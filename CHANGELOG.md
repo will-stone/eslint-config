@@ -1,5 +1,13 @@
 # @will-stone/eslint-config
 
+## 0.5.0
+
+### Minor Changes
+
+- 5891e9c: No changes (hopefully). Migrated from old will-stone/dx repo to this
+  standalone one, whilst converting to TS and exporing both ESM and CJS
+  versions.
+
 ## 0.4.0
 
 ### Minor Changes
