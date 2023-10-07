@@ -65,6 +65,8 @@ and then
 
 ```bash
 npm i -D husky lint-staged
+npx husky install
+npx husky add .husky/pre-commit "npx --no lint-staged"
 ```
 
 ## Credits
