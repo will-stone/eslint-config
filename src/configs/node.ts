@@ -1,10 +1,14 @@
 import type { Linter } from 'eslint'
 // @ts-expect-error -- no types
 import pluginNode from 'eslint-plugin-n'
+import globals from 'globals'
 
 export function node(): Linter.FlatConfig[] {
   return [
     {
+      languageOptions: {
+        globals: globals.node,
+      },
       plugins: {
         n: pluginNode,
       },
