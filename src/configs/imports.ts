@@ -1,6 +1,6 @@
 import type { Linter } from 'eslint'
 // @ts-expect-error -- no types
-import pluginImport from 'eslint-plugin-i'
+import * as pluginImport from 'eslint-plugin-i'
 // @ts-expect-error -- no types
 import pluginSimpleImport from 'eslint-plugin-simple-import-sort'
 
