@@ -1,5 +1,11 @@
 # @will-stone/eslint-config
 
+## 0.5.1
+
+### Patch Changes
+
+- 8c325f3: Fixed missing node globals.
+
 ## 0.5.0
 
 ### Minor Changes
