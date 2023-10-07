@@ -1,0 +1,96 @@
+# @will-stone/eslint-config
+
+## 0.4.0
+
+### Minor Changes
+
+- 12d89b6: Ignore files using gitignore.
+
+### Patch Changes
+
+- 9a4fc4b: Internal refactor to use parsers in a consistent manner.
+
+## 0.3.0
+
+### Minor Changes
+
+- 7c6172a: Added full support for Astro's recommended rules.
+
+## 0.2.1
+
+### Patch Changes
+
+- 5ee5299: Fixed support for Tailwind in Astro files.
+
+## 0.2.0
+
+### Minor Changes
+
+- 9be0e9d: Added support for ignoring Next.Js build folder.
+
+## 0.1.0
+
+### Minor Changes
+
+- de8854e: Added support for Tailwind rules.
+
+## 0.0.10
+
+### Patch Changes
+
+- 17e3de3: Fixed global ignore patterns (for real this time).
+
+## 0.0.9
+
+### Patch Changes
+
+- 0a0a1fd: Fixed build file ignore pattern.
+
+## 0.0.8
+
+### Patch Changes
+
+- 25101d4: Ignore some common build folders.
+
+## 0.0.7
+
+### Patch Changes
+
+- 3882d03: Fixed not finding mock files.
+
+## 0.0.6
+
+### Patch Changes
+
+- 1ab951c: Fixed `jest` global not available in mocks.
+
+## 0.0.5
+
+### Patch Changes
+
+- 4f97233: Fixed requiring use-strict in files that don't need it.
+
+## 0.0.4
+
+### Patch Changes
+
+- Fixed no browser globals available. Puting these in all files for now, but
+  maybe should be based on something else?
+
+## 0.0.3
+
+### Patch Changes
+
+- fd613ec: Fixed cannot find TS plugin.
+
+## 0.0.2
+
+### Patch Changes
+
+- e49eee7: Fixed TS parser not loading.
+
+## 0.0.1
+
+### Patch Changes
+
+- 40e33d5: Initial release.
