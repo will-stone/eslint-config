@@ -23,7 +23,9 @@ export function factory(): Linter.FlatConfig[] {
 
   const configs: Linter.FlatConfig[][] = []
 
-  if (isGitIgnore) configs.push([gitignore()])
+  if (isGitIgnore) {
+    configs.push([gitignore()])
+  }
 
   configs.push(
     ignores(),
@@ -36,13 +38,21 @@ export function factory(): Linter.FlatConfig[] {
     react(),
   )
 
-  if (isNode) configs.push(node())
+  if (isNode) {
+    configs.push(node())
+  }
 
-  if (isTailwind) configs.push(node())
+  if (isTailwind) {
+    configs.push(node())
+  }
 
-  if (testingFramework === 'jest') configs.push(jest())
+  if (testingFramework === 'jest') {
+    configs.push(jest())
+  }
 
-  if (isPrettier) configs.push(prettier())
+  if (isPrettier) {
+    configs.push(prettier())
+  }
 
   const merged = configs.flat()
 
