@@ -421,6 +421,7 @@ export function base(): Linter.FlatConfig[] {
         'no-nonoctal-decimal-escape': 'error',
         // This rule disallows calling the Math, JSON, Reflect and Atomics objects as functions.
         'no-obj-calls': 'error',
+        'no-object-constructor': 'error',
         // the leading zero which identifies an octal literal has been a source of
         // confusion and error in JavaScript code, ECMAScript 5 deprecates the use
         // of octal numeric literals.
