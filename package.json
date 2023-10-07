@@ -1,0 +1,76 @@
+{
+  "name": "@will-stone/eslint-config",
+  "version": "0.4.0",
+  "description": "Will Stone's ESLint config",
+  "keywords": [
+    "eslint-config"
+  ],
+  "homepage": "https://github.com/will-stone/eslint-config#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/will-stone/eslint-config.git"
+  },
+  "license": "MIT",
+  "author": "Will Stone",
+  "type": "module",
+  "exports": {
+    ".": {
+      "import": "./dist/index.js",
+      "require": "./dist/index.cjs"
+    }
+  },
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsup src/index.ts --format esm,cjs --clean --dts",
+    "dev": "tsup src/index.ts --format esm,cjs --watch & eslint-flat-config-viewer",
+    "lint": "npm run stub && eslint .",
+    "prepublishOnly": "npm run build",
+    "stub": "tsup src/index.ts --format esm",
+    "typecheck": "tsc --noEmit"
+  },
+  "prettier": "@will-stone/prettier-config",
+  "dependencies": {
+    "@typescript-eslint/eslint-plugin": "^6.7.4",
+    "@typescript-eslint/parser": "^6.7.4",
+    "astro-eslint-parser": "^0.16.0",
+    "confusing-browser-globals": "^1.0.11",
+    "eslint-config-flat-gitignore": "^0.1.0",
+    "eslint-define-config": "^1.23.0",
+    "eslint-plugin-astro": "^0.29.1",
+    "eslint-plugin-i": "^2.28.1",
+    "eslint-plugin-jest": "^27.4.2",
+    "eslint-plugin-jsx-a11y": "^6.7.1",
+    "eslint-plugin-n": "^16.1.0",
+    "eslint-plugin-prettier": "^5.0.0",
+    "eslint-plugin-react": "^7.33.2",
+    "eslint-plugin-react-hooks": "^4.6.0",
+    "eslint-plugin-simple-import-sort": "^10.0.0",
+    "eslint-plugin-switch-case": "^1.1.2",
+    "eslint-plugin-tailwindcss": "^3.13.0",
+    "eslint-plugin-unicorn": "^48.0.1",
+    "globals": "^13.22.0",
+    "globby": "^13.2.2",
+    "load-json-file": "^7.0.1"
+  },
+  "devDependencies": {
+    "@changesets/cli": "^2.26.2",
+    "@types/confusing-browser-globals": "^1.0.1",
+    "@types/eslint": "^8.44.3",
+    "@types/node": "^20.8.2",
+    "@will-stone/prettier-config": "^7.0.1",
+    "eslint": "^8.50.0",
+    "eslint-flat-config-viewer": "^0.0.8",
+    "lint-staged": "^14.0.1",
+    "prettier": "^3.0.3",
+    "tsup": "^7.2.0",
+    "typescript": "^5.2.2",
+    "type-fest": "^4.3.3"
+  },
+  "peerDependencies": {
+    "eslint": ">=8.0.0"
+  }
+}
