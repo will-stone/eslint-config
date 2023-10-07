@@ -1,5 +1,11 @@
 # @will-stone/eslint-config
 
+## 0.6.0
+
+### Minor Changes
+
+- 0ae33b7: Do not lint Next.js build artefacts.
+
 ## 0.5.1
 
 ### Patch Changes
