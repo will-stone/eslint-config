@@ -35,10 +35,13 @@ export function checkEnvironment(): {
       Boolean(
         packageJson.dependencies?.jest || packageJson.devDependencies?.jest,
       )
-    )
+    ) {
       testingFramework = 'jest' as const
+    }
 
-    if (!isNodeEngine && Boolean(packageJson.engines?.node)) isNodeEngine = true
+    if (!isNodeEngine && Boolean(packageJson.engines?.node)) {
+      isNodeEngine = true
+    }
 
     if (
       !isPrettier &&
@@ -46,8 +49,9 @@ export function checkEnvironment(): {
         packageJson.dependencies?.prettier ||
           packageJson.devDependencies?.prettier,
       )
-    )
+    ) {
       isPrettier = true
+    }
 
     if (
       !isTailwind &&
@@ -55,8 +59,9 @@ export function checkEnvironment(): {
         packageJson.dependencies?.tailwindcss ||
           packageJson.devDependencies?.tailwindcss,
       )
-    )
+    ) {
       isTailwind = true
+    }
   }
 
   const isNode =
