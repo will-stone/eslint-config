@@ -193,26 +193,9 @@ export function react(): Linter.FlatConfig[] {
         'react/jsx-tag-spacing': 'off',
         'react/jsx-wrap-multilines': 'off',
 
-        // It is common to use these lifecycle methods without using "this".
-        'class-methods-use-this': [
-          'error',
-          {
-            exceptMethods: [
-              'render',
-              'getInitialState',
-              'getDefaultProps',
-              'getChildContext',
-              'componentWillMount',
-              'componentDidMount',
-              'componentWillReceiveProps',
-              'shouldComponentUpdate',
-              'componentWillUpdate',
-              'componentDidUpdate',
-              'componentWillUnmount',
-              'componentDidCatch',
-            ],
-          },
-        ],
+        /**
+         * React
+         */
         'react/boolean-prop-naming': 'error',
         'react/button-has-type': 'error',
         'react/default-props-match-prop-types': 'error',
@@ -328,6 +311,10 @@ export function react(): Linter.FlatConfig[] {
         'react/static-property-placement': 'error',
         'react/style-prop-object': 'error',
         'react/void-dom-elements-no-children': 'error',
+
+        /**
+         * Hooks
+         */
         // Checks effect dependencies
         'react-hooks/exhaustive-deps': 'warn',
         // Checks rules of Hooks

@@ -162,6 +162,7 @@ export function typescript(): Linter.FlatConfig[] {
         /**
          * Superseded by TS rules below
          */
+        'class-methods-use-this': 'off',
         'default-param-last': 'off',
         'lines-between-class-members': 'off',
         'no-duplicate-imports': 'off',
@@ -186,6 +187,7 @@ export function typescript(): Linter.FlatConfig[] {
         '@typescript-eslint/ban-tslint-comment': 'warn',
         // Ensures that literals on classes are exposed in a consistent style
         '@typescript-eslint/class-literal-property-style': 'warn',
+        '@typescript-eslint/class-methods-use-this': 'off',
         // https://typescript-eslint.io/rules/consistent-generic-constructors/
         '@typescript-eslint/consistent-generic-constructors': 'warn',
         // Enforce the use of the record type
