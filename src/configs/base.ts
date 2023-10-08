@@ -122,9 +122,7 @@ export function base(): Linter.FlatConfig[] {
         'camelcase': 'error',
         // Write comments however you like
         'capitalized-comments': 'off',
-        // If a class method does not use this,
-        // it can sometimes be made into a static function
-        'class-methods-use-this': 'error',
+        'class-methods-use-this': 'off',
         // Measures the number of linearly independent paths through a program's
         // source code. Rubbish. Use your own judgement on complexity.
         'complexity': 'off',

@@ -72,7 +72,7 @@
     "@types/node": "^20.8.2",
     "@will-stone/prettier-config": "^7.0.1",
     "eslint": "^8.50.0",
-    "eslint-flat-config-viewer": "^0.0.8",
+    "eslint-flat-config-viewer": "^0.0.9",
     "husky": "^8.0.3",
     "lint-staged": "^14.0.1",
     "prettier": "^3.0.3",
