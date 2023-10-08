@@ -1,5 +1,7 @@
 # @will-stone/eslint-config
 
+My personal [ESLint](https://eslint.org/) config.
+
 ## Usage
 
 ### Install
@@ -55,8 +57,7 @@ the following to your `package.json`:
     "prepare": "husky install"
   },
   "lint-staged": {
-    "*.{js,jsx,ts,tsx}": ["eslint --fix"],
-    "*.{css,json,md}": ["prettier --write"]
+    "*.{js,jsx,ts,tsx}": ["eslint --fix"]
   }
 }
 ```
