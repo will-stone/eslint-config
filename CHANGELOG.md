@@ -1,5 +1,13 @@
 # @will-stone/eslint-config
 
+## 0.7.0
+
+### Minor Changes
+
+- 6bcfc6f: `no-object-constructor` error.
+- c2daa78: Turn off `class-methods-use-this` ruke, which can quite often be not
+  be required.
+
 ## 0.6.0
 
 ### Minor Changes
