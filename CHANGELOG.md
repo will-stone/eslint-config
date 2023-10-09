@@ -1,5 +1,11 @@
 # @will-stone/eslint-config
 
+## 0.7.3
+
+### Patch Changes
+
+- Fixed CJS default export (maybe for real this time).
+
 ## 0.7.2
 
 ### Patch Changes
