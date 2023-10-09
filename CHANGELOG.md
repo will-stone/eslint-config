@@ -1,5 +1,11 @@
 # @will-stone/eslint-config
 
+## 0.7.4
+
+### Patch Changes
+
+- c3bfc0a: Fixed not working as CJS against TS files.
+
 ## 0.7.3
 
 ### Patch Changes
