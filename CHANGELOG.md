@@ -1,5 +1,11 @@
 # @will-stone/eslint-config
 
+## 0.7.2
+
+### Patch Changes
+
+- 1803a9f: Fix commonJS default import.
+
 ## 0.7.1
 
 ### Patch Changes
