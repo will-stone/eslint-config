@@ -1,5 +1,5 @@
 import pluginTypescript from '@typescript-eslint/eslint-plugin'
-import parserTypescript from '@typescript-eslint/parser'
+import * as parserTypescript from '@typescript-eslint/parser'
 import type { Linter } from 'eslint'
 
 export function typescript(): Linter.FlatConfig[] {
