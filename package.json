@@ -1,6 +1,6 @@
 {
   "name": "@will-stone/eslint-config",
-  "version": "0.7.2",
+  "version": "0.7.3",
   "description": "Will Stone's ESLint config",
   "keywords": [
     "eslint-config"
@@ -25,7 +25,7 @@
     "dist"
   ],
   "scripts": {
-    "build": "tsup src/index.ts --format esm,cjs --clean --dts --cjsInterop",
+    "build": "tsup src/index.ts --format esm,cjs --clean --dts --cjsInterop --splitting",
     "dev": "tsup src/index.ts --format esm,cjs --watch & eslint-flat-config-viewer",
     "lint": "npm run stub && eslint .",
     "prepare": "husky install",
