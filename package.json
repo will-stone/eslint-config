@@ -61,6 +61,7 @@
     "eslint-plugin-switch-case": "^1.1.2",
     "eslint-plugin-tailwindcss": "^3.13.0",
     "eslint-plugin-unicorn": "^48.0.1",
+    "glob": "^10.3.10",
     "globals": "^13.22.0",
     "globby": "^13.2.2",
     "load-json-file": "^7.0.1"

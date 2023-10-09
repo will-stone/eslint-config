@@ -1,8 +1,13 @@
-import { existsSync } from 'node:fs'
+import { existsSync, readFileSync } from 'node:fs'
 
-import { globbySync } from 'globby'
-import { loadJsonFileSync } from 'load-json-file'
+import { globSync } from 'glob'
 import type { PackageJson } from 'type-fest'
+
+function loadJsonFileSync(filePath: string) {
+  const buffer = readFileSync(filePath)
+  const data = new TextDecoder().decode(buffer)
+  return JSON.parse(data)
+}
 
 export function checkEnvironment(): {
   isGitIgnore: boolean
@@ -20,12 +25,9 @@ export function checkEnvironment(): {
   // In a monorepo environment with one eslint instance at the root of the project,
   // we must traverse every child package.json to find out if certain dependencies
   // are included, so that we know which plugins and rules to include.
-  const allPackageJsonPaths = globbySync([
-    '**/package.json',
-    // Could use the `gitIgnore` option but the negative pattern is about 8 times faster.
-    // https://github.com/sindresorhus/globby/issues/50
-    '!**/node_modules',
-  ])
+  const allPackageJsonPaths = globSync('**/package.json', {
+    ignore: '**/node_modules/**',
+  })
 
   for (const packageJsonPath of allPackageJsonPaths) {
     const packageJson = loadJsonFileSync(packageJsonPath) satisfies PackageJson
