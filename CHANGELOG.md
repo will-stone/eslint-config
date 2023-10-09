@@ -1,5 +1,11 @@
 # @will-stone/eslint-config
 
+## 0.7.1
+
+### Patch Changes
+
+- 8028cc6: Fixed (hopefully) not working with CJS environments.
+
 ## 0.7.0
 
 ### Minor Changes
