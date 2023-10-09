@@ -25,7 +25,7 @@
     "dist"
   ],
   "scripts": {
-    "build": "tsup src/index.ts --format esm,cjs --clean --dts",
+    "build": "tsup src/index.ts --format esm,cjs --clean --dts --cjsInterop",
     "dev": "tsup src/index.ts --format esm,cjs --watch & eslint-flat-config-viewer",
     "lint": "npm run stub && eslint .",
     "prepare": "husky install",
