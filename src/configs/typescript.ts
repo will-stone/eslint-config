@@ -87,7 +87,7 @@ export function typescript(): Linter.FlatConfig[] {
         'no-extra-semi': 'off',
 
         /**
-         * These are for type checking which I don't use eslint for
+         * These require type checking
          */
         '@typescript-eslint/await-thenable': 'off',
         '@typescript-eslint/consistent-type-exports': 'off',
@@ -116,6 +116,7 @@ export function typescript(): Linter.FlatConfig[] {
         '@typescript-eslint/no-unsafe-member-access': 'off',
         '@typescript-eslint/no-unsafe-return': 'off',
         '@typescript-eslint/non-nullable-type-assertion-style': 'off',
+        '@typescript-eslint/prefer-destructuring': 'off',
         '@typescript-eslint/prefer-includes': 'off',
         '@typescript-eslint/prefer-nullish-coalescing': 'off',
         '@typescript-eslint/prefer-optional-chain': 'off',
