@@ -1,5 +1,15 @@
 # @will-stone/eslint-config
 
+## 0.8.0
+
+### Minor Changes
+
+- c739a74: Report unused eslint-disable/enables.
+
+### Patch Changes
+
+- a22b7f3: Support (as off) `@typescript-eslint/prefer-destructuring`.
+
 ## 0.7.4
 
 ### Patch Changes
