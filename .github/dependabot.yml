@@ -9,3 +9,8 @@ updates:
     allow:
       - dependency-type: 'all'
     versioning-strategy: increase
+    groups:
+      dependencies:
+        dependency-type: 'production'
+      dev-dependencies:
+        dependency-type: 'development'
