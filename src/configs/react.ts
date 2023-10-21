@@ -201,28 +201,20 @@ export function react(): Linter.FlatConfig[] {
         'react/default-props-match-prop-types': 'error',
         'react/destructuring-assignment': 'error',
         'react/display-name': 'error',
-        // Components can use any props.
         'react/forbid-component-props': 'off',
         'react/forbid-dom-props': 'error',
         'react/forbid-elements': 'error',
         'react/forbid-foreign-prop-types': 'error',
         'react/forbid-prop-types': 'error',
-        // Functional components can use any style.
         'react/function-component-definition': 'off',
         'react/hook-use-state': 'error',
         'react/iframe-missing-sandbox': 'error',
-        // ❌ <Hello personal={true} />
-        // ✅ <Hello personal />
         'react/jsx-boolean-value': 'warn',
-        // disallow unnecessary curly braces in JSX props and/or children.
         'react/jsx-curly-brace-presence': 'warn',
-        // Allow JSX in any files
         'react/jsx-filename-extension': 'off',
-        // Enforce shorthand for React fragments.
         'react/jsx-fragments': 'warn',
         'react/jsx-handler-names': 'error',
         'react/jsx-key': 'error',
-        // Unlimited JSX nesting.
         'react/jsx-max-depth': 'off',
         // I haven't found any modern benchmarks for disallowing inline arrow
         // functions, and quite frankly it feels like this "optimisation" is just
@@ -236,20 +228,14 @@ export function react(): Linter.FlatConfig[] {
         'react/jsx-no-comment-textnodes': 'error',
         'react/jsx-no-constructed-context-values': 'error',
         'react/jsx-no-duplicate-props': 'error',
-        // In React, you might end up rendering unexpected values like 0 or NaN.
-        // https://github.com/jsx-eslint/eslint-plugin-react/blob/master/docs/rules/jsx-no-leaked-render.md
         'react/jsx-no-leaked-render': 'warn',
-        // ✅ <div>test</div>
-        // ✅ <div>{'test'}</div>
         'react/jsx-no-literals': 'off',
         'react/jsx-no-script-url': 'error',
         'react/jsx-no-target-blank': 'error',
         'react/jsx-no-undef': 'error',
         'react/jsx-no-useless-fragment': 'warn',
         'react/jsx-pascal-case': 'error',
-        // Allow prop spreading, you know the dangers!
         'react/jsx-props-no-spreading': 'off',
-        // Alphabetical sorting of props
         // TODO there's other options in this one that could be useful.
         'react/jsx-sort-props': ['warn', { reservedFirst: true }],
         'react/jsx-uses-react': 'error',
@@ -268,10 +254,8 @@ export function react(): Linter.FlatConfig[] {
         'react/no-find-dom-node': 'error',
         'react/no-invalid-html-attribute': 'error',
         'react/no-is-mounted': 'error',
-        // Allow as many components per file as you like
         'react/no-multi-comp': 'off',
         'react/no-namespace': 'error',
-        // Prevent potential unnecessary rerenders, and performance regressions
         'react/no-object-type-as-default-prop': 'error',
         'react/no-redundant-should-component-update': 'error',
         'react/no-render-return-value': 'error',
@@ -280,8 +264,6 @@ export function react(): Linter.FlatConfig[] {
         'react/no-this-in-sfc': 'error',
         'react/no-typos': 'error',
         'react/no-unescaped-entities': 'error',
-        // ❌ <div class="hello">Hello World</div>
-        // ✅ <div className="hello">Hello World</div>
         'react/no-unknown-property': 'warn',
         'react/no-unsafe': 'error',
         'react/no-unstable-nested-components': 'error',
@@ -294,15 +276,10 @@ export function react(): Linter.FlatConfig[] {
         'react/prefer-read-only-props': 'error',
         'react/prefer-stateless-function': 'error',
         'react/prop-types': 'off',
-        // React is no longer required to be imported to use JSX
         'react/react-in-jsx-scope': 'off',
-        // Enforce a defaultProps definition for every prop that is not a required prop
-        // TODO turn this back on and create a react-typescript rule set for disabling thing like this.
         'react/require-default-props': 'off',
-        // Do not enforce React components to have a shouldComponentUpdate method.
         'react/require-optimization': 'off',
         'react/require-render-return': 'error',
-        // Prevent extra closing tags for components without children.
         'react/self-closing-comp': 'warn',
         'react/sort-comp': 'error',
         'react/sort-default-props': 'error',
@@ -315,9 +292,7 @@ export function react(): Linter.FlatConfig[] {
         /**
          * Hooks
          */
-        // Checks effect dependencies
         'react-hooks/exhaustive-deps': 'warn',
-        // Checks rules of Hooks
         'react-hooks/rules-of-hooks': 'error',
       },
       settings: {
