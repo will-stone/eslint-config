@@ -16,6 +16,11 @@ export function base(): Linter.FlatConfig[] {
           ...globals.es2021,
         },
       },
+      linterOptions: {
+        // Indicate if unused disable and enable directives should be reported
+        // as "warn".
+        reportUnusedDisableDirectives: true,
+      },
       rules: {
         /**
          * Built-in rules
