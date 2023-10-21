@@ -13,28 +13,15 @@ export function node(): Linter.FlatConfig[] {
         n: pluginNode,
       },
       rules: {
-        // Enforces return statements in callbacks of array's methods
         'n/callback-return': 'error',
-        // require() should be called only in the top level of a module to make it
-        // easier to identify dependencies.
         'n/global-require': 'error',
-        // This rule expects that when you're using the callback pattern in Node.js
-        // you'll handle the error.
         'n/handle-callback-err': 'error',
-        // Disallow require calls to be mixed with regular variable declarations.
         'n/no-mixed-requires': 'error',
-        // ❌ var appHeader = new require('app-header')
-        // ✅ var AppHeader = require('app-header')
-        //    var appHeader = new AppHeader()
         'n/no-new-require': 'error',
-        // Disallow string concatenation when using __dirname and __filename.
-        // Use path.join() instead.
         'n/no-path-concat': 'error',
-        // Allow env vars in code
         'n/no-process-env': 'off',
         // Handled by Unicorn
         'n/no-process-exit': 'off',
-        // No modules are restricted
         'n/no-restricted-require': 'off',
         // I like synchronous functions
         'n/no-sync': 'off',

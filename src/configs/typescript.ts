@@ -182,22 +182,14 @@ export function typescript(): Linter.FlatConfig[] {
         /**
          * The rest
          */
-        // Requires using T[] over Array<T> for arrays
         '@typescript-eslint/array-type': ['warn', { default: 'array' }],
-        // Bans // tslint:<rule-flag> comments from being used
         '@typescript-eslint/ban-tslint-comment': 'warn',
-        // Ensures that literals on classes are exposed in a consistent style
         '@typescript-eslint/class-literal-property-style': 'warn',
         '@typescript-eslint/class-methods-use-this': 'off',
-        // https://typescript-eslint.io/rules/consistent-generic-constructors/
         '@typescript-eslint/consistent-generic-constructors': 'warn',
-        // Enforce the use of the record type
         '@typescript-eslint/consistent-indexed-object-style': 'warn',
-        // Enforces consistent usage of type assertions
         '@typescript-eslint/consistent-type-assertions': 'error',
-        // Enforce using types for object type definitions
         '@typescript-eslint/consistent-type-definitions': ['warn', 'type'],
-        // Enforces consistent usage of type imports
         '@typescript-eslint/consistent-type-imports': [
           'warn',
           {
@@ -205,77 +197,38 @@ export function typescript(): Linter.FlatConfig[] {
             prefer: 'type-imports',
           },
         ],
-        // Enforce default parameters to be last
         '@typescript-eslint/default-param-last': ['error'],
-        // Don't mind if functions do not have return types.
         '@typescript-eslint/explicit-function-return-type': 'off',
-        // Require explicit accessibility modifiers ("public") on class properties and methods
         '@typescript-eslint/explicit-member-accessibility': 'warn',
-        // Initialise vairables however you like
         '@typescript-eslint/init-declarations': 'off',
         '@typescript-eslint/lines-between-class-members': [
           'warn',
           'always',
           { exceptAfterOverload: true },
         ],
-        // Require a consistent member declaration order
         '@typescript-eslint/member-ordering': 'error',
-        // ❌
-        // interface T1 {
-        //  func(arg: string): number;
-        // }
-        // ✅
-        // interface T1 {
-        //  func: (arg: string) => number;
-        // }
         '@typescript-eslint/method-signature-style': 'warn',
-        // Disallow non-null assertion in locations that may be confusing
         '@typescript-eslint/no-confusing-non-null-assertion': 'warn',
-        // Disallow duplicate class members
         '@typescript-eslint/no-dupe-class-members': 'error',
-        // ❌
-        // enum E {
-        //   A = 0,
-        //   B = 0,
-        // }
-        // ✅
-        // enum E {
-        //   A = 0,
-        //   B = 1,
-        // }
         '@typescript-eslint/no-duplicate-enum-values': 'error',
-        // Deleting missing key/value is safe
         '@typescript-eslint/no-dynamic-delete': 'off',
-        // ❌ const bar = foo!!!.bar
-        // ✅ const bar = foo!.bar
         '@typescript-eslint/no-extra-non-null-assertion': 'warn',
-        // Warns when a class is accidentally used as a namespace
         '@typescript-eslint/no-extraneous-class': 'error',
         '@typescript-eslint/no-import-type-side-effects': 'warn',
-        // Disallow this keywords outside of classes or class-like objects
         '@typescript-eslint/no-invalid-this': 'error',
-        // Disallows usage of void type outside of generic or return types
         '@typescript-eslint/no-invalid-void-type': 'error',
-        // Disallow function declarations that contain unsafe references inside loop statements
         '@typescript-eslint/no-loop-func': 'error',
-        // Disallow literal numbers that lose precision
         '@typescript-eslint/no-loss-of-precision': ['error'],
-        // Disallowing magic numbers causes all sorts of problems
         '@typescript-eslint/no-magic-numbers': 'off',
         '@typescript-eslint/no-non-null-asserted-nullish-coalescing': 'error',
         '@typescript-eslint/no-redeclare': 'error',
         '@typescript-eslint/no-require-imports': 'error',
         '@typescript-eslint/no-restricted-imports': 'off',
-        // Disallow variable declarations from shadowing variables declared in the outer scope
         '@typescript-eslint/no-shadow': ['error'],
-        // Aliasing can be useful
         '@typescript-eslint/no-type-alias': 'off',
-        // Disallows unnecessary constraints on generic types
         '@typescript-eslint/no-unnecessary-type-constraint': 'warn',
         '@typescript-eslint/no-unsafe-declaration-merging': 'error',
-        // Aims to eliminate unused expressions which have no effect on the state of the program.
         '@typescript-eslint/no-unused-expressions': ['error'],
-        // Variables must be used unless name ends with "ignored"
         '@typescript-eslint/no-unused-vars': [
           'error',
           {
@@ -287,7 +240,6 @@ export function typescript(): Linter.FlatConfig[] {
         ],
         '@typescript-eslint/no-use-before-define': 'error',
         '@typescript-eslint/no-useless-constructor': 'error',
-        // Disallow empty exports that don't change anything in a module file
         '@typescript-eslint/no-useless-empty-export': 'warn',
         '@typescript-eslint/padding-line-between-statements': [
           'error',
@@ -300,19 +252,15 @@ export function typescript(): Linter.FlatConfig[] {
           { blankLine: 'always', next: '*', prev: 'multiline-var' },
           { blankLine: 'always', next: 'multiline-var', prev: '*' },
         ],
-        // Not sure I need this, how many classes do I write?!
-        // https://github.com/typescript-eslint/typescript-eslint/blob/main/packages/eslint-plugin/docs/rules/parameter-properties.md
         '@typescript-eslint/parameter-properties': 'off',
         '@typescript-eslint/prefer-enum-initializers': 'error',
         // Unicorn does this better by providing a fixer
         '@typescript-eslint/prefer-for-of': 'off',
         '@typescript-eslint/prefer-function-type': 'warn',
-        // Require that all enum members be literal values to prevent unintended enum member name shadow issues.
         '@typescript-eslint/prefer-literal-enum-member': 'error',
-        // Recommends using // @ts-expect-error over // @ts-ignore
         '@typescript-eslint/prefer-ts-expect-error': 'warn',
         '@typescript-eslint/sort-type-constituents': 'warn',
-        // Not sure if required yet. Might be too strict and produce noist code.
+        // TODO Not sure if required yet. Might be too strict and produce noisy code.
         '@typescript-eslint/typedef': 'off',
         '@typescript-eslint/unified-signatures': 'error',
       },
