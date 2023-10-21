@@ -8,3 +8,4 @@ updates:
       interval: 'weekly'
     allow:
       - dependency-type: 'all'
+    versioning-strategy: increase
