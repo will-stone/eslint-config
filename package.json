@@ -70,7 +70,7 @@
     "@changesets/cli": "^2.26.2",
     "@types/confusing-browser-globals": "^1.0.2",
     "@types/eslint": "^8.44.6",
-    "@types/node": "^20.8.7",
+    "@types/node": "^20.8.9",
     "@will-stone/prettier-config": "^7.0.1",
     "eslint": "^8.52.0",
     "eslint-flat-config-viewer": "^0.1.0",
@@ -78,7 +78,7 @@
     "lint-staged": "^15.0.2",
     "prettier": "^3.0.3",
     "tsup": "^7.2.0",
-    "type-fest": "^4.5.0",
+    "type-fest": "^4.6.0",
     "typescript": "^5.2.2"
   },
   "peerDependencies": {
