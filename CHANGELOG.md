@@ -1,5 +1,11 @@
 # @will-stone/eslint-config
 
+## 0.8.1
+
+### Patch Changes
+
+- e80a716: Support and turn off @typescript-eslint/max-params rule.
+
 ## 0.8.0
 
 ### Minor Changes
