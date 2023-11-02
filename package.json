@@ -43,16 +43,16 @@
   },
   "prettier": "@will-stone/prettier-config",
   "dependencies": {
-    "@typescript-eslint/eslint-plugin": "^6.8.0",
-    "@typescript-eslint/parser": "^6.8.0",
+    "@typescript-eslint/eslint-plugin": "^6.9.1",
+    "@typescript-eslint/parser": "^6.9.1",
     "astro-eslint-parser": "^0.16.0",
     "confusing-browser-globals": "^1.0.11",
     "eslint-config-flat-gitignore": "^0.1.1",
     "eslint-define-config": "^1.24.1",
     "eslint-plugin-astro": "^0.29.1",
-    "eslint-plugin-i": "^2.28.1",
-    "eslint-plugin-jest": "^27.4.3",
-    "eslint-plugin-jsx-a11y": "^6.7.1",
+    "eslint-plugin-i": "^2.29.0",
+    "eslint-plugin-jest": "^27.6.0",
+    "eslint-plugin-jsx-a11y": "^6.8.0",
     "eslint-plugin-n": "^16.2.0",
     "eslint-plugin-prettier": "^5.0.1",
     "eslint-plugin-react": "^7.33.2",
@@ -60,7 +60,7 @@
     "eslint-plugin-simple-import-sort": "^10.0.0",
     "eslint-plugin-switch-case": "^1.1.2",
     "eslint-plugin-tailwindcss": "^3.13.0",
-    "eslint-plugin-unicorn": "^48.0.1",
+    "eslint-plugin-unicorn": "^49.0.0",
     "glob": "^10.3.10",
     "globals": "^13.23.0",
     "globby": "^13.2.2",
@@ -70,7 +70,7 @@
     "@changesets/cli": "^2.26.2",
     "@types/confusing-browser-globals": "^1.0.2",
     "@types/eslint": "^8.44.6",
-    "@types/node": "^20.8.9",
+    "@types/node": "^20.8.10",
     "@will-stone/prettier-config": "^7.0.1",
     "eslint": "^8.52.0",
     "eslint-flat-config-viewer": "^0.1.0",
@@ -84,5 +84,5 @@
   "peerDependencies": {
     "eslint": ">=8.52.0"
   },
-  "packageManager": "pnpm@8.10.0+sha256.3c5d70d07b0c4849d7e07398b62bf48ca6619ca86f77981125eaab7f5ee82c4c"
+  "packageManager": "pnpm@8.10.2+sha256.487609e857f1c11780cc98dd0bfe4c8a8b11c7f23bc3a4493ac7d263d6fb6c8c"
 }

@@ -206,6 +206,7 @@ export function typescript(): Linter.FlatConfig[] {
           'always',
           { exceptAfterOverload: true },
         ],
+        '@typescript-eslint/max-params': 'off',
         '@typescript-eslint/member-ordering': 'error',
         '@typescript-eslint/method-signature-style': 'warn',
         '@typescript-eslint/no-confusing-non-null-assertion': 'warn',
