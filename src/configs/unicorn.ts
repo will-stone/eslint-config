@@ -134,20 +134,7 @@ export function unicorn(): Linter.FlatConfig[] {
         'unicorn/prefer-ternary': ['warn', 'only-single-line'],
         'unicorn/prefer-top-level-await': 'error',
         'unicorn/prefer-type-error': 'warn',
-        'unicorn/prevent-abbreviations': [
-          'warn',
-          {
-            allowList: {
-              'next-env.d': true,
-              'react-app-env.d': true,
-            },
-            replacements: {
-              props: false,
-              ref: false,
-              refs: false,
-            },
-          },
-        ],
+        'unicorn/prevent-abbreviations': 'off',
         'unicorn/regex-shorthand': 'warn',
         'unicorn/relative-url-style': 'warn',
         'unicorn/require-array-join-separator': 'warn',
