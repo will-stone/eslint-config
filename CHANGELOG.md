@@ -1,5 +1,11 @@
 # @will-stone/eslint-config
 
+## 0.9.0
+
+### Minor Changes
+
+- 5db2c75: Stop preventing abbreviations.
+
 ## 0.8.1
 
 ### Patch Changes
