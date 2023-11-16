@@ -1,5 +1,12 @@
 # @will-stone/eslint-config
 
+## 0.10.0
+
+### Minor Changes
+
+- 4ef025f: Enabled type-aware TS rules by using the `tsconfigPath` option.
+- 4ef025f: Allow nested ternaries to be compatible with Prettier 3.1.
+
 ## 0.9.0
 
 ### Minor Changes
