@@ -1,5 +1,11 @@
 # @will-stone/eslint-config
 
+## 0.12.1
+
+### Patch Changes
+
+- 4da29fd: Turn off all (but one) TS type rules, for now.
+
 ## 0.12.0
 
 ### Minor Changes
