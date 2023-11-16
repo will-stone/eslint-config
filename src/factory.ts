@@ -12,12 +12,13 @@ import { react } from './configs/react'
 import { switchCase } from './configs/switch-case'
 import { typescript } from './configs/typescript'
 import { unicorn } from './configs/unicorn'
+import type { Options } from './types'
 import { checkEnvironment } from './utils'
 
 /**
  * Construct an array of ESLint flat config items.
  */
-export function factory(): Linter.FlatConfig[] {
+export function factory(options?: Options): Linter.FlatConfig[] {
   const { isGitIgnore, isNode, isPrettier, isTailwind, testingFramework } =
     checkEnvironment()
 
@@ -33,7 +34,7 @@ export function factory(): Linter.FlatConfig[] {
     imports(),
     switchCase(),
     unicorn(),
-    typescript(),
+    typescript(options),
     astro(),
     react(),
   )

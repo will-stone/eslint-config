@@ -3,12 +3,6 @@ import { existsSync, readFileSync } from 'node:fs'
 import { globSync } from 'glob'
 import type { PackageJson } from 'type-fest'
 
-function loadJsonFileSync(filePath: string) {
-  const buffer = readFileSync(filePath)
-  const data = new TextDecoder().decode(buffer)
-  return JSON.parse(data)
-}
-
 export function checkEnvironment(): {
   isGitIgnore: boolean
   isNode: boolean
@@ -30,7 +24,9 @@ export function checkEnvironment(): {
   })
 
   for (const packageJsonPath of allPackageJsonPaths) {
-    const packageJson = loadJsonFileSync(packageJsonPath) satisfies PackageJson
+    const buffer = readFileSync(packageJsonPath)
+    const data = new TextDecoder().decode(buffer)
+    const packageJson = JSON.parse(data) as PackageJson
 
     if (
       !testingFramework &&

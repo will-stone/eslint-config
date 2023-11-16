@@ -1,4 +1,4 @@
-import type { Linter } from 'eslint'
+import type { ESLint, Linter } from 'eslint'
 // @ts-expect-error -- no types
 import * as pluginImport from 'eslint-plugin-i'
 // @ts-expect-error -- no types
@@ -8,8 +8,8 @@ export function imports(): Linter.FlatConfig[] {
   return [
     {
       plugins: {
-        'import': pluginImport,
-        'simple-import-sort': pluginSimpleImport,
+        'import': pluginImport as ESLint.Plugin,
+        'simple-import-sort': pluginSimpleImport as ESLint.Plugin,
       },
       rules: {
         'import/consistent-type-specifier-style': ['warn', 'prefer-top-level'],

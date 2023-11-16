@@ -1,4 +1,4 @@
-import type { Linter } from 'eslint'
+import type { ESLint, Linter } from 'eslint'
 // @ts-expect-error -- no types
 import pluginJest from 'eslint-plugin-jest'
 import globals from 'globals'
@@ -14,7 +14,7 @@ export function jest(): Linter.FlatConfig[] {
     {
       files: ['**/*.{spec,test}.{js,cjs,mjs,jsx,ts,tsx}'],
       plugins: {
-        jest: pluginJest,
+        jest: pluginJest as ESLint.Plugin,
       },
       rules: {
         'jest/consistent-test-it': [

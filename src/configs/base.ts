@@ -227,7 +227,7 @@ export function base(): Linter.FlatConfig[] {
         'no-multi-str': 'error',
         // This is handled by unicorn.
         'no-negated-condition': 'off',
-        'no-nested-ternary': 'error',
+        'no-nested-ternary': 'off',
         'no-new': 'error',
         'no-new-func': 'error',
         'no-new-native-nonconstructor': 'error',
