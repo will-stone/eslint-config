@@ -1,5 +1,11 @@
 # @will-stone/eslint-config
 
+## 0.12.0
+
+### Minor Changes
+
+- a40badd: Turn off very noisy TS rule: no-unsafe-return.
+
 ## 0.11.0
 
 ### Minor Changes
