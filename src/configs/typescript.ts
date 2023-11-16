@@ -141,7 +141,7 @@ export function typescript(options?: Options): Linter.FlatConfig[] {
               '@typescript-eslint/prefer-nullish-coalescing': 'off',
               '@typescript-eslint/prefer-optional-chain': 'off',
               '@typescript-eslint/prefer-readonly': 'warn',
-              '@typescript-eslint/prefer-readonly-parameter-types': 'error',
+              '@typescript-eslint/prefer-readonly-parameter-types': 'off',
               '@typescript-eslint/prefer-reduce-type-parameter': 'warn',
               '@typescript-eslint/prefer-regexp-exec': 'warn',
               '@typescript-eslint/prefer-return-this-type': 'warn',
