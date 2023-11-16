@@ -133,7 +133,7 @@ export function typescript(options?: Options): Linter.FlatConfig[] {
               '@typescript-eslint/no-unsafe-call': 'error',
               '@typescript-eslint/no-unsafe-enum-comparison': 'error',
               '@typescript-eslint/no-unsafe-member-access': 'error',
-              '@typescript-eslint/no-unsafe-return': 'error',
+              '@typescript-eslint/no-unsafe-return': 'off',
               '@typescript-eslint/no-unsafe-unary-minus': 'error',
               '@typescript-eslint/non-nullable-type-assertion-style': 'off',
               '@typescript-eslint/prefer-destructuring': 'warn',
