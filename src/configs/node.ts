@@ -1,4 +1,4 @@
-import type { Linter } from 'eslint'
+import type { ESLint, Linter } from 'eslint'
 // @ts-expect-error -- no types
 import pluginNode from 'eslint-plugin-n'
 import globals from 'globals'
@@ -10,7 +10,7 @@ export function node(): Linter.FlatConfig[] {
         globals: globals.node,
       },
       plugins: {
-        n: pluginNode,
+        n: pluginNode as ESLint.Plugin,
       },
       rules: {
         'n/callback-return': 'error',

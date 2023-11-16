@@ -1,4 +1,4 @@
-import type { Linter } from 'eslint'
+import type { ESLint, Linter } from 'eslint'
 // @ts-expect-error -- no types
 import pluginJsxA11y from 'eslint-plugin-jsx-a11y'
 // @ts-expect-error -- no types
@@ -20,9 +20,9 @@ export function react(): Linter.FlatConfig[] {
         },
       },
       plugins: {
-        'jsx-a11y': pluginJsxA11y,
-        'react': pluginReact,
-        'react-hooks': pluginReactHooks,
+        'jsx-a11y': pluginJsxA11y as ESLint.Plugin,
+        'react': pluginReact as ESLint.Plugin,
+        'react-hooks': pluginReactHooks as ESLint.Plugin,
       },
       rules: {
         'jsx-a11y/alt-text': 'error',

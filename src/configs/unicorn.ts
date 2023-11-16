@@ -1,4 +1,4 @@
-import type { Linter } from 'eslint'
+import type { ESLint, Linter } from 'eslint'
 // @ts-expect-error -- no types
 import pluginUnicorn from 'eslint-plugin-unicorn'
 
@@ -6,7 +6,7 @@ export function unicorn(): Linter.FlatConfig[] {
   return [
     {
       plugins: {
-        unicorn: pluginUnicorn,
+        unicorn: pluginUnicorn as ESLint.Plugin,
       },
       rules: {
         // This rule is superseded by the unicorn version below
@@ -57,7 +57,7 @@ export function unicorn(): Linter.FlatConfig[] {
         ],
         'unicorn/no-lonely-if': 'warn',
         'unicorn/no-negated-condition': 'warn',
-        'unicorn/no-nested-ternary': 'warn',
+        'unicorn/no-nested-ternary': 'off',
         'unicorn/no-new-array': 'warn',
         'unicorn/no-new-buffer': 'warn',
         'unicorn/no-null': 'off',
