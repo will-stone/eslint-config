@@ -1,5 +1,11 @@
 # @will-stone/eslint-config
 
+## 0.11.0
+
+### Minor Changes
+
+- 6e05d23: Turn off very noisy TS rule: prefer-readonly-parameter-types.
+
 ## 0.10.0
 
 ### Minor Changes
