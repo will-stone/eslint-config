@@ -10,6 +10,7 @@ import { node } from './configs/node'
 import { prettier } from './configs/prettier'
 import { react } from './configs/react'
 import { switchCase } from './configs/switch-case'
+import { tailwind } from './configs/tailwind'
 import { typescript } from './configs/typescript'
 import { unicorn } from './configs/unicorn'
 import type { Options } from './types'
@@ -44,7 +45,7 @@ export function factory(options?: Options): Linter.FlatConfig[] {
   }
 
   if (isTailwind) {
-    configs.push(node())
+    configs.push(tailwind())
   }
 
   if (testingFramework === 'jest') {
