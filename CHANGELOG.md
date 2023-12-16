@@ -1,5 +1,11 @@
 # @will-stone/eslint-config
 
+## 0.12.2
+
+### Patch Changes
+
+- e1c73a4: Fixed Tailwind rules not loading.
+
 ## 0.12.1
 
 ### Patch Changes
