@@ -1,5 +1,11 @@
 # @will-stone/eslint-config
 
+## 0.13.0
+
+### Minor Changes
+
+- 9dfa9a6: Time to go all ESM: turned on `unicorn/prefer-module` rule.
+
 ## 0.12.2
 
 ### Patch Changes
