@@ -110,7 +110,7 @@ export function unicorn(): Linter.FlatConfig[] {
         'unicorn/prefer-modern-math-apis': 'warn',
         // Not ready yet for ESM modules
         // https://github.com/microsoft/TypeScript/issues/33079
-        'unicorn/prefer-module': 'off',
+        'unicorn/prefer-module': 'warn',
         'unicorn/prefer-native-coercion-functions': 'warn',
         'unicorn/prefer-negative-index': 'warn',
         // TODO seems like this is not well supported by webpack yet
