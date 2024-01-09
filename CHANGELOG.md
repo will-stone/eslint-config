@@ -1,5 +1,12 @@
 # @will-stone/eslint-config
 
+## 0.14.0
+
+### Minor Changes
+
+- da546f1: Support `unicorn/no-unnecessary-polyfills`.
+- da546f1: Support `@typescript-eslint/no-useless-template-literals`.
+
 ## 0.13.0
 
 ### Minor Changes
