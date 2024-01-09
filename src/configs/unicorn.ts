@@ -68,6 +68,7 @@ export function unicorn(): Linter.FlatConfig[] {
         'unicorn/no-this-assignment': 'error',
         'unicorn/no-typeof-undefined': 'warn',
         'unicorn/no-unnecessary-await': 'warn',
+        'unicorn/no-unnecessary-polyfills': 'error',
         'unicorn/no-unreadable-array-destructuring': 'error',
         'unicorn/no-unreadable-iife': 'error',
         // Turned off for now, even Sindre doesn't like it:
