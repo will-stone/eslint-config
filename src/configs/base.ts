@@ -150,7 +150,7 @@ export function base(): Linter.FlatConfig[] {
         'id-match': 'off',
         'init-declarations': 'off',
         'line-comment-position': 'error',
-        'lines-between-class-members': 'warn',
+        'lines-between-class-members': 'off',
         'logical-assignment-operators': ['warn', 'always'],
         'max-classes-per-file': 'off',
         'max-depth': 'off',
@@ -159,7 +159,7 @@ export function base(): Linter.FlatConfig[] {
         'max-nested-callbacks': 'error',
         'max-params': 'off',
         'max-statements': 'off',
-        'max-statements-per-line': 'error',
+        'max-statements-per-line': 'off',
         'multiline-comment-style': 'off',
         'new-cap': 'error',
         'no-alert': 'error',
@@ -202,7 +202,7 @@ export function base(): Linter.FlatConfig[] {
         'no-extra-bind': 'warn',
         'no-extra-boolean-cast': 'warn',
         'no-extra-label': 'warn',
-        'no-fallthrough': 'error',
+        'no-fallthrough': ['error', { allowEmptyCase: true }],
         'no-func-assign': 'error',
         'no-global-assign': 'error',
         'no-implicit-coercion': 'warn',
@@ -306,17 +306,7 @@ export function base(): Linter.FlatConfig[] {
         'object-shorthand': ['warn', 'always', { ignoreConstructors: true }],
         'one-var': ['warn', 'never'],
         'operator-assignment': ['warn', 'never'],
-        'padding-line-between-statements': [
-          'warn',
-          { blankLine: 'always', next: '*', prev: 'multiline-block-like' },
-          { blankLine: 'always', next: 'multiline-block-like', prev: '*' },
-          { blankLine: 'always', next: '*', prev: 'multiline-const' },
-          { blankLine: 'always', next: 'multiline-const', prev: '*' },
-          { blankLine: 'always', next: '*', prev: 'multiline-let' },
-          { blankLine: 'always', next: 'multiline-let', prev: '*' },
-          { blankLine: 'always', next: '*', prev: 'multiline-var' },
-          { blankLine: 'always', next: 'multiline-var', prev: '*' },
-        ],
+        'padding-line-between-statements': 'off',
         // Can cause issues when Prettier is enabled
         'prefer-arrow-callback': 'off',
         'prefer-const': 'warn',
@@ -352,7 +342,7 @@ export function base(): Linter.FlatConfig[] {
         // Not required as one-var rule is set to 'error' and so there will
         // never be vars to sort.
         'sort-vars': 'off',
-        'spaced-comment': ['warn', 'always', { markers: ['/'] }],
+        'spaced-comment': 'off',
         // Generally gets in the way as it's difficult to know when this may be
         // required.
         'strict': 'off',
