@@ -100,7 +100,6 @@ export function typescript(options?: Options): Linter.FlatConfig[] {
         '@typescript-eslint/triple-slash-reference': 'error',
         'no-array-constructor': 'off',
         'no-empty-function': 'off',
-        'no-extra-semi': 'off',
 
         /**
          * These require type checking
@@ -111,6 +110,7 @@ export function typescript(options?: Options): Linter.FlatConfig[] {
               '@typescript-eslint/consistent-type-exports': 'warn',
               '@typescript-eslint/dot-notation': 'off',
               '@typescript-eslint/naming-convention': 'off',
+              '@typescript-eslint/no-array-delete': 'off',
               '@typescript-eslint/no-base-to-string': 'off',
               '@typescript-eslint/no-confusing-void-expression': 'off',
               '@typescript-eslint/no-duplicate-type-constituents': 'off',
@@ -141,6 +141,7 @@ export function typescript(options?: Options): Linter.FlatConfig[] {
               '@typescript-eslint/prefer-includes': 'off',
               '@typescript-eslint/prefer-nullish-coalescing': 'off',
               '@typescript-eslint/prefer-optional-chain': 'off',
+              '@typescript-eslint/prefer-promise-reject-errors': 'off',
               '@typescript-eslint/prefer-readonly': 'off',
               '@typescript-eslint/prefer-readonly-parameter-types': 'off',
               '@typescript-eslint/prefer-reduce-type-parameter': 'off',
@@ -160,35 +161,10 @@ export function typescript(options?: Options): Linter.FlatConfig[] {
           : {}),
 
         /**
-         * Off for Prettier
-         * https://github.com/prettier/eslint-config-prettier/blob/main/index.js
-         */
-        '@typescript-eslint/block-spacing': 'off',
-        '@typescript-eslint/brace-style': 'off',
-        '@typescript-eslint/comma-dangle': 'off',
-        '@typescript-eslint/comma-spacing': 'off',
-        '@typescript-eslint/func-call-spacing': 'off',
-        '@typescript-eslint/indent': 'off',
-        '@typescript-eslint/key-spacing': 'off',
-        '@typescript-eslint/keyword-spacing': 'off',
-        '@typescript-eslint/lines-around-comment': 'off',
-        '@typescript-eslint/member-delimiter-style': 'off',
-        '@typescript-eslint/no-extra-parens': 'off',
-        '@typescript-eslint/no-extra-semi': 'off',
-        '@typescript-eslint/object-curly-spacing': 'off',
-        '@typescript-eslint/quotes': 'off',
-        '@typescript-eslint/semi': 'off',
-        '@typescript-eslint/space-before-blocks': 'off',
-        '@typescript-eslint/space-before-function-paren': 'off',
-        '@typescript-eslint/space-infix-ops': 'off',
-        '@typescript-eslint/type-annotation-spacing': 'off',
-
-        /**
          * Superseded by TS rules below
          */
         'class-methods-use-this': 'off',
         'default-param-last': 'off',
-        'lines-between-class-members': 'off',
         'no-duplicate-imports': 'off',
         'no-invalid-this': 'off',
         'no-loop-func': 'off',
@@ -200,7 +176,6 @@ export function typescript(options?: Options): Linter.FlatConfig[] {
         'no-unused-vars': 'off',
         'no-use-before-define': 'off',
         'no-useless-constructor': 'off',
-        'padding-line-between-statements': 'off',
 
         /**
          * The rest
@@ -224,7 +199,6 @@ export function typescript(options?: Options): Linter.FlatConfig[] {
         '@typescript-eslint/explicit-function-return-type': 'off',
         '@typescript-eslint/explicit-member-accessibility': 'warn',
         '@typescript-eslint/init-declarations': 'off',
-        '@typescript-eslint/lines-between-class-members': 'off',
         '@typescript-eslint/max-params': 'off',
         '@typescript-eslint/member-ordering': 'error',
         '@typescript-eslint/method-signature-style': 'warn',
@@ -245,7 +219,6 @@ export function typescript(options?: Options): Linter.FlatConfig[] {
         '@typescript-eslint/no-require-imports': 'error',
         '@typescript-eslint/no-restricted-imports': 'off',
         '@typescript-eslint/no-shadow': ['error'],
-        '@typescript-eslint/no-type-alias': 'off',
         '@typescript-eslint/no-unnecessary-type-constraint': 'warn',
         '@typescript-eslint/no-unsafe-declaration-merging': 'error',
         '@typescript-eslint/no-unused-expressions': ['error'],
@@ -261,7 +234,6 @@ export function typescript(options?: Options): Linter.FlatConfig[] {
         '@typescript-eslint/no-use-before-define': 'error',
         '@typescript-eslint/no-useless-constructor': 'error',
         '@typescript-eslint/no-useless-empty-export': 'warn',
-        '@typescript-eslint/padding-line-between-statements': 'off',
         '@typescript-eslint/parameter-properties': 'off',
         '@typescript-eslint/prefer-enum-initializers': 'error',
         // Unicorn does this better by providing a fixer

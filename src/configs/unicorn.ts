@@ -26,7 +26,6 @@ export function unicorn(): Linter.FlatConfig[] {
         // Don't care how if(blah.length) is checked
         'unicorn/explicit-length-check': 'off',
         'unicorn/filename-case': 'error',
-        'unicorn/import-index': ['warn', { ignoreImports: true }],
         // TODO Not sure if this is useful yet
         'unicorn/import-style': 'off',
         'unicorn/new-for-builtins': 'warn',
@@ -71,9 +70,6 @@ export function unicorn(): Linter.FlatConfig[] {
         'unicorn/no-unnecessary-polyfills': 'error',
         'unicorn/no-unreadable-array-destructuring': 'error',
         'unicorn/no-unreadable-iife': 'error',
-        // Turned off for now, even Sindre doesn't like it:
-        // https://github.com/sindresorhus/eslint-plugin-unicorn/issues/153
-        'unicorn/no-unsafe-regex': 'off',
         // Recommended config turned this off so I will too
         'unicorn/no-unused-properties': 'off',
         'unicorn/no-useless-fallback-in-spread': 'warn',
@@ -118,7 +114,6 @@ export function unicorn(): Linter.FlatConfig[] {
         'unicorn/prefer-node-protocol': 'off',
         'unicorn/prefer-number-properties': 'warn',
         'unicorn/prefer-object-from-entries': 'warn',
-        'unicorn/prefer-object-has-own': 'warn',
         'unicorn/prefer-optional-catch-binding': 'warn',
         'unicorn/prefer-prototype-methods': 'warn',
         'unicorn/prefer-query-selector': 'warn',
@@ -136,7 +131,6 @@ export function unicorn(): Linter.FlatConfig[] {
         'unicorn/prefer-top-level-await': 'error',
         'unicorn/prefer-type-error': 'warn',
         'unicorn/prevent-abbreviations': 'off',
-        'unicorn/regex-shorthand': 'warn',
         'unicorn/relative-url-style': 'warn',
         'unicorn/require-array-join-separator': 'warn',
         'unicorn/require-number-to-fixed-digits-argument': 'warn',
