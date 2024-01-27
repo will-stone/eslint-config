@@ -1,5 +1,11 @@
 # @will-stone/eslint-config
 
+## 0.15.0
+
+### Minor Changes
+
+- 05330fb: Turn off deprecated stylistic rules.
+
 ## 0.14.0
 
 ### Minor Changes
