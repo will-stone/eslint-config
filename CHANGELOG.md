@@ -1,6 +1,11 @@
 # @will-stone/eslint-config
 
-## 1.0.0
+## 7.0.0
+
+Why the massive jump in versions? I originally had an npm package published
+under the same name. It was deprecated but npm doesn't allow for overwriting
+versions. The last major of that old config was v6, so going with v7 so I can
+start again.
 
 ### Major Changes
 
