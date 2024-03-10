@@ -1,5 +1,12 @@
 # @will-stone/eslint-config
 
+## 1.0.0
+
+### Major Changes
+
+- 7d73d56: Release first stable version. Updated all configs and deps, adding
+  support for new rules, such as `react/checked-requires-onchange-or-readonly`.
+
 ## 0.15.0
 
 ### Minor Changes
