@@ -15,7 +15,6 @@ export function typescript(options?: Options): Linter.FlatConfig[] {
     {
       files: ['**/*.{ts,tsx,astro}'],
       languageOptions: {
-        // @ts-expect-error -- does not confirm to type
         parser: parserTypescript,
         parserOptions: {
           ...(tsconfigPath
@@ -107,6 +106,7 @@ export function typescript(options?: Options): Linter.FlatConfig[] {
         ...(tsconfigPath
           ? {
               '@typescript-eslint/await-thenable': 'off',
+              '@typescript-eslint/consistent-return': 'off',
               '@typescript-eslint/consistent-type-exports': 'warn',
               '@typescript-eslint/dot-notation': 'off',
               '@typescript-eslint/naming-convention': 'off',
@@ -138,6 +138,7 @@ export function typescript(options?: Options): Linter.FlatConfig[] {
               '@typescript-eslint/no-useless-template-literals': 'error',
               '@typescript-eslint/non-nullable-type-assertion-style': 'off',
               '@typescript-eslint/prefer-destructuring': 'off',
+              '@typescript-eslint/prefer-find': 'off',
               '@typescript-eslint/prefer-includes': 'off',
               '@typescript-eslint/prefer-nullish-coalescing': 'off',
               '@typescript-eslint/prefer-optional-chain': 'off',

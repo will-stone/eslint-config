@@ -8,7 +8,6 @@ export function astro(): Linter.FlatConfig[] {
     {
       files: ['**/*.astro'],
       languageOptions: {
-        // @ts-expect-error -- does not confirm to type
         parser: parserAstro,
         parserOptions: {
           extraFileExtensions: ['.astro'],
