@@ -1,5 +1,12 @@
 # @will-stone/eslint-config
 
+## 7.1.0
+
+### Minor Changes
+
+- f176446: Added support for
+  "@typescript-eslint/use-unknown-in-catch-callback-variable" (off).
+
 ## 7.0.0
 
 Why the massive jump in versions? I originally had an npm package published
