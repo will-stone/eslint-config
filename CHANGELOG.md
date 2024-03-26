@@ -1,5 +1,12 @@
 # @will-stone/eslint-config
 
+## 7.2.0
+
+### Minor Changes
+
+- 447a526: Added support for `astro/missing-client-only-directive-value=error`,
+  and `@typescript-eslint/only-throw-error=off`.
+
 ## 7.1.0
 
 ### Minor Changes
