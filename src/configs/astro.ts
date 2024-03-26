@@ -19,6 +19,7 @@ export function astro(): Linter.FlatConfig[] {
         astro: pluginAstro,
       },
       rules: {
+        'astro/missing-client-only-directive-value': 'error',
         'astro/no-conflict-set-directives': 'error',
         'astro/no-deprecated-astro-canonicalurl': 'error',
         'astro/no-deprecated-astro-fetchcontent': 'error',
