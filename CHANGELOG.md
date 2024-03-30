@@ -1,5 +1,11 @@
 # @will-stone/eslint-config
 
+## 7.2.1
+
+### Patch Changes
+
+- 3e7f7a4: Removed deprecated rule.
+
 ## 7.2.0
 
 ### Minor Changes
