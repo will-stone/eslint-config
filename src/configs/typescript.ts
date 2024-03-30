@@ -121,7 +121,6 @@ export function typescript(options?: Options): Linter.FlatConfig[] {
               '@typescript-eslint/no-misused-promises': 'off',
               '@typescript-eslint/no-mixed-enums': 'off',
               '@typescript-eslint/no-redundant-type-constituents': 'off',
-              '@typescript-eslint/no-throw-literal': 'off',
               '@typescript-eslint/no-unnecessary-boolean-literal-compare':
                 'off',
               '@typescript-eslint/no-unnecessary-condition': 'off',
