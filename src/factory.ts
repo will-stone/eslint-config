@@ -7,9 +7,7 @@ import { ignores } from './configs/ignores'
 import { imports } from './configs/imports'
 import { jest } from './configs/jest'
 import { node } from './configs/node'
-import { prettier } from './configs/prettier'
 import { react } from './configs/react'
-import { switchCase } from './configs/switch-case'
 import { tailwind } from './configs/tailwind'
 import { typescript } from './configs/typescript'
 import { unicorn } from './configs/unicorn'
@@ -20,7 +18,7 @@ import { checkEnvironment } from './utils'
  * Construct an array of ESLint flat config items.
  */
 export function factory(options?: Options): Linter.FlatConfig[] {
-  const { isGitIgnore, isNode, isPrettier, isTailwind, testingFramework } =
+  const { isGitIgnore, isNode, isTailwind, testingFramework } =
     checkEnvironment()
 
   const configs: Linter.FlatConfig[][] = []
@@ -33,7 +31,6 @@ export function factory(options?: Options): Linter.FlatConfig[] {
     ignores(),
     base(),
     imports(),
-    switchCase(),
     unicorn(),
     typescript(options),
     astro(),
@@ -50,10 +47,6 @@ export function factory(options?: Options): Linter.FlatConfig[] {
 
   if (testingFramework === 'jest') {
     configs.push(jest())
-  }
-
-  if (isPrettier) {
-    configs.push(prettier())
   }
 
   const merged = configs.flat()

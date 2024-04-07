@@ -6,13 +6,11 @@ import type { PackageJson } from 'type-fest'
 export function checkEnvironment(): {
   isGitIgnore: boolean
   isNode: boolean
-  isPrettier: boolean
   isTailwind: boolean
   testingFramework: 'jest' | null
 } {
   const isGitIgnore = existsSync('.gitignore')
   let isNodeEngine = false
-  let isPrettier = false
   let isTailwind = false
   let testingFramework = null
 
@@ -42,16 +40,6 @@ export function checkEnvironment(): {
     }
 
     if (
-      !isPrettier &&
-      Boolean(
-        packageJson.dependencies?.prettier ||
-          packageJson.devDependencies?.prettier,
-      )
-    ) {
-      isPrettier = true
-    }
-
-    if (
       !isTailwind &&
       Boolean(
         packageJson.dependencies?.tailwindcss ||
@@ -68,7 +56,6 @@ export function checkEnvironment(): {
   return {
     isGitIgnore,
     isNode,
-    isPrettier,
     isTailwind,
     testingFramework,
   }
