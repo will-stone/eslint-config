@@ -6,6 +6,7 @@ export function tailwind(): Linter.FlatConfig[] {
   return [
     {
       files: ['**/*.{jsx,tsx,astro}'],
+      name: 'will-stone/tailwind',
       plugins: { tailwindcss: pluginTailwind as ESLint.Plugin },
       rules: {
         'tailwindcss/classnames-order': 'warn',

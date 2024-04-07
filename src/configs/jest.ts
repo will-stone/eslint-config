@@ -10,9 +10,11 @@ export function jest(): Linter.FlatConfig[] {
       languageOptions: {
         globals: globals.jest,
       },
+      name: 'will-stone/jest/globals',
     },
     {
       files: ['**/*.{spec,test}.{js,cjs,mjs,jsx,ts,tsx}'],
+      name: 'will-stone/jest/base',
       plugins: {
         jest: pluginJest as ESLint.Plugin,
       },
@@ -75,6 +77,7 @@ export function jest(): Linter.FlatConfig[] {
     },
     {
       files: ['**/*.{spec,test}.{ts,tsx}'],
+      name: 'will-stone/jest/typescript',
       rules: {
         'jest/no-untyped-mock-factory': 'warn',
       },

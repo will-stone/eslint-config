@@ -25,6 +25,7 @@ export function typescript(options?: Options): Linter.FlatConfig[] {
             : {}),
         },
       },
+      name: 'will-stone/typescript',
       plugins: {
         // @ts-expect-error -- does not confirm to type
         '@typescript-eslint': pluginTypescript,

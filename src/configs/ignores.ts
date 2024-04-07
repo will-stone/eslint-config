@@ -6,6 +6,7 @@ export function ignores(): Linter.FlatConfig[] {
   return [
     {
       ignores: GLOB_EXCLUDE,
+      name: 'will-stone/ignores',
     },
   ]
 }

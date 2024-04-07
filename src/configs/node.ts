@@ -9,6 +9,7 @@ export function node(): Linter.FlatConfig[] {
       languageOptions: {
         globals: globals.node,
       },
+      name: 'will-stone/node',
       plugins: {
         n: pluginNode as ESLint.Plugin,
       },

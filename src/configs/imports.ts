@@ -7,6 +7,7 @@ import pluginSimpleImport from 'eslint-plugin-simple-import-sort'
 export function imports(): Linter.FlatConfig[] {
   return [
     {
+      name: 'will-stone/imports',
       plugins: {
         'import': pluginImport as ESLint.Plugin,
         'simple-import-sort': pluginSimpleImport as ESLint.Plugin,

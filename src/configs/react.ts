@@ -19,6 +19,7 @@ export function react(): Linter.FlatConfig[] {
           },
         },
       },
+      name: 'will-stone/react',
       plugins: {
         'jsx-a11y': pluginJsxA11y as ESLint.Plugin,
         'react': pluginReact as ESLint.Plugin,

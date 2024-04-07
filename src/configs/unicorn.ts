@@ -5,6 +5,7 @@ import pluginUnicorn from 'eslint-plugin-unicorn'
 export function unicorn(): Linter.FlatConfig[] {
   return [
     {
+      name: 'will-stone/unicorn',
       plugins: {
         unicorn: pluginUnicorn as ESLint.Plugin,
       },
@@ -30,12 +31,14 @@ export function unicorn(): Linter.FlatConfig[] {
         'unicorn/import-style': 'off',
         'unicorn/new-for-builtins': 'warn',
         'unicorn/no-abusive-eslint-disable': 'error',
+        'unicorn/no-anonymous-default-export': 'error',
         'unicorn/no-array-callback-reference': 'off',
         'unicorn/no-array-for-each': 'warn',
         'unicorn/no-array-method-this-argument': 'warn',
         'unicorn/no-array-push-push': 'warn',
         'unicorn/no-array-reduce': 'error',
         'unicorn/no-await-expression-member': 'warn',
+        'unicorn/no-await-in-promise-methods': 'error',
         'unicorn/no-console-spaces': 'warn',
         'unicorn/no-document-cookie': 'error',
         // TODO turn back on when it can exclude files. As this warns about the
@@ -62,6 +65,7 @@ export function unicorn(): Linter.FlatConfig[] {
         'unicorn/no-null': 'off',
         'unicorn/no-object-as-default-parameter': 'error',
         'unicorn/no-process-exit': 'error',
+        'unicorn/no-single-promise-in-promise-methods': 'warn',
         'unicorn/no-static-only-class': 'error',
         'unicorn/no-thenable': 'error',
         'unicorn/no-this-assignment': 'error',

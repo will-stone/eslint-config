@@ -21,6 +21,7 @@ export function base(): Linter.FlatConfig[] {
         // as "warn".
         reportUnusedDisableDirectives: true,
       },
+      name: 'will-stone/base',
       rules: {
         /**
          * Built-in rules

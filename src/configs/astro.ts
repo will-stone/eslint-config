@@ -14,6 +14,7 @@ export function astro(): Linter.FlatConfig[] {
           parser: parserTypescript,
         },
       },
+      name: 'will-stone/astro',
       plugins: {
         // @ts-expect-error -- does not confirm to type
         astro: pluginAstro,
