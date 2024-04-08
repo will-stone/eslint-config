@@ -1,5 +1,18 @@
 # @will-stone/eslint-config
 
+## 8.0.0
+
+### Major Changes
+
+- 44b0164: Stopped supporting Prettier from ESLint as it's slower than running
+  Prettier directly:
+  https://prettier.io/docs/en/integrating-with-linters.html#notes
+- 44b0164: Removed unsupported `eslint-plugin-switch-case` plugin.
+
+### Minor Changes
+
+- 3a607fd: Add support for `n/prefer-node-protocol`.
+
 ## 7.2.1
 
 ### Patch Changes
