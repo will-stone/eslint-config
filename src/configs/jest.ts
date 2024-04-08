@@ -38,7 +38,6 @@ export function jest(): Linter.FlatConfig[] {
         'jest/no-focused-tests': 'error',
         'jest/no-hooks': 'off',
         'jest/no-identical-title': 'error',
-        'jest/no-if': 'error',
         'jest/no-interpolation-in-snapshots': 'error',
         'jest/no-jasmine-globals': 'warn',
         'jest/no-large-snapshots': 'off',
