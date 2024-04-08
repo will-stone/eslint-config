@@ -1,5 +1,4 @@
 import type { ESLint, Linter } from 'eslint'
-// @ts-expect-error -- no types
 import pluginNode from 'eslint-plugin-n'
 import globals from 'globals'
 
@@ -17,6 +16,9 @@ export function node(): Linter.FlatConfig[] {
         'n/callback-return': 'error',
         'n/global-require': 'error',
         'n/handle-callback-err': 'error',
+        // Not sure I need this...?
+        // TODO check others' configs to see how they use this.
+        'n/hashbang': 'off',
         'n/no-mixed-requires': 'error',
         'n/no-new-require': 'error',
         'n/no-path-concat': 'error',
@@ -26,9 +28,6 @@ export function node(): Linter.FlatConfig[] {
         'n/no-restricted-require': 'off',
         // I like synchronous functions
         'n/no-sync': 'off',
-        // Not sure I need this...?
-        // TODO check others' configs to see how they use this.
-        'n/shebang': 'off',
 
         // Turn these off until I work out if I need them
         'n/exports-style': 'off',
@@ -54,6 +53,7 @@ export function node(): Linter.FlatConfig[] {
         'n/prefer-global/text-encoder': 'off',
         'n/prefer-global/url': 'off',
         'n/prefer-global/url-search-params': 'off',
+        'n/prefer-node-protocol': 'warn',
         'n/prefer-promises/dns': 'off',
         'n/prefer-promises/fs': 'off',
         'n/process-exit-as-throw': 'off',
