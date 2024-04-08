@@ -1,5 +1,11 @@
 # @will-stone/eslint-config
 
+## 8.0.1
+
+### Patch Changes
+
+- 9222b00: Remove deprecated `jest/no-if` rule.
+
 ## 8.0.0
 
 ### Major Changes
