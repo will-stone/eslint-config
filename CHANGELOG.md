@@ -1,5 +1,11 @@
 # @will-stone/eslint-config
 
+## 8.0.2
+
+### Patch Changes
+
+- fba1aa0: Upgrade deps.
+
 ## 8.0.1
 
 ### Patch Changes
