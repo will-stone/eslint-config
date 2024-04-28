@@ -1,3 +1,12 @@
+# Changelog
+
+## [8.0.3](https://github.com/will-stone/eslint-config/compare/v8.0.2...v8.0.3) (2024-04-28)
+
+### Patches
+
+- Upgrade deps
+  ([5ccdbe2](https://github.com/will-stone/eslint-config/commit/5ccdbe29cc5cfdde830cd4f49470d129cba02a0d))
+
 # @will-stone/eslint-config
 
 ## 8.0.2
