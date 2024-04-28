@@ -1,5 +1,12 @@
 # Changelog
 
+## [8.0.4](https://github.com/will-stone/eslint-config/compare/v8.0.3...v8.0.4) (2024-04-28)
+
+### Patches
+
+- Run hooks and check using dummy release commit
+  ([cf7736e](https://github.com/will-stone/eslint-config/commit/cf7736e8d1838334602ee8adf000b09801aebea4))
+
 ## [8.0.3](https://github.com/will-stone/eslint-config/compare/v8.0.2...v8.0.3) (2024-04-28)
 
 ### Patches
