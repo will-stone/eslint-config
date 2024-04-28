@@ -65,7 +65,7 @@
     "load-json-file": "^7.0.1"
   },
   "devDependencies": {
-    "@commits-with-character/conventional-changelog-preset": "^0.0.2",
+    "@commits-with-character/conventional-changelog-preset": "^0.0.3",
     "@eslint/config-inspector": "^0.4.6",
     "@release-it/conventional-changelog": "^8.0.1",
     "@types/confusing-browser-globals": "^1.0.3",
