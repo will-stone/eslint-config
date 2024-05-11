@@ -1,5 +1,12 @@
 # Changelog
 
+## [9.0.0](https://github.com/will-stone/eslint-config/compare/v8.0.7...v9.0.0) (2024-05-11)
+
+### Major changes
+
+- Add support for new rules
+  ([3e3e745](https://github.com/will-stone/eslint-config/commit/3e3e7453de97d6b6aee660863b2fadb715040e7f))
+
 ## [8.0.7](https://github.com/will-stone/eslint-config/compare/v8.0.5...v8.0.7) (2024-05-09)
 
 ### Patches
