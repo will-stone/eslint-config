@@ -1,5 +1,17 @@
 # Changelog
 
+## [9.1.0](https://github.com/will-stone/eslint-config/compare/v9.0.0...v9.1.0) (2024-06-26)
+
+### Minor changes
+
+- Add unicorn/no-negation-in-equality-check
+  ([4a963f1](https://github.com/will-stone/eslint-config/commit/4a963f14cecd57e391a6e1bdc24de4783c1dda23))
+
+### Patches
+
+- Remove deprecated rules
+  ([9de8f8d](https://github.com/will-stone/eslint-config/commit/9de8f8da9b92234db223e985886a5567a44b855e))
+
 ## [9.0.0](https://github.com/will-stone/eslint-config/compare/v8.0.7...v9.0.0) (2024-05-11)
 
 ### Major changes
