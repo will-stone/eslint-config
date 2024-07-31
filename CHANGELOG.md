@@ -1,5 +1,12 @@
 # Changelog
 
+## [10.0.0](https://github.com/will-stone/eslint-config/compare/v9.1.0...v10.0.0) (2024-07-31)
+
+### Major changes
+
+- Upgrade to ESLint v9
+  ([8a3ad56](https://github.com/will-stone/eslint-config/commit/8a3ad564c548b374cabf2e687f21e7be8e2f0b68))
+
 ## [9.1.0](https://github.com/will-stone/eslint-config/compare/v9.0.0...v9.1.0) (2024-06-26)
 
 ### Minor changes
