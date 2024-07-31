@@ -19,6 +19,9 @@ export function astro(): Linter.FlatConfig[] {
         astro: pluginAstro,
       },
       rules: {
+        // Astro passes Components to the view which this rule doesn't like.
+        'no-useless-assignment': 'off',
+
         'astro/missing-client-only-directive-value': 'error',
         'astro/no-conflict-set-directives': 'error',
         'astro/no-deprecated-astro-canonicalurl': 'error',
