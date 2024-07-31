@@ -44,43 +44,46 @@
   },
   "prettier": "@will-stone/prettier-config",
   "dependencies": {
-    "@typescript-eslint/eslint-plugin": "^7.14.1",
-    "@typescript-eslint/parser": "^7.14.1",
+    "@typescript-eslint/eslint-plugin": "^8.0.0",
+    "@typescript-eslint/parser": "^8.0.0",
     "astro-eslint-parser": "^1.0.2",
     "confusing-browser-globals": "^1.0.11",
-    "eslint-config-flat-gitignore": "^0.1.5",
-    "eslint-plugin-astro": "^1.2.2",
-    "eslint-plugin-i": "^2.29.1",
+    "eslint-config-flat-gitignore": "^0.1.8",
+    "eslint-plugin-astro": "^1.2.3",
+    "eslint-plugin-import-x": "^3.1.0",
     "eslint-plugin-jest": "^28.6.0",
     "eslint-plugin-jsx-a11y": "^6.9.0",
-    "eslint-plugin-n": "^17.9.0",
-    "eslint-plugin-react": "^7.34.3",
+    "eslint-plugin-n": "^17.10.1",
+    "eslint-plugin-react": "^7.35.0",
     "eslint-plugin-react-hooks": "^4.6.2",
-    "eslint-plugin-simple-import-sort": "^12.1.0",
+    "eslint-plugin-simple-import-sort": "^12.1.1",
     "eslint-plugin-tailwindcss": "^3.17.4",
-    "eslint-plugin-unicorn": "^54.0.0",
-    "glob": "^10.4.2",
-    "globals": "^15.6.0",
-    "globby": "^14.0.1",
-    "load-json-file": "^7.0.1"
+    "eslint-plugin-unicorn": "^55.0.0",
+    "glob": "^11.0.0",
+    "globals": "^15.8.0"
   },
   "devDependencies": {
     "@commits-with-character/conventional-changelog-preset": "^0.2.2",
-    "@eslint/config-inspector": "^0.5.0",
+    "@eslint/config-inspector": "^0.5.2",
     "@release-it/conventional-changelog": "^8.0.1",
     "@types/confusing-browser-globals": "^1.0.3",
-    "@types/eslint": "^8.56.10",
-    "@types/node": "^20.14.9",
+    "@types/eslint": "^9.6.0",
+    "@types/node": "^22.0.1",
     "@will-stone/prettier-config": "^8.0.1",
-    "husky": "^9.0.11",
+    "husky": "^9.1.4",
     "lint-staged": "^15.2.7",
-    "prettier": "^3.3.2",
-    "release-it": "^17.4.0",
-    "tsup": "^8.1.0",
-    "type-fest": "^4.20.1",
-    "typescript": "^5.5.2"
+    "prettier": "^3.3.3",
+    "release-it": "^17.6.0",
+    "tsup": "^8.2.3",
+    "type-fest": "^4.23.0",
+    "typescript": "^5.5.4"
   },
   "peerDependencies": {
-    "eslint": ">=8.57.0"
+    "eslint": ">=9.8.0"
+  },
+  "overrides": {
+    "@typescript-eslint/eslint-plugin": "^8.0.0",
+    "@typescript-eslint/parser": "^8.0.0",
+    "eslint": ">=9.8.0"
   }
 }

@@ -1,13 +1,12 @@
-import type { ESLint, Linter } from 'eslint'
-// @ts-expect-error -- no types
+import type { Linter } from 'eslint'
 import pluginUnicorn from 'eslint-plugin-unicorn'
 
-export function unicorn(): Linter.FlatConfig[] {
+export function unicorn(): Linter.Config[] {
   return [
     {
       name: 'will-stone/unicorn',
       plugins: {
-        unicorn: pluginUnicorn as ESLint.Plugin,
+        unicorn: pluginUnicorn,
       },
       rules: {
         // This rule is superseded by the unicorn version below
@@ -59,6 +58,7 @@ export function unicorn(): Linter.FlatConfig[] {
             disallowedPrefixes: ['new'],
           },
         ],
+        'unicorn/no-length-as-slice-end': 'warn',
         'unicorn/no-lonely-if': 'warn',
         'unicorn/no-magic-array-flat-depth': 'error',
         'unicorn/no-negated-condition': 'warn',

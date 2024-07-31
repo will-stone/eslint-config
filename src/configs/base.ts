@@ -37,22 +37,22 @@ export function base(): Linter.FlatConfig[] {
         // TODO should this move to prettier config?
         'arrow-body-style': 'off',
         'block-scoped-var': 'error',
-        'camelcase': 'error',
+        camelcase: 'error',
         'capitalized-comments': 'off',
         'class-methods-use-this': 'off',
-        'complexity': 'off',
+        complexity: 'off',
         // When on, this rule gets annoying when combined with Unicorn's
         // no-useless-* rules.
         'consistent-return': 'off',
         // Not sure if required
         'consistent-this': 'error',
         'constructor-super': 'error',
-        'curly': 'off',
+        curly: 'off',
         'default-case': 'error',
         'default-case-last': 'error',
         'default-param-last': 'error',
         'dot-notation': 'warn',
-        'eqeqeq': 'warn',
+        eqeqeq: 'warn',
         'for-direction': 'error',
         'func-name-matching': 'error',
         'func-names': ['error', 'as-needed'],
@@ -68,7 +68,6 @@ export function base(): Linter.FlatConfig[] {
         // trouble than it's worth.
         'id-match': 'off',
         'init-declarations': 'off',
-        'line-comment-position': 'error',
         'logical-assignment-operators': ['warn', 'always'],
         'max-classes-per-file': 'off',
         'max-depth': 'off',
@@ -77,7 +76,6 @@ export function base(): Linter.FlatConfig[] {
         'max-nested-callbacks': 'error',
         'max-params': 'off',
         'max-statements': 'off',
-        'multiline-comment-style': 'off',
         'new-cap': 'error',
         'no-alert': 'error',
         'no-array-constructor': 'error',
@@ -147,7 +145,6 @@ export function base(): Linter.FlatConfig[] {
         'no-new': 'error',
         'no-new-func': 'error',
         'no-new-native-nonconstructor': 'error',
-        'no-new-symbol': 'error',
         'no-new-wrappers': 'error',
         'no-nonoctal-decimal-escape': 'error',
         'no-obj-calls': 'error',
@@ -205,6 +202,7 @@ export function base(): Linter.FlatConfig[] {
         ],
         'no-use-before-define': 'error',
         // TODO Do I need this? https://eslint.org/docs/rules/no-useless-backreference
+        'no-useless-assignment': 'error',
         'no-useless-backreference': 'off',
         'no-useless-call': 'error',
         'no-useless-catch': 'error',
@@ -237,7 +235,7 @@ export function base(): Linter.FlatConfig[] {
         'prefer-rest-params': 'error',
         'prefer-spread': 'error',
         'prefer-template': 'warn',
-        'radix': 'error',
+        radix: 'error',
         'require-atomic-updates': 'error',
         'require-await': 'error',
         'require-unicode-regexp': 'error',
@@ -258,13 +256,13 @@ export function base(): Linter.FlatConfig[] {
         'sort-vars': 'off',
         // Generally gets in the way as it's difficult to know when this may be
         // required.
-        'strict': 'off',
+        strict: 'off',
         'symbol-description': 'error',
         'unicode-bom': ['error', 'never'],
         'use-isnan': 'error',
         'valid-typeof': ['error', { requireStringLiterals: true }],
         'vars-on-top': 'error',
-        'yoda': 'warn',
+        yoda: 'warn',
       },
     },
   ]

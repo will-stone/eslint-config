@@ -42,7 +42,7 @@ Add the following settings to your `.vscode/settings.json`:
 ```jsonc
 {
   // Enable the ESlint flat config support
-  "eslint.experimental.useFlatConfig": true
+  "eslint.experimental.useFlatConfig": true,
 }
 ```
 

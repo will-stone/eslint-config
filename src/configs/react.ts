@@ -1,4 +1,4 @@
-import type { ESLint, Linter } from 'eslint'
+import type { Linter } from 'eslint'
 // @ts-expect-error -- no types
 import pluginJsxA11y from 'eslint-plugin-jsx-a11y'
 // @ts-expect-error -- no types
@@ -7,7 +7,7 @@ import pluginReact from 'eslint-plugin-react'
 import pluginReactHooks from 'eslint-plugin-react-hooks'
 import globals from 'globals'
 
-export function react(): Linter.FlatConfig[] {
+export function react(): Linter.Config[] {
   return [
     {
       files: ['**/*.{jsx,tsx}'],
@@ -21,9 +21,9 @@ export function react(): Linter.FlatConfig[] {
       },
       name: 'will-stone/react',
       plugins: {
-        'jsx-a11y': pluginJsxA11y as ESLint.Plugin,
-        'react': pluginReact as ESLint.Plugin,
-        'react-hooks': pluginReactHooks as ESLint.Plugin,
+        'jsx-a11y': pluginJsxA11y,
+        react: pluginReact,
+        'react-hooks': pluginReactHooks,
       },
       rules: {
         'jsx-a11y/alt-text': 'error',
@@ -236,6 +236,7 @@ export function react(): Linter.FlatConfig[] {
         'react/jsx-no-undef': 'error',
         'react/jsx-no-useless-fragment': 'warn',
         'react/jsx-pascal-case': 'error',
+        'react/jsx-props-no-spread-multi': 'error',
         'react/jsx-props-no-spreading': 'off',
         // TODO there's other options in this one that could be useful.
         'react/jsx-sort-props': ['warn', { reservedFirst: true }],
