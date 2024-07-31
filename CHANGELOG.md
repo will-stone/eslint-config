@@ -1,5 +1,12 @@
 # Changelog
 
+## [10.0.1](https://github.com/will-stone/eslint-config/compare/v10.0.0...v10.0.1) (2024-07-31)
+
+### Patches
+
+- Fix no-useless-assignment not compatible with Astro
+  ([a825d3c](https://github.com/will-stone/eslint-config/commit/a825d3c4afa935a461d93cd0d34385528ca405bf))
+
 ## [10.0.0](https://github.com/will-stone/eslint-config/compare/v9.1.0...v10.0.0) (2024-07-31)
 
 ### Major changes
