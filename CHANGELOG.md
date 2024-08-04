@@ -1,5 +1,12 @@
 # Changelog
 
+## [10.0.2](https://github.com/will-stone/eslint-config/compare/v10.0.1...v10.0.2) (2024-08-04)
+
+### Patches
+
+- Upgrade jest plugin that supports ESLint v9
+  ([816b3b3](https://github.com/will-stone/eslint-config/commit/816b3b34c19f9f10b54be959a1820fe380551f4f))
+
 ## [10.0.1](https://github.com/will-stone/eslint-config/compare/v10.0.0...v10.0.1) (2024-07-31)
 
 ### Patches
