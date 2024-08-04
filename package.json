@@ -51,7 +51,7 @@
     "eslint-config-flat-gitignore": "^0.1.8",
     "eslint-plugin-astro": "^1.2.3",
     "eslint-plugin-import-x": "^3.1.0",
-    "eslint-plugin-jest": "^28.6.0",
+    "eslint-plugin-jest": "^28.7.0",
     "eslint-plugin-jsx-a11y": "^6.9.0",
     "eslint-plugin-n": "^17.10.1",
     "eslint-plugin-react": "^7.35.0",
@@ -60,7 +60,7 @@
     "eslint-plugin-tailwindcss": "^3.17.4",
     "eslint-plugin-unicorn": "^55.0.0",
     "glob": "^11.0.0",
-    "globals": "^15.8.0"
+    "globals": "^15.9.0"
   },
   "devDependencies": {
     "@commits-with-character/conventional-changelog-preset": "^0.2.2",
@@ -68,13 +68,13 @@
     "@release-it/conventional-changelog": "^8.0.1",
     "@types/confusing-browser-globals": "^1.0.3",
     "@types/eslint": "^9.6.0",
-    "@types/node": "^22.0.1",
+    "@types/node": "^22.1.0",
     "@will-stone/prettier-config": "^8.0.1",
     "husky": "^9.1.4",
-    "lint-staged": "^15.2.7",
+    "lint-staged": "^15.2.8",
     "prettier": "^3.3.3",
     "release-it": "^17.6.0",
-    "tsup": "^8.2.3",
+    "tsup": "^8.2.4",
     "type-fest": "^4.23.0",
     "typescript": "^5.5.4"
   },
@@ -82,8 +82,6 @@
     "eslint": ">=9.8.0"
   },
   "overrides": {
-    "@typescript-eslint/eslint-plugin": "^8.0.0",
-    "@typescript-eslint/parser": "^8.0.0",
     "eslint": ">=9.8.0"
   }
 }
