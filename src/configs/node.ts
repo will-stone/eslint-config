@@ -2,7 +2,7 @@ import type { ESLint, Linter } from 'eslint'
 import pluginNode from 'eslint-plugin-n'
 import globals from 'globals'
 
-export function node(): Linter.FlatConfig[] {
+export function node(): Linter.Config[] {
   return [
     {
       languageOptions: {

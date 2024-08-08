@@ -1,13 +1,13 @@
-import type { ESLint, Linter } from 'eslint'
+import type { Linter } from 'eslint'
 // @ts-expect-error -- no types
 import pluginTailwind from 'eslint-plugin-tailwindcss'
 
-export function tailwind(): Linter.FlatConfig[] {
+export function tailwind(): Linter.Config[] {
   return [
     {
       files: ['**/*.{jsx,tsx,astro}'],
       name: 'will-stone/tailwind',
-      plugins: { tailwindcss: pluginTailwind as ESLint.Plugin },
+      plugins: { tailwindcss: pluginTailwind },
       rules: {
         'tailwindcss/classnames-order': 'warn',
         'tailwindcss/enforces-negative-arbitrary-values': 'warn',

@@ -7,7 +7,7 @@ import restrictedGlobals from 'confusing-browser-globals'
 import type { Linter } from 'eslint'
 import globals from 'globals'
 
-export function base(): Linter.FlatConfig[] {
+export function base(): Linter.Config[] {
   return [
     {
       languageOptions: {
