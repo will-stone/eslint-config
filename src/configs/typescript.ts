@@ -4,22 +4,19 @@ import type { Linter } from 'eslint'
 
 import type { Options } from '../types'
 
-export function typescript(options?: Options): Linter.FlatConfig[] {
-  const tsconfigPath = options?.tsconfigPath
-    ? Array.isArray(options.tsconfigPath)
-      ? options.tsconfigPath
-      : [options.tsconfigPath]
-    : undefined
-
+export function typescript(options?: Options): Linter.Config[] {
   return [
     {
       files: ['**/*.{ts,tsx,astro}'],
       languageOptions: {
         parser: parserTypescript,
         parserOptions: {
-          ...(tsconfigPath
+          ...(options?.tsconfigPath
             ? {
-                project: tsconfigPath,
+                projectService: {
+                  allowDefaultProject: ['./*.js'],
+                  defaultProject: options.tsconfigPath,
+                },
                 tsconfigRootDir: process.cwd(),
               }
             : {}),
@@ -102,7 +99,7 @@ export function typescript(options?: Options): Linter.FlatConfig[] {
         /**
          * These require type checking
          */
-        ...(tsconfigPath
+        ...(options?.tsconfigPath
           ? {
               '@typescript-eslint/await-thenable': 'off',
               '@typescript-eslint/consistent-return': 'off',
