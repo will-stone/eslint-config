@@ -4,4 +4,6 @@ export type Options = {
    * @see https://typescript-eslint.io/linting/typed-linting/
    */
   readonly tsconfigPath?: string | readonly string[]
+
+  readonly testingFramework?: 'jest'
 }

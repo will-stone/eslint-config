@@ -11,14 +11,11 @@ import { tailwind } from './configs/tailwind'
 import { typescript } from './configs/typescript'
 import { unicorn } from './configs/unicorn'
 import type { Options } from './types'
-import { checkEnvironment } from './utils'
 
 /**
  * Construct an array of ESLint flat config items.
  */
 export function factory(options?: Options): Linter.Config[] {
-  const { isNode, isTailwind, testingFramework } = checkEnvironment()
-
   const configs: Linter.Config[][] = []
 
   configs.push(
@@ -29,17 +26,11 @@ export function factory(options?: Options): Linter.Config[] {
     typescript(options),
     astro(),
     react(),
+    node(),
+    tailwind(),
   )
 
-  if (isNode) {
-    configs.push(node())
-  }
-
-  if (isTailwind) {
-    configs.push(tailwind())
-  }
-
-  if (testingFramework === 'jest') {
+  if (options?.testingFramework === 'jest') {
     configs.push(jest())
   }
 
