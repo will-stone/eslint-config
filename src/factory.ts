@@ -1,5 +1,4 @@
 import type { Linter } from 'eslint'
-import gitignore from 'eslint-config-flat-gitignore'
 
 import { astro } from './configs/astro'
 import { base } from './configs/base'
@@ -17,15 +16,10 @@ import { checkEnvironment } from './utils'
 /**
  * Construct an array of ESLint flat config items.
  */
-export function factory(options?: Options): Linter.FlatConfig[] {
-  const { isGitIgnore, isNode, isTailwind, testingFramework } =
-    checkEnvironment()
+export function factory(options?: Options): Linter.Config[] {
+  const { isNode, isTailwind, testingFramework } = checkEnvironment()
 
-  const configs: Linter.FlatConfig[][] = []
-
-  if (isGitIgnore) {
-    configs.push([gitignore()])
-  }
+  const configs: Linter.Config[][] = []
 
   configs.push(
     ignores(),

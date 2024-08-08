@@ -4,12 +4,10 @@ import { globSync } from 'glob'
 import type { PackageJson } from 'type-fest'
 
 export function checkEnvironment(): {
-  isGitIgnore: boolean
   isNode: boolean
   isTailwind: boolean
   testingFramework: 'jest' | null
 } {
-  const isGitIgnore = existsSync('.gitignore')
   let isNodeEngine = false
   let isTailwind = false
   let testingFramework = null
@@ -54,7 +52,6 @@ export function checkEnvironment(): {
     isNodeEngine || existsSync('.nvmrc') || existsSync('.node-version')
 
   return {
-    isGitIgnore,
     isNode,
     isTailwind,
     testingFramework,
