@@ -25,8 +25,8 @@
     "dist"
   ],
   "scripts": {
-    "build": "tsup src/index.ts --format esm,cjs --clean --dts --cjsInterop --splitting",
-    "dev": "tsup src/index.ts --format esm,cjs --watch & config-inspector",
+    "build": "tsup src/index.ts --format esm --clean --dts",
+    "dev": "tsup src/index.ts --format esm --watch & INSPECTOR=true config-inspector",
     "lint": "npm run stub && eslint .",
     "prepare": "husky",
     "prepublishOnly": "npm run build",

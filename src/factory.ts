@@ -31,9 +31,11 @@ export function factory(options?: Options): Linter.ConfigType[] {
     tailwind(),
   )
 
-  if (options?.testingFramework === 'jest') {
+  if (options?.testingFramework === 'jest' || process.env.INSPECTOR) {
     configs.push(jest())
-  } else if (options?.testingFramework === 'vitest') {
+  }
+
+  if (options?.testingFramework === 'vitest' || process.env.INSPECTOR) {
     configs.push(vitest())
   }
 
