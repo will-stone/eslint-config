@@ -1,3 +1,4 @@
+import { fixupPluginRules } from '@eslint/compat'
 import type { Linter } from '@typescript-eslint/utils/ts-eslint'
 // @ts-expect-error -- no types
 import pluginJsxA11y from 'eslint-plugin-jsx-a11y'
@@ -23,7 +24,7 @@ export function react(): Linter.ConfigType[] {
       plugins: {
         'jsx-a11y': pluginJsxA11y,
         react: pluginReact,
-        'react-hooks': pluginReactHooks,
+        'react-hooks': fixupPluginRules(pluginReactHooks),
       },
       rules: {
         'jsx-a11y/alt-text': 'error',
