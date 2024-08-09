@@ -10,6 +10,7 @@ import { react } from './configs/react'
 import { tailwind } from './configs/tailwind'
 import { typescript } from './configs/typescript'
 import { unicorn } from './configs/unicorn'
+import { vitest } from './configs/vitest'
 import type { Options } from './types'
 
 /**
@@ -32,6 +33,8 @@ export function factory(options?: Options): Linter.ConfigType[] {
 
   if (options?.testingFramework === 'jest') {
     configs.push(jest())
+  } else if (options?.testingFramework === 'vitest') {
+    configs.push(vitest())
   }
 
   const merged = configs.flat()

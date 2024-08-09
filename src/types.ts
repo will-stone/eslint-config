@@ -5,5 +5,5 @@ export type Options = {
    */
   readonly tsconfigPath?: string | readonly string[]
 
-  readonly testingFramework?: 'jest'
+  readonly testingFramework?: 'jest' | 'vitest'
 }
