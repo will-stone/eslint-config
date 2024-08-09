@@ -1,4 +1,4 @@
-import type { Linter } from 'eslint'
+import type { Linter } from '@typescript-eslint/utils/ts-eslint'
 // @ts-expect-error -- no types
 import pluginJsxA11y from 'eslint-plugin-jsx-a11y'
 // @ts-expect-error -- no types
@@ -7,7 +7,7 @@ import pluginReact from 'eslint-plugin-react'
 import pluginReactHooks from 'eslint-plugin-react-hooks'
 import globals from 'globals'
 
-export function react(): Linter.Config[] {
+export function react(): Linter.ConfigType[] {
   return [
     {
       files: ['**/*.{jsx,tsx}'],

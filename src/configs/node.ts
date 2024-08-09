@@ -1,17 +1,13 @@
-import type { ESLint, Linter } from 'eslint'
+import type { Linter } from '@typescript-eslint/utils/ts-eslint'
 import pluginNode from 'eslint-plugin-n'
 import globals from 'globals'
 
-export function node(): Linter.Config[] {
+export function node(): Linter.ConfigType[] {
   return [
     {
-      languageOptions: {
-        globals: globals.node,
-      },
+      languageOptions: { globals: globals.node },
       name: 'will-stone/node',
-      plugins: {
-        n: pluginNode as ESLint.Plugin,
-      },
+      plugins: { n: pluginNode },
       rules: {
         'n/callback-return': 'error',
         'n/global-require': 'error',

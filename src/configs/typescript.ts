@@ -1,10 +1,10 @@
 import pluginTypescript from '@typescript-eslint/eslint-plugin'
 import * as parserTypescript from '@typescript-eslint/parser'
-import type { Linter } from 'eslint'
+import type { Linter } from '@typescript-eslint/utils/ts-eslint'
 
 import type { Options } from '../types'
 
-export function typescript(options?: Options): Linter.Config[] {
+export function typescript(options?: Options): Linter.ConfigType[] {
   return [
     {
       files: ['**/*.{ts,tsx,astro}'],

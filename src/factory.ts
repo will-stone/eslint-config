@@ -1,4 +1,4 @@
-import type { Linter } from 'eslint'
+import type { Linter } from '@typescript-eslint/utils/ts-eslint'
 
 import { astro } from './configs/astro'
 import { base } from './configs/base'
@@ -15,8 +15,8 @@ import type { Options } from './types'
 /**
  * Construct an array of ESLint flat config items.
  */
-export function factory(options?: Options): Linter.Config[] {
-  const configs: Linter.Config[][] = []
+export function factory(options?: Options): Linter.ConfigType[] {
+  const configs: Linter.ConfigType[][] = []
 
   configs.push(
     ignores(),

@@ -1,9 +1,9 @@
 import parserTypescript from '@typescript-eslint/parser'
+import type { Linter } from '@typescript-eslint/utils/ts-eslint'
 import parserAstro from 'astro-eslint-parser'
-import type { Linter } from 'eslint'
 import pluginAstro from 'eslint-plugin-astro'
 
-export function astro(): Linter.Config[] {
+export function astro(): Linter.ConfigType[] {
   return [
     {
       files: ['**/*.astro'],

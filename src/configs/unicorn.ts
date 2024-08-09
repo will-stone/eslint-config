@@ -1,13 +1,11 @@
-import type { Linter } from 'eslint'
+import type { Linter } from '@typescript-eslint/utils/ts-eslint'
 import pluginUnicorn from 'eslint-plugin-unicorn'
 
-export function unicorn(): Linter.Config[] {
+export function unicorn(): Linter.ConfigType[] {
   return [
     {
       name: 'will-stone/unicorn',
-      plugins: {
-        unicorn: pluginUnicorn,
-      },
+      plugins: { unicorn: pluginUnicorn },
       rules: {
         // This rule is superseded by the unicorn version below
         'no-nested-ternary': 'off',

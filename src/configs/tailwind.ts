@@ -1,8 +1,8 @@
-import type { Linter } from 'eslint'
+import type { Linter } from '@typescript-eslint/utils/ts-eslint'
 // @ts-expect-error -- no types
 import pluginTailwind from 'eslint-plugin-tailwindcss'
 
-export function tailwind(): Linter.Config[] {
+export function tailwind(): Linter.ConfigType[] {
   return [
     {
       files: ['**/*.{jsx,tsx,astro}'],

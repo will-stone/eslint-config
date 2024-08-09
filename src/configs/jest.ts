@@ -1,9 +1,9 @@
-import type { Linter } from 'eslint'
+import type { Linter } from '@typescript-eslint/utils/ts-eslint'
 // @ts-expect-error -- no types
 import pluginJest from 'eslint-plugin-jest'
 import globals from 'globals'
 
-export function jest(): Linter.Config[] {
+export function jest(): Linter.ConfigType[] {
   return [
     {
       files: ['**/__mocks__/**/*', '**/*.{spec,test}.{js,cjs,mjs,jsx,ts,tsx}'],

@@ -1,13 +1,13 @@
-import type { ESLint, Linter } from 'eslint'
+import type { Linter } from '@typescript-eslint/utils/ts-eslint'
 import * as pluginImport from 'eslint-plugin-import-x'
 import pluginSimpleImport from 'eslint-plugin-simple-import-sort'
 
-export function imports(): Linter.Config[] {
+export function imports(): Linter.ConfigType[] {
   return [
     {
       name: 'will-stone/imports',
       plugins: {
-        'import-x': pluginImport as unknown as ESLint.Plugin,
+        'import-x': pluginImport,
         'simple-import-sort': pluginSimpleImport,
       },
       rules: {
