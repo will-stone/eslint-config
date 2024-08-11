@@ -61,7 +61,8 @@
     "eslint-plugin-tailwindcss": "^3.17.4",
     "eslint-plugin-unicorn": "^55.0.0",
     "eslint-plugin-vitest": "^0.5.4",
-    "globals": "^15.9.0"
+    "globals": "^15.9.0",
+    "globby": "^14.0.2"
   },
   "devDependencies": {
     "@commits-with-character/conventional-changelog-preset": "^0.2.2",

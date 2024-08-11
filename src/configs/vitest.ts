@@ -11,9 +11,6 @@ export function vitest(): Linter.ConfigType[] {
       rules: {
         // For now, I will turn on all rules and tweak them below.
         ...pluginVitest.configs.all.rules,
-        // I often spy-on and test the output of console, so this avoids
-        // repetitive disables.
-        'no-console': 'off',
         // Expect as much as you like. Is there any benefit to limiting this?
         'vitest/max-expects': 'off',
         // The lifecycle hooks, like `beforeEach`, can be useful. I could move

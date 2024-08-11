@@ -4,14 +4,19 @@ import type { Linter } from '@typescript-eslint/utils/ts-eslint'
 
 import type { Options } from '../types'
 
-export function typescript(options?: Options): Linter.ConfigType[] {
+export function typescript(
+  rawOptions?: Options['typescript'],
+): Linter.ConfigType[] {
+  const options =
+    !rawOptions || typeof rawOptions === 'boolean' ? {} : rawOptions
+
   return [
     {
       files: ['**/*.{ts,tsx,astro}'],
       languageOptions: {
         parser: parserTypescript,
         parserOptions: {
-          ...(options?.tsconfigPath
+          ...(options.tsconfigPath
             ? {
                 projectService: {
                   allowDefaultProject: ['./*.js'],
