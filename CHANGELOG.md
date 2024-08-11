@@ -1,5 +1,28 @@
 # Changelog
 
+## [11.0.0](https://github.com/will-stone/eslint-config/compare/v10.0.2...v11.0.0) (2024-08-11)
+
+### Major changes
+
+- Back to auto configure, but with the ability to manually turn on configs too
+  ([d29c0fa](https://github.com/will-stone/eslint-config/commit/d29c0fab081206fb536361f8aa13dc7f637ef38c))
+- Turn on all but testing configs by default
+  ([878f3c8](https://github.com/will-stone/eslint-config/commit/878f3c844eb062698fb4f64ec44f35aad7bbb492))
+
+### Minor changes
+
+- Add support for Vitest
+  ([e95a40d](https://github.com/will-stone/eslint-config/commit/e95a40d43668078e95e5e8776b8509745b568840))
+- Use faster projectService for type-aware rules
+  ([be7be05](https://github.com/will-stone/eslint-config/commit/be7be0550e231bc991412aa85841510453ae507f))
+
+### Patches
+
+- Fix React Hooks not linted
+  ([8e5b053](https://github.com/will-stone/eslint-config/commit/8e5b0532fd1264b2e7063559702a493c21ad7490))
+- Enable gitignore without scanning for the file
+  ([1d3dabd](https://github.com/will-stone/eslint-config/commit/1d3dabdebe63265e904d650c1b88f096ceec3e79))
+
 ## [10.0.2](https://github.com/will-stone/eslint-config/compare/v10.0.1...v10.0.2) (2024-08-04)
 
 ### Patches
