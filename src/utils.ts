@@ -4,7 +4,7 @@ import { globbySync } from 'globby'
 import type { PackageJson } from 'type-fest'
 
 export function checkDepsExist<T extends string>(
-  depNames: T[],
+  depNames: readonly T[],
 ): Record<T, boolean> {
   const depCount = depNames.length
 
