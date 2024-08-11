@@ -1,6 +1,7 @@
 import { readFileSync } from 'node:fs'
 
 import { globbySync } from 'globby'
+import type { PackageJson } from 'type-fest'
 
 export function checkDepsExist<T extends string>(
   depNames: T[],
@@ -18,12 +19,13 @@ export function checkDepsExist<T extends string>(
   for (const packageJsonPath of allPackageJsonPaths) {
     const buffer = readFileSync(packageJsonPath)
     const data = new TextDecoder().decode(buffer)
-    const package_ = JSON.parse(data)
+    const package_ = JSON.parse(data) as PackageJson
 
     for (const depName of depNames) {
       if (
         package_ &&
-        (package_?.dependencies[depName] || package_?.devDependencies[depName])
+        (package_.dependencies?.[depName] ||
+          package_.devDependencies?.[depName])
       ) {
         hasPackageMap[depName] = true
         foundCount = foundCount + 1

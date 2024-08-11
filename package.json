@@ -62,7 +62,8 @@
     "eslint-plugin-unicorn": "^55.0.0",
     "eslint-plugin-vitest": "^0.5.4",
     "globals": "^15.9.0",
-    "globby": "^14.0.2"
+    "globby": "^14.0.2",
+    "type-fest": "^4.24.0"
   },
   "devDependencies": {
     "@commits-with-character/conventional-changelog-preset": "^0.2.2",
