@@ -2,19 +2,19 @@
 
 import type { Linter } from '@typescript-eslint/utils/ts-eslint'
 
-import { astro } from './configs/astro'
-import { base } from './configs/base'
-import { ignores } from './configs/ignores'
-import { imports } from './configs/imports'
-import { jest } from './configs/jest'
-import { node } from './configs/node'
-import { react } from './configs/react'
-import { tailwind } from './configs/tailwind'
-import { typescript } from './configs/typescript'
-import { unicorn } from './configs/unicorn'
-import { vitest } from './configs/vitest'
-import type { Options } from './types'
-import { checkDepsExist } from './utils'
+import { astro } from './configs/astro.js'
+import { base } from './configs/base.js'
+import { ignores } from './configs/ignores.js'
+import { imports } from './configs/imports.js'
+import { jest } from './configs/jest.js'
+import { node } from './configs/node.js'
+import { react } from './configs/react.js'
+import { tailwind } from './configs/tailwind.js'
+import { typescript } from './configs/typescript.js'
+import { unicorn } from './configs/unicorn.js'
+import { vitest } from './configs/vitest.js'
+import type { Options } from './types.js'
+import { checkDepsExist } from './utils.js'
 
 /**
  * Construct an array of ESLint flat config items.

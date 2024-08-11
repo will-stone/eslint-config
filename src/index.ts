@@ -1,1 +1,1 @@
-export { factory as default } from './factory'
+export { factory as default } from './factory.js'

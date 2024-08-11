@@ -1,12 +1,15 @@
 {
   "compilerOptions": {
     "target": "es2020",
-    "module": "es2020",
-    "moduleResolution": "Bundler",
+    "module": "NodeNext",
+    "moduleResolution": "NodeNext",
+    "noImplicitAny": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
     "strict": true,
     "esModuleInterop": true,
     "skipLibCheck": true
   },
   "include": ["**/*.ts"],
-  "exclude": ["./fixtures/**/*.*"]
+  "exclude": ["node_modules", "dist", "./fixtures/**/*.*"]
 }

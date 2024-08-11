@@ -45,16 +45,16 @@
   "prettier": "@will-stone/prettier-config",
   "dependencies": {
     "@eslint/compat": "^1.1.1",
-    "@typescript-eslint/eslint-plugin": "^8.0.0",
-    "@typescript-eslint/parser": "^8.0.0",
+    "@typescript-eslint/eslint-plugin": "^8.0.1",
+    "@typescript-eslint/parser": "^8.0.1",
     "astro-eslint-parser": "^1.0.2",
     "confusing-browser-globals": "^1.0.11",
     "eslint-config-flat-gitignore": "^0.1.8",
     "eslint-plugin-astro": "^1.2.3",
     "eslint-plugin-import-x": "^3.1.0",
-    "eslint-plugin-jest": "^28.7.0",
+    "eslint-plugin-jest": "^28.8.0",
     "eslint-plugin-jsx-a11y": "^6.9.0",
-    "eslint-plugin-n": "^17.10.1",
+    "eslint-plugin-n": "^17.10.2",
     "eslint-plugin-react": "^7.35.0",
     "eslint-plugin-react-hooks": "^4.6.2",
     "eslint-plugin-simple-import-sort": "^12.1.1",
@@ -70,7 +70,7 @@
     "@release-it/conventional-changelog": "^8.0.1",
     "@types/confusing-browser-globals": "^1.0.3",
     "@types/eslint": "^9.6.0",
-    "@types/node": "^22.1.0",
+    "@types/node": "^22.2.0",
     "@typescript-eslint/utils": "^8.0.1",
     "@will-stone/prettier-config": "^8.0.1",
     "husky": "^9.1.4",
@@ -81,9 +81,9 @@
     "typescript": "^5.5.4"
   },
   "peerDependencies": {
-    "eslint": ">=9.8.0"
+    "eslint": ">=9.9.0"
   },
   "overrides": {
-    "eslint": ">=9.8.0"
+    "eslint": ">=9.9.0"
   }
 }

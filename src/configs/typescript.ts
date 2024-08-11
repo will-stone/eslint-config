@@ -2,7 +2,7 @@ import pluginTypescript from '@typescript-eslint/eslint-plugin'
 import * as parserTypescript from '@typescript-eslint/parser'
 import type { Linter } from '@typescript-eslint/utils/ts-eslint'
 
-import type { Options } from '../types'
+import type { Options } from '../types.js'
 
 export function typescript(
   rawOptions?: Options['typescript'],
@@ -29,7 +29,7 @@ export function typescript(
       },
       name: 'will-stone/typescript',
       plugins: {
-        // @ts-expect-error -- does not confirm to type
+        // @ts-expect-error -- is using classic config type instead of flat config.
         '@typescript-eslint': pluginTypescript,
       },
       rules: {
