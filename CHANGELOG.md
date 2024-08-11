@@ -1,5 +1,13 @@
 # Changelog
 
+## [11.0.1](https://github.com/will-stone/eslint-config/compare/v11.0.0...v11.0.1) (2024-08-11)
+
+### Patches
+
+- Fix unable to scan for deps when either deps or devDeps is missing from a
+  package.json file
+  ([13a4a74](https://github.com/will-stone/eslint-config/commit/13a4a747a532e3463439b44d82c99036749e7820))
+
 ## [11.0.0](https://github.com/will-stone/eslint-config/compare/v10.0.2...v11.0.0) (2024-08-11)
 
 ### Major changes
