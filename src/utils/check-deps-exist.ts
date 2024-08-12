@@ -3,6 +3,11 @@ import { readFileSync } from 'node:fs'
 import { globbySync } from 'globby'
 import type { PackageJson } from 'type-fest'
 
+/**
+ * Given an array of dependency names, this will scan all package.json files in
+ * the project, and return whether each exists in either a dependencies or
+ * devDependencies field.
+ */
 export function checkDepsExist<T extends string>(
   depNames: readonly T[],
 ): Record<T, boolean> {
@@ -14,6 +19,12 @@ export function checkDepsExist<T extends string>(
   ])
 
   const hasPackageMap: Record<string, boolean> = {}
+
+  // Begin by assuming all packages do not exist.
+  for (const depName of depNames) {
+    hasPackageMap[depName] = false
+  }
+
   let foundCount = 0
 
   for (const packageJsonPath of allPackageJsonPaths) {
@@ -29,12 +40,14 @@ export function checkDepsExist<T extends string>(
       ) {
         hasPackageMap[depName] = true
         foundCount = foundCount + 1
+        // Stop checking if all deps found.
         if (foundCount === depCount) {
           break
         }
       }
     }
 
+    // Stop checking if all deps found.
     if (foundCount === depCount) {
       break
     }

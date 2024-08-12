@@ -3,7 +3,7 @@ import type { Linter } from '@typescript-eslint/utils/ts-eslint'
 import parserAstro from 'astro-eslint-parser'
 import pluginAstro from 'eslint-plugin-astro'
 
-export function astro(): Linter.ConfigType[] {
+export function astro(_options: unknown): Linter.ConfigType[] {
   return [
     {
       files: ['**/*.astro'],

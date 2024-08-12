@@ -3,7 +3,7 @@ import type { Linter } from '@typescript-eslint/utils/ts-eslint'
 import pluginJest from 'eslint-plugin-jest'
 import globals from 'globals'
 
-export function jest(): Linter.ConfigType[] {
+export function jest(_options: unknown): Linter.ConfigType[] {
   return [
     {
       files: ['**/__mocks__/**/*', '**/*.{spec,test}.{js,cjs,mjs,jsx,ts,tsx}'],

@@ -26,12 +26,13 @@
   ],
   "scripts": {
     "build": "tsup src/index.ts --format esm --clean --dts",
-    "dev": "tsup src/index.ts --format esm --watch & INSPECTOR=true config-inspector",
+    "dev": "tsup src/index.ts --format esm --watch & config-inspector --config ./eslint-config-for-inspector.js",
     "lint": "npm run stub && eslint .",
     "prepare": "husky",
     "prepublishOnly": "npm run build",
     "release": "release-it",
     "stub": "tsup src/index.ts --format esm",
+    "test": "vitest",
     "typecheck": "tsc --noEmit"
   },
   "lint-staged": {
@@ -45,8 +46,8 @@
   "prettier": "@will-stone/prettier-config",
   "dependencies": {
     "@eslint/compat": "^1.1.1",
-    "@typescript-eslint/eslint-plugin": "^8.0.1",
-    "@typescript-eslint/parser": "^8.0.1",
+    "@typescript-eslint/eslint-plugin": "^8.1.0",
+    "@typescript-eslint/parser": "^8.1.0",
     "astro-eslint-parser": "^1.0.2",
     "confusing-browser-globals": "^1.0.11",
     "eslint-config-flat-gitignore": "^0.1.8",
@@ -72,14 +73,16 @@
     "@types/confusing-browser-globals": "^1.0.3",
     "@types/eslint": "^9.6.0",
     "@types/node": "^22.2.0",
-    "@typescript-eslint/utils": "^8.0.1",
+    "@typescript-eslint/utils": "^8.1.0",
     "@will-stone/prettier-config": "^8.0.1",
     "husky": "^9.1.4",
     "lint-staged": "^15.2.8",
+    "memfs": "^4.11.1",
     "prettier": "^3.3.3",
     "release-it": "^17.6.0",
     "tsup": "^8.2.4",
-    "typescript": "^5.5.4"
+    "typescript": "^5.5.4",
+    "vitest": "^2.0.5"
   },
   "peerDependencies": {
     "eslint": ">=9.9.0"

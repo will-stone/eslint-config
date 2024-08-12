@@ -2,7 +2,13 @@ import type { Linter } from '@typescript-eslint/utils/ts-eslint'
 // @ts-expect-error -- no types
 import pluginTailwind from 'eslint-plugin-tailwindcss'
 
-export function tailwind(): Linter.ConfigType[] {
+import type { Options } from '../model.js'
+
+export function tailwind(
+  rawOptions?: Options['tailwind'],
+): Linter.ConfigType[] {
+  const options = !rawOptions || rawOptions === true ? {} : rawOptions
+
   return [
     {
       files: ['**/*.{jsx,tsx,astro}'],
@@ -16,6 +22,19 @@ export function tailwind(): Linter.ConfigType[] {
         'tailwindcss/no-arbitrary-value': 'off',
         'tailwindcss/no-contradicting-classname': 'warn',
         'tailwindcss/no-custom-classname': 'error',
+      },
+      settings: {
+        tailwindcss: {
+          config: options.config,
+          /**
+           * Default to no custom CSS files, due to performance issue with the
+           * plugin can be somewhat mitigated by setting this config to `[]` so
+           * that cssFiles do not need to be found automatically.
+           * @see https://github.com/francoismassart/eslint-plugin-tailwindcss/issues/276
+           * @see https://github.com/francoismassart/eslint-plugin-tailwindcss/issues/174
+           */
+          cssFiles: options.cssFiles || [],
+        },
       },
     },
   ]

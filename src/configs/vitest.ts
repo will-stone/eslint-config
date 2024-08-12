@@ -2,7 +2,7 @@ import { fixupPluginRules } from '@eslint/compat'
 import type { Linter } from '@typescript-eslint/utils/ts-eslint'
 import pluginVitest from 'eslint-plugin-vitest'
 
-export function vitest(): Linter.ConfigType[] {
+export function vitest(_options: unknown): Linter.ConfigType[] {
   return [
     {
       files: ['**/*.{spec,test}.{js,cjs,mjs,jsx,ts,tsx}'],

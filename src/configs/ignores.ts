@@ -10,7 +10,7 @@ export function ignores(): Linter.ConfigType[] {
       name: 'will-stone/ignores',
     },
     {
-      name: 'will-stone/git-ignores',
+      name: 'will-stone/git-ignore',
       ...gitignore({
         // Prevent throw if gitignore not found.
         strict: false,

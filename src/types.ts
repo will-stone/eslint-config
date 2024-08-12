@@ -2,7 +2,12 @@ export type Options = {
   readonly astro?: boolean
   readonly jest?: boolean
   readonly react?: boolean
-  readonly tailwind?: boolean
+  readonly tailwind?:
+    | {
+        config?: string
+        cssFiles?: string[]
+      }
+    | boolean
   readonly typescript?:
     | boolean
     | {
