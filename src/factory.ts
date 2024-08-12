@@ -28,7 +28,7 @@ export function factory(options?: Options): Linter.ConfigType[] {
     'typescript',
     'astro',
     'react',
-    'tailwind',
+    'tailwindcss',
     'jest',
     'vitest',
   ])
@@ -67,11 +67,11 @@ export function factory(options?: Options): Linter.ConfigType[] {
     configs.push(react())
   }
 
-  if (packageExists.tailwind) {
+  if (packageExists.tailwindcss) {
     console.log('  - Tailwind')
   }
 
-  if (packageExists.tailwind || options?.tailwind || process.env.INSPECTOR) {
+  if (packageExists.tailwindcss || options?.tailwind || process.env.INSPECTOR) {
     configs.push(tailwind())
   }
 
