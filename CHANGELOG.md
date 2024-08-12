@@ -1,5 +1,12 @@
 # Changelog
 
+## [11.0.2](https://github.com/will-stone/eslint-config/compare/v11.0.1...v11.0.2) (2024-08-12)
+
+### Patches
+
+- Fix looking for incorrect tailwind package
+  ([27c5b57](https://github.com/will-stone/eslint-config/commit/27c5b57aebb2665772b3cab406cbe73425323657))
+
 ## [11.0.1](https://github.com/will-stone/eslint-config/compare/v11.0.0...v11.0.1) (2024-08-11)
 
 ### Patches
