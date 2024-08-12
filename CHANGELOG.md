@@ -1,5 +1,12 @@
 # Changelog
 
+## [11.0.3](https://github.com/will-stone/eslint-config/compare/v11.0.2...v11.0.3) (2024-08-12)
+
+### Patches
+
+- Refactor configs
+  ([47a50d0](https://github.com/will-stone/eslint-config/commit/47a50d0d4f0eeacb9aaf830f1583e14db458bb68))
+
 ## [11.0.2](https://github.com/will-stone/eslint-config/compare/v11.0.1...v11.0.2) (2024-08-12)
 
 ### Patches
