@@ -20,6 +20,12 @@ export const defaultConfigs = [
 
 export const autoConfigs = [
   {
+    config: typescript,
+    dep: 'typescript',
+    name: 'Typescript',
+    optionName: 'typescript',
+  },
+  {
     config: astro,
     dep: 'astro',
     name: 'Astro.js',
@@ -42,12 +48,6 @@ export const autoConfigs = [
     dep: 'tailwindcss',
     name: 'Tailwind',
     optionName: 'tailwind',
-  },
-  {
-    config: typescript,
-    dep: 'typescript',
-    name: 'Typescript',
-    optionName: 'typescript',
   },
   {
     config: vitest,
