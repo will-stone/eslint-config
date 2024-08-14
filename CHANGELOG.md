@@ -1,5 +1,12 @@
 # Changelog
 
+## [11.0.4](https://github.com/will-stone/eslint-config/compare/v11.0.3...v11.0.4) (2024-08-14)
+
+### Patches
+
+- Fix parser broken error on Astro files
+  ([1fecc3b](https://github.com/will-stone/eslint-config/commit/1fecc3b6adc44730c2b85954f1407c8e1899c693))
+
 ## [11.0.3](https://github.com/will-stone/eslint-config/compare/v11.0.2...v11.0.3) (2024-08-12)
 
 ### Patches
