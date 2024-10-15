@@ -1,5 +1,12 @@
 # Changelog
 
+## [11.0.5](https://github.com/will-stone/eslint-config/compare/v11.0.4...v11.0.5) (2024-10-15)
+
+### Patches
+
+- Remove reference to non-existent CJS build
+  ([2c7514d](https://github.com/will-stone/eslint-config/commit/2c7514da2a2f61d33cba42d75d2af9013d38d7c9))
+
 ## [11.0.4](https://github.com/will-stone/eslint-config/compare/v11.0.3...v11.0.4) (2024-08-14)
 
 ### Patches
