@@ -22,6 +22,7 @@ export function tailwind(
         'tailwindcss/no-arbitrary-value': 'off',
         'tailwindcss/no-contradicting-classname': 'warn',
         'tailwindcss/no-custom-classname': 'error',
+        'tailwindcss/no-unnecessary-arbitrary-value': 'warn',
       },
       settings: {
         tailwindcss: {

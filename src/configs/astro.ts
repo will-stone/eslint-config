@@ -31,6 +31,7 @@ export function astro(_options: unknown): Linter.ConfigType[] {
         'astro/no-exports-from-components': 'error',
         'astro/no-unused-define-vars-in-style': 'error',
         'astro/semi': 'off',
+        'astro/sort-attributes': 'warn',
         'astro/valid-compile': 'error',
 
         // TODO off until checked to see if I need them.

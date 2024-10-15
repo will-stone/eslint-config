@@ -20,6 +20,7 @@ export function imports(): Linter.ConfigType[] {
         'import-x/group-exports': 'off',
         'import-x/newline-after-import': 'warn',
         'import-x/no-empty-named-blocks': 'warn',
+        'import-x/no-rename-default': 'off',
         'import-x/prefer-default-export': 'off',
         'simple-import-sort/exports': 'warn',
         'simple-import-sort/imports': 'warn',

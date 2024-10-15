@@ -2,7 +2,6 @@ import { fixupPluginRules } from '@eslint/compat'
 import type { Linter } from '@typescript-eslint/utils/ts-eslint'
 // @ts-expect-error -- no types
 import pluginJsxA11y from 'eslint-plugin-jsx-a11y'
-// @ts-expect-error -- no types
 import pluginReact from 'eslint-plugin-react'
 // @ts-expect-error -- no types
 import pluginReactHooks from 'eslint-plugin-react-hooks'
@@ -22,6 +21,7 @@ export function react(_options: unknown): Linter.ConfigType[] {
       },
       name: 'will-stone/react',
       plugins: {
+        // @ts-expect-error -- no idea why this is tripping.
         'jsx-a11y': pluginJsxA11y,
         react: pluginReact,
         'react-hooks': fixupPluginRules(pluginReactHooks),
@@ -208,6 +208,7 @@ export function react(_options: unknown): Linter.ConfigType[] {
         'react/forbid-elements': 'error',
         'react/forbid-foreign-prop-types': 'error',
         'react/forbid-prop-types': 'error',
+        'react/forward-ref-uses-ref': 'error',
         'react/function-component-definition': 'off',
         'react/hook-use-state': 'error',
         'react/iframe-missing-sandbox': 'error',

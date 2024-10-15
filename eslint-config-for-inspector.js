@@ -5,6 +5,8 @@ export default config({
   jest: true,
   react: true,
   tailwind: true,
-  typescript: true,
+  typescript: {
+    tsconfigPath: './tsconfig.json',
+  },
   vitest: true,
 })
