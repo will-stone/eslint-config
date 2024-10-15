@@ -1,5 +1,12 @@
 # Changelog
 
+## [12.0.0](https://github.com/will-stone/eslint-config/compare/v11.0.5...v12.0.0) (2024-10-15)
+
+### Major changes
+
+- Update all plugins and support all rules
+  ([7409d27](https://github.com/will-stone/eslint-config/commit/7409d27a68f371048ca0caeb3a611b01aa0f5305))
+
 ## [11.0.5](https://github.com/will-stone/eslint-config/compare/v11.0.4...v11.0.5) (2024-10-15)
 
 ### Patches
