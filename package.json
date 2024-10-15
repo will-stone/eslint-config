@@ -67,9 +67,9 @@
     "type-fest": "^4.26.1"
   },
   "devDependencies": {
-    "@commits-with-character/conventional-changelog-preset": "^0.2.2",
-    "@eslint/config-inspector": "^0.5.2",
-    "@release-it/conventional-changelog": "^8.0.1",
+    "@commits-with-character/conventional-changelog-preset": "^1.0.0",
+    "@eslint/config-inspector": "^0.5.4",
+    "@release-it/conventional-changelog": "^9.0.0",
     "@types/confusing-browser-globals": "^1.0.3",
     "@types/eslint": "^9.6.1",
     "@types/node": "^22.7.5",
