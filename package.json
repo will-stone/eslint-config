@@ -29,10 +29,10 @@
     "typecheck": "tsc --noEmit"
   },
   "lint-staged": {
-    "*.{js,jsx,ts,tsx}": [
+    "*.{js,ts}": [
       "eslint --fix"
     ],
-    "*.{css,json,md}": [
+    "*.{css,json,md,js,ts}": [
       "prettier --write"
     ]
   },
