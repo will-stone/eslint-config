@@ -1,5 +1,14 @@
 # Changelog
 
+## [12.0.1](https://github.com/will-stone/eslint-config/compare/v12.0.0...v12.0.1) (2024-11-02)
+
+### Patches
+
+- Remove deprecated Vitest rule
+  ([e8d4e98](https://github.com/will-stone/eslint-config/commit/e8d4e98dfef0d0dee3f26edc7ffa611e5329605c))
+- Upgrade all deps
+  ([7db1742](https://github.com/will-stone/eslint-config/commit/7db174219bfa77d00e2482e760d975534031a84b))
+
 ## [12.0.0](https://github.com/will-stone/eslint-config/compare/v11.0.5...v12.0.0) (2024-10-15)
 
 ### Major changes
