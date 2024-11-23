@@ -1,5 +1,4 @@
 import type { Linter } from '@typescript-eslint/utils/ts-eslint'
-// @ts-expect-error -- no types
 import pluginJest from 'eslint-plugin-jest'
 import globals from 'globals'
 
