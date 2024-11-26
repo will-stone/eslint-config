@@ -1,5 +1,12 @@
 # Changelog
 
+## [12.0.2](https://github.com/will-stone/eslint-config/compare/v12.0.1...v12.0.2) (2024-11-26)
+
+### Patches
+
+- Bump all deps and turn off new TS rules
+  ([0777d2a](https://github.com/will-stone/eslint-config/commit/0777d2a990999e3f51804e4ff815d6586a987312))
+
 ## [12.0.1](https://github.com/will-stone/eslint-config/compare/v12.0.0...v12.0.1) (2024-11-02)
 
 ### Patches
