@@ -29,7 +29,6 @@ export function typescript(
       },
       name: 'will-stone/typescript',
       plugins: {
-        // @ts-expect-error -- is using classic config type instead of flat config.
         '@typescript-eslint': pluginTypescript,
       },
       rules: {
@@ -137,6 +136,7 @@ export function typescript(
               '@typescript-eslint/no-unsafe-enum-comparison': 'off',
               '@typescript-eslint/no-unsafe-member-access': 'off',
               '@typescript-eslint/no-unsafe-return': 'off',
+              '@typescript-eslint/no-unsafe-type-assertion': 'off',
               '@typescript-eslint/no-unsafe-unary-minus': 'off',
               '@typescript-eslint/non-nullable-type-assertion-style': 'off',
               '@typescript-eslint/only-throw-error': 'off',
@@ -153,6 +153,7 @@ export function typescript(
               '@typescript-eslint/prefer-return-this-type': 'off',
               '@typescript-eslint/prefer-string-starts-ends-with': 'off',
               '@typescript-eslint/promise-function-async': 'off',
+              '@typescript-eslint/related-getter-setter-pairs': 'off',
               '@typescript-eslint/require-array-sort-compare': 'off',
               '@typescript-eslint/require-await': 'off',
               '@typescript-eslint/restrict-plus-operands': 'off',

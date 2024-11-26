@@ -21,8 +21,8 @@ export function react(_options: unknown): TSESLint.FlatConfig.Config[] {
       },
       name: 'will-stone/react',
       plugins: {
-        // @ts-expect-error -- no idea why this is tripping.
         'jsx-a11y': pluginJsxA11y,
+        // @ts-expect-error -- no idea why this is tripping.
         react: pluginReact,
         'react-hooks': fixupPluginRules(pluginReactHooks),
       },
