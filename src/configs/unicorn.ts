@@ -1,7 +1,7 @@
-import type { Linter } from '@typescript-eslint/utils/ts-eslint'
+import type { TSESLint } from '@typescript-eslint/utils'
 import pluginUnicorn from 'eslint-plugin-unicorn'
 
-export function unicorn(): Linter.ConfigType[] {
+export function unicorn(): TSESLint.FlatConfig.Config[] {
   return [
     {
       name: 'will-stone/unicorn',

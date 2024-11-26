@@ -1,8 +1,8 @@
 import { fixupPluginRules } from '@eslint/compat'
-import type { Linter } from '@typescript-eslint/utils/ts-eslint'
+import type { TSESLint } from '@typescript-eslint/utils'
 import pluginVitest from 'eslint-plugin-vitest'
 
-export function vitest(_options: unknown): Linter.ConfigType[] {
+export function vitest(_options: unknown): TSESLint.FlatConfig.Config[] {
   return [
     {
       files: ['**/*.{spec,test}.{js,cjs,mjs,jsx,ts,tsx}'],

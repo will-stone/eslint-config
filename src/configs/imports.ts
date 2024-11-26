@@ -1,8 +1,8 @@
-import type { Linter } from '@typescript-eslint/utils/ts-eslint'
+import type { TSESLint } from '@typescript-eslint/utils'
 import * as pluginImport from 'eslint-plugin-import-x'
 import pluginSimpleImport from 'eslint-plugin-simple-import-sort'
 
-export function imports(): Linter.ConfigType[] {
+export function imports(): TSESLint.FlatConfig.Config[] {
   return [
     {
       name: 'will-stone/imports',

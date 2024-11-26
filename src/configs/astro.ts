@@ -1,9 +1,9 @@
 import parserTypescript from '@typescript-eslint/parser'
-import type { Linter } from '@typescript-eslint/utils/ts-eslint'
+import type { TSESLint } from '@typescript-eslint/utils'
 import parserAstro from 'astro-eslint-parser'
 import pluginAstro from 'eslint-plugin-astro'
 
-export function astro(_options: unknown): Linter.ConfigType[] {
+export function astro(_options: unknown): TSESLint.FlatConfig.Config[] {
   return [
     {
       files: ['**/*.astro'],

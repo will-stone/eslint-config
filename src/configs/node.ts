@@ -1,8 +1,8 @@
-import type { Linter } from '@typescript-eslint/utils/ts-eslint'
+import type { TSESLint } from '@typescript-eslint/utils'
 import pluginNode from 'eslint-plugin-n'
 import globals from 'globals'
 
-export function node(): Linter.ConfigType[] {
+export function node(): TSESLint.FlatConfig.Config[] {
   return [
     {
       languageOptions: { globals: globals.node },

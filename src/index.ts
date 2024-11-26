@@ -1,4 +1,4 @@
-import type { Linter as TSLinter } from '@typescript-eslint/utils/ts-eslint'
+import type { TSESLint } from '@typescript-eslint/utils'
 
 import { autoConfigs, defaultConfigs } from './configs/index.js'
 import type { Options } from './model.js'
@@ -7,8 +7,8 @@ import { checkDepsExist } from './utils/check-deps-exist.js'
 /**
  * Construct an array of ESLint flat config items.
  */
-function config(options?: Options): TSLinter.ConfigType[] {
-  const configs: TSLinter.ConfigType[][] = []
+function config(options?: Options): TSESLint.FlatConfig.Config[] {
+  const configs: TSESLint.FlatConfig.Config[][] = []
 
   const autoConfigDeps = Object.values(autoConfigs).map(({ dep }) => dep)
   const existingAutoConfigDeps = checkDepsExist(autoConfigDeps)

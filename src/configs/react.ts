@@ -1,5 +1,5 @@
 import { fixupPluginRules } from '@eslint/compat'
-import type { Linter } from '@typescript-eslint/utils/ts-eslint'
+import type { TSESLint } from '@typescript-eslint/utils'
 // @ts-expect-error -- no types
 import pluginJsxA11y from 'eslint-plugin-jsx-a11y'
 import pluginReact from 'eslint-plugin-react'
@@ -7,7 +7,7 @@ import pluginReact from 'eslint-plugin-react'
 import pluginReactHooks from 'eslint-plugin-react-hooks'
 import globals from 'globals'
 
-export function react(_options: unknown): Linter.ConfigType[] {
+export function react(_options: unknown): TSESLint.FlatConfig.Config[] {
   return [
     {
       files: ['**/*.{jsx,tsx}'],

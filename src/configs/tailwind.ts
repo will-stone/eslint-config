@@ -1,4 +1,4 @@
-import type { Linter } from '@typescript-eslint/utils/ts-eslint'
+import type { TSESLint } from '@typescript-eslint/utils'
 // @ts-expect-error -- no types
 import pluginTailwind from 'eslint-plugin-tailwindcss'
 
@@ -6,7 +6,7 @@ import type { Options } from '../model.js'
 
 export function tailwind(
   rawOptions?: Options['tailwind'],
-): Linter.ConfigType[] {
+): TSESLint.FlatConfig.Config[] {
   const options = !rawOptions || rawOptions === true ? {} : rawOptions
 
   return [

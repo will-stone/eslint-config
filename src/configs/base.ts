@@ -1,13 +1,13 @@
+import type { TSESLint } from '@typescript-eslint/utils'
 // The ESLint browser environment defines all browser globals as valid,
 // Even though most people don't know some of them exist (e.g. `name` or `status`).
 // This is dangerous as it hides accidentally undefined variables.
 // We blacklist the globals that we deem potentially confusing.
 // To use them, explicitly reference them, e.g. `window.name` or `window.status`.
-import type { Linter } from '@typescript-eslint/utils/ts-eslint'
 import restrictedGlobals from 'confusing-browser-globals'
 import globals from 'globals'
 
-export function base(): Linter.ConfigType[] {
+export function base(): TSESLint.FlatConfig.Config[] {
   return [
     {
       languageOptions: {

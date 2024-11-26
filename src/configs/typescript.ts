@@ -1,12 +1,12 @@
 import pluginTypescript from '@typescript-eslint/eslint-plugin'
 import * as parserTypescript from '@typescript-eslint/parser'
-import type { Linter } from '@typescript-eslint/utils/ts-eslint'
+import type { TSESLint } from '@typescript-eslint/utils'
 
 import type { Options } from '../types.js'
 
 export function typescript(
   rawOptions?: Options['typescript'],
-): Linter.ConfigType[] {
+): TSESLint.FlatConfig.Config[] {
   const options =
     !rawOptions || typeof rawOptions === 'boolean' ? {} : rawOptions
 
