@@ -203,7 +203,10 @@ export function typescript(
         ],
         '@typescript-eslint/default-param-last': ['error'],
         '@typescript-eslint/explicit-function-return-type': 'off',
-        '@typescript-eslint/explicit-member-accessibility': 'warn',
+        '@typescript-eslint/explicit-member-accessibility': [
+          'warn',
+          { accessibility: 'no-public' },
+        ],
         '@typescript-eslint/init-declarations': 'off',
         '@typescript-eslint/max-params': 'off',
         '@typescript-eslint/member-ordering': 'error',
