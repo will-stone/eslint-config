@@ -1,5 +1,12 @@
 # Changelog
 
+## [12.1.0](https://github.com/will-stone/eslint-config/compare/v12.0.2...v12.1.0) (2024-12-02)
+
+### Minor changes
+
+- Do not require public accessibility modifier on class properties and methods
+  ([8ffd060](https://github.com/will-stone/eslint-config/commit/8ffd0606abbf369c747a34531a409b70bf1debdb))
+
 ## [12.0.2](https://github.com/will-stone/eslint-config/compare/v12.0.1...v12.0.2) (2024-11-26)
 
 ### Patches
