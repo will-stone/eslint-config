@@ -1,5 +1,12 @@
 # Changelog
 
+## [13.0.0](https://github.com/will-stone/eslint-config/compare/v12.1.0...v13.0.0) (2025-02-02)
+
+### Major changes
+
+- Only import plugins when config is used
+  ([e5f7fd9](https://github.com/will-stone/eslint-config/commit/e5f7fd99389b4a89d954ae87f345047077827377))
+
 ## [12.1.0](https://github.com/will-stone/eslint-config/compare/v12.0.2...v12.1.0) (2024-12-02)
 
 ### Minor changes
