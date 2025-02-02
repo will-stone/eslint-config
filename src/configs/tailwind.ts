@@ -1,19 +1,20 @@
 import type { TSESLint } from '@typescript-eslint/utils'
-// @ts-expect-error -- no types
-import pluginTailwind from 'eslint-plugin-tailwindcss'
 
 import type { Options } from '../model.js'
 
-export function tailwind(
+export async function tailwind(
   rawOptions?: Options['tailwind'],
-): TSESLint.FlatConfig.Config[] {
+): Promise<TSESLint.FlatConfig.Config[]> {
   const options = !rawOptions || rawOptions === true ? {} : rawOptions
+
+  // @ts-expect-error -- no types
+  const plugin = await import('eslint-plugin-tailwindcss')
 
   return [
     {
       files: ['**/*.{jsx,tsx,astro}'],
       name: 'will-stone/tailwind',
-      plugins: { tailwindcss: pluginTailwind },
+      plugins: { tailwindcss: plugin },
       rules: {
         'tailwindcss/classnames-order': 'warn',
         'tailwindcss/enforces-negative-arbitrary-values': 'warn',

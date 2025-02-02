@@ -4,9 +4,10 @@ import type { TSESLint } from '@typescript-eslint/utils'
 
 import type { Options } from '../types.js'
 
-export function typescript(
+// eslint-disable-next-line require-await
+export async function typescript(
   rawOptions?: Options['typescript'],
-): TSESLint.FlatConfig.Config[] {
+): Promise<TSESLint.FlatConfig.Config[]> {
   const options =
     !rawOptions || typeof rawOptions === 'boolean' ? {} : rawOptions
 

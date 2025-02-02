@@ -7,7 +7,8 @@ import type { TSESLint } from '@typescript-eslint/utils'
 import restrictedGlobals from 'confusing-browser-globals'
 import globals from 'globals'
 
-export function base(): TSESLint.FlatConfig.Config[] {
+// eslint-disable-next-line require-await
+export async function base(): Promise<TSESLint.FlatConfig.Config[]> {
   return [
     {
       languageOptions: {

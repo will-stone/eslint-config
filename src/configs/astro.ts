@@ -3,7 +3,10 @@ import type { TSESLint } from '@typescript-eslint/utils'
 import parserAstro from 'astro-eslint-parser'
 import pluginAstro from 'eslint-plugin-astro'
 
-export function astro(_options: unknown): TSESLint.FlatConfig.Config[] {
+// eslint-disable-next-line require-await
+export async function astro(
+  _options: unknown,
+): Promise<TSESLint.FlatConfig.Config[]> {
   return [
     {
       files: ['**/*.astro'],

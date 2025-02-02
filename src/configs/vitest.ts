@@ -2,7 +2,10 @@ import { fixupPluginRules } from '@eslint/compat'
 import type { TSESLint } from '@typescript-eslint/utils'
 import pluginVitest from 'eslint-plugin-vitest'
 
-export function vitest(_options: unknown): TSESLint.FlatConfig.Config[] {
+// eslint-disable-next-line require-await
+export async function vitest(
+  _options: unknown,
+): Promise<TSESLint.FlatConfig.Config[]> {
   return [
     {
       files: ['**/*.{spec,test}.{js,cjs,mjs,jsx,ts,tsx}'],

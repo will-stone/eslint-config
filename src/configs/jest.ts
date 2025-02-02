@@ -2,7 +2,10 @@ import type { TSESLint } from '@typescript-eslint/utils'
 import pluginJest from 'eslint-plugin-jest'
 import globals from 'globals'
 
-export function jest(_options: unknown): TSESLint.FlatConfig.Config[] {
+// eslint-disable-next-line require-await
+export async function jest(
+  _options: unknown,
+): Promise<TSESLint.FlatConfig.Config[]> {
   return [
     {
       files: ['**/__mocks__/**/*', '**/*.{spec,test}.{js,cjs,mjs,jsx,ts,tsx}'],

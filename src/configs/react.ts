@@ -7,7 +7,10 @@ import pluginReact from 'eslint-plugin-react'
 import pluginReactHooks from 'eslint-plugin-react-hooks'
 import globals from 'globals'
 
-export function react(_options: unknown): TSESLint.FlatConfig.Config[] {
+// eslint-disable-next-line require-await
+export async function react(
+  _options: unknown,
+): Promise<TSESLint.FlatConfig.Config[]> {
   return [
     {
       files: ['**/*.{jsx,tsx}'],

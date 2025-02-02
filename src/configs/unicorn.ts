@@ -1,7 +1,8 @@
 import type { TSESLint } from '@typescript-eslint/utils'
 import pluginUnicorn from 'eslint-plugin-unicorn'
 
-export function unicorn(): TSESLint.FlatConfig.Config[] {
+// eslint-disable-next-line require-await
+export async function unicorn(): Promise<TSESLint.FlatConfig.Config[]> {
   return [
     {
       name: 'will-stone/unicorn',

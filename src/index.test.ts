@@ -25,14 +25,14 @@ beforeEach(() => {
   vol.reset()
 })
 
-test('should load default configs', () => {
+test('should load default configs', async () => {
   const logSpy = vi.spyOn(console, 'log').mockImplementation(() => null)
   vol.fromJSON({
     'package.json': JSON.stringify({
       dependencies: { bar: '^4.2.1', foo: '^9.0.0' },
     }),
   })
-  expect(config()).toStrictEqual([
+  await expect(config()).resolves.toStrictEqual([
     expect.objectContaining({ name: 'will-stone/ignores' }),
     expect.objectContaining({ name: 'will-stone/git-ignore' }),
     expect.objectContaining({ name: 'will-stone/base' }),
@@ -69,12 +69,12 @@ test.each([
     dep: 'vitest',
     name: 'Vitest',
   },
-])('should load auto configs', ({ name, configNames, dep }) => {
+])('should load auto configs', async ({ name, configNames, dep }) => {
   const logSpy = vi.spyOn(console, 'log').mockImplementation(() => null)
   vol.fromJSON({
     'package.json': JSON.stringify({ dependencies: { [dep]: '^9.0.0' } }),
   })
-  expect(config()).toStrictEqual(
+  await expect(config()).resolves.toStrictEqual(
     expect.arrayContaining(
       configNames.map((configName) =>
         expect.objectContaining({ name: `will-stone/${configName}` }),
@@ -86,7 +86,7 @@ test.each([
   expect(logSpy).toHaveBeenCalledTimes(2)
 })
 
-test('should not load any auto-configs if forced off', () => {
+test('should not load any auto-configs if forced off', async () => {
   const logSpy = vi.spyOn(console, 'log').mockImplementation(() => null)
   vol.fromJSON({
     'package.json': JSON.stringify({
@@ -99,7 +99,7 @@ test('should not load any auto-configs if forced off', () => {
       },
     }),
   })
-  expect(
+  await expect(
     config({
       jest: false,
       react: false,
@@ -107,7 +107,7 @@ test('should not load any auto-configs if forced off', () => {
       typescript: false,
       vitest: false,
     }),
-  ).toStrictEqual([
+  ).resolves.toStrictEqual([
     expect.objectContaining({ name: 'will-stone/ignores' }),
     expect.objectContaining({ name: 'will-stone/git-ignore' }),
     expect.objectContaining({ name: 'will-stone/base' }),
@@ -118,12 +118,12 @@ test('should not load any auto-configs if forced off', () => {
   expect(logSpy).not.toHaveBeenCalled()
 })
 
-test('should load auto-configs if forced on', () => {
+test('should load auto-configs if forced on', async () => {
   const logSpy = vi.spyOn(console, 'log').mockImplementation(() => null)
   vol.fromJSON({
     'package.json': JSON.stringify({ dependencies: { lorem: '^9.0.0' } }),
   })
-  expect(
+  await expect(
     config({
       jest: true,
       react: true,
@@ -131,7 +131,7 @@ test('should load auto-configs if forced on', () => {
       typescript: true,
       vitest: true,
     }),
-  ).toStrictEqual(
+  ).resolves.toStrictEqual(
     expect.arrayContaining([
       expect.objectContaining({ name: 'will-stone/ignores' }),
       expect.objectContaining({ name: 'will-stone/git-ignore' }),
@@ -157,14 +157,14 @@ test('should load auto-configs if forced on', () => {
   expect(logSpy).toHaveBeenCalledTimes(6)
 })
 
-test('should load multiple auto-configs', () => {
+test('should load multiple auto-configs', async () => {
   const logSpy = vi.spyOn(console, 'log').mockImplementation(() => null)
   vol.fromJSON({
     'package.json': JSON.stringify({
       dependencies: { react: '^9.0.0', vitest: '^9.0.0' },
     }),
   })
-  expect(config()).toStrictEqual(
+  await expect(config()).resolves.toStrictEqual(
     expect.arrayContaining([
       expect.objectContaining({ name: 'will-stone/react' }),
       expect.objectContaining({ name: 'will-stone/vitest' }),

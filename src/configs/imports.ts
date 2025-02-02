@@ -2,7 +2,8 @@ import type { TSESLint } from '@typescript-eslint/utils'
 import * as pluginImport from 'eslint-plugin-import-x'
 import pluginSimpleImport from 'eslint-plugin-simple-import-sort'
 
-export function imports(): TSESLint.FlatConfig.Config[] {
+// eslint-disable-next-line require-await
+export async function imports(): Promise<TSESLint.FlatConfig.Config[]> {
   return [
     {
       name: 'will-stone/imports',

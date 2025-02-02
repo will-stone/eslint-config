@@ -7,14 +7,16 @@ import { checkDepsExist } from './utils/check-deps-exist.js'
 /**
  * Construct an array of ESLint flat config items.
  */
-function config(options?: Options): TSESLint.FlatConfig.Config[] {
+async function config(
+  options?: Options,
+): Promise<TSESLint.FlatConfig.Config[]> {
   const configs: TSESLint.FlatConfig.Config[][] = []
 
   const autoConfigDeps = Object.values(autoConfigs).map(({ dep }) => dep)
   const existingAutoConfigDeps = checkDepsExist(autoConfigDeps)
 
-  for (const defaultConfig of defaultConfigs) {
-    configs.push(defaultConfig.config())
+  for await (const defaultConfig of defaultConfigs) {
+    configs.push(await defaultConfig.config())
   }
 
   const enabledAutoConfigs = autoConfigs.filter(({ dep, optionName }) => {
@@ -31,11 +33,11 @@ function config(options?: Options): TSESLint.FlatConfig.Config[] {
     console.log('Auto-configured plugins:')
   }
 
-  for (const autoConfig of enabledAutoConfigs) {
+  for await (const autoConfig of enabledAutoConfigs) {
     // eslint-disable-next-line no-console
     console.log(`- ${autoConfig.name}`)
     const autoConfigOptions = options?.[autoConfig.optionName]
-    configs.push(autoConfig.config(autoConfigOptions))
+    configs.push(await autoConfig.config(autoConfigOptions))
   }
 
   const merged = configs.flat()
