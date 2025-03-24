@@ -1,5 +1,12 @@
 # Changelog
 
+## [15.0.4](https://github.com/will-stone/eslint-config/compare/v15.0.3...v15.0.4) (2025-03-24)
+
+### Patches
+
+- Document husky auto-adds prepare script
+  ([39797cc](https://github.com/will-stone/eslint-config/commit/39797ccef3b3ef0890db65f1093bf4affbbe4251))
+
 ## [15.0.3](https://github.com/will-stone/eslint-config/compare/v15.0.2...v15.0.3) (2025-03-24)
 
 ### Patches
