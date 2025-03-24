@@ -38,6 +38,7 @@ beforeEach(() => {
 
 test('should find deps in package.json files', () => {
   const readFileSpy = vi.spyOn(fs, 'readFileSync')
+
   expect(checkDepsExist(['react', 'moo', 'lorem', 'joe'])).toStrictEqual({
     joe: true,
     lorem: true,
@@ -63,6 +64,7 @@ test('should not find deps only in peerDependencies', () => {
 
 test('should exit early if all deps found', () => {
   const readFileSpy = vi.spyOn(fs, 'readFileSync')
+
   expect(checkDepsExist(['bar'])).toStrictEqual({ bar: true })
   expect(readFileSpy).toHaveBeenCalledOnce()
 })

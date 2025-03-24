@@ -18,8 +18,9 @@
     "dist"
   ],
   "scripts": {
-    "build": "tsup src/index.ts --format esm --clean --dts",
-    "dev": "tsup src/index.ts --format esm --watch & config-inspector --config ./eslint-config-for-inspector.js",
+    "build": "tsup src/index.ts --format esm --clean --dts --shims",
+    "predev": "npm run build",
+    "dev": "tsup src/index.ts --format esm --shims --watch & config-inspector --config ./eslint-config-for-inspector.js",
     "lint": "npm run stub && eslint .",
     "prepare": "simple-git-hooks",
     "prepublishOnly": "npm run build",
@@ -41,49 +42,75 @@
   },
   "prettier": "@will-stone/prettier-config",
   "dependencies": {
-    "@eslint/compat": "^1.2.3",
-    "@typescript-eslint/eslint-plugin": "^8.16.0",
-    "@typescript-eslint/parser": "^8.16.0",
-    "@vitest/eslint-plugin": "^1.1.36",
-    "astro-eslint-parser": "^1.1.0",
+    "@typescript-eslint/eslint-plugin": "^8.27.0",
+    "@typescript-eslint/parser": "^8.27.0",
     "confusing-browser-globals": "^1.0.11",
     "eslint-config-flat-gitignore": "^0.3.0",
-    "eslint-plugin-astro": "^1.3.1",
-    "eslint-plugin-import-x": "^4.4.3",
-    "eslint-plugin-jest": "^28.9.0",
+    "eslint-plugin-import-x": "^4.9.1",
     "eslint-plugin-jsx-a11y": "^6.10.2",
-    "eslint-plugin-n": "^17.14.0",
-    "eslint-plugin-react": "^7.37.2",
-    "eslint-plugin-react-hooks": "^5.0.0",
+    "eslint-plugin-n": "^17.16.2",
     "eslint-plugin-simple-import-sort": "^12.1.1",
-    "eslint-plugin-tailwindcss": "^3.17.5",
     "eslint-plugin-unicorn": "^56.0.1",
     "globals": "^15.12.0",
-    "globby": "^14.0.2",
-    "type-fest": "^4.28.1"
+    "globby": "^14.1.0",
+    "type-fest": "^4.38.0"
   },
   "devDependencies": {
     "@commits-with-character/conventional-changelog-preset": "^1.0.0",
-    "@eslint/config-inspector": "^0.5.6",
+    "@eslint/config-inspector": "^1.0.2",
     "@release-it/conventional-changelog": "^9.0.3",
     "@types/confusing-browser-globals": "^1.0.3",
     "@types/eslint": "^9.6.1",
-    "@types/node": "^22.10.0",
-    "@typescript-eslint/utils": "^8.26.0",
+    "@types/node": "^22.13.12",
+    "@typescript-eslint/utils": "^8.27.0",
+    "@vitest/eslint-plugin": "^1.1.38",
     "@will-stone/prettier-config": "^8.0.1",
-    "lint-staged": "^15.2.10",
-    "memfs": "^4.14.0",
-    "prettier": "^3.4.1",
+    "astro-eslint-parser": "^1.0.2",
+    "eslint-plugin-astro": "^1.3.1",
+    "eslint-plugin-jest": "^28.11.0",
+    "eslint-plugin-react": "^7.37.4",
+    "eslint-plugin-react-hooks": "^5.2.0",
+    "eslint-plugin-tailwindcss": "^3.18.0",
+    "lint-staged": "^15.5.0",
+    "memfs": "^4.17.0",
+    "prettier": "^3.5.3",
     "release-it": "^17.10.0",
-    "simple-git-hooks": "^2.11.1",
-    "tsup": "^8.3.5",
-    "typescript": "^5.7.2",
+    "simple-git-hooks": "^2.12.1",
+    "tsup": "^8.4.0",
+    "typescript": "^5.8.2",
     "vitest": "^2.1.6"
   },
   "peerDependencies": {
-    "eslint": ">=9.15.0"
+    "@vitest/eslint-plugin": "^1.1.38",
+    "astro-eslint-parser": "^1.0.2",
+    "eslint": ">=9.23.0",
+    "eslint-plugin-astro": "^1.3.1",
+    "eslint-plugin-jest": "^28.11.0",
+    "eslint-plugin-react": "^7.37.4",
+    "eslint-plugin-react-hooks": "^5.2.0",
+    "eslint-plugin-tailwindcss": "^3.18.0"
   },
-  "overrides": {
-    "eslint": ">=9.15.0"
+  "peerDependenciesMeta": {
+    "@vitest/eslint-plugin": {
+      "optional": true
+    },
+    "astro-eslint-parser": {
+      "optional": true
+    },
+    "eslint-plugin-astro": {
+      "optional": true
+    },
+    "eslint-plugin-jest": {
+      "optional": true
+    },
+    "eslint-plugin-react": {
+      "optional": true
+    },
+    "eslint-plugin-react-hooks": {
+      "optional": true
+    },
+    "eslint-plugin-tailwindcss": {
+      "optional": true
+    }
   }
 }

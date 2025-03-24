@@ -1,10 +1,12 @@
 import type { TSESLint } from '@typescript-eslint/utils'
-import pluginVitest from '@vitest/eslint-plugin'
 
-// eslint-disable-next-line require-await
+import { interopDefault } from '../utils/interop-default.js'
+
 export async function vitest(
   _options: unknown,
 ): Promise<TSESLint.FlatConfig.Config[]> {
+  const pluginVitest = await interopDefault(import('@vitest/eslint-plugin'))
+
   return [
     {
       files: ['**/*.{spec,test}.{js,cjs,mjs,jsx,ts,tsx}'],

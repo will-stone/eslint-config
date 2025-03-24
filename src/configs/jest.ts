@@ -1,11 +1,13 @@
 import type { TSESLint } from '@typescript-eslint/utils'
-import pluginJest from 'eslint-plugin-jest'
 import globals from 'globals'
 
-// eslint-disable-next-line require-await
+import { interopDefault } from '../utils/interop-default.js'
+
 export async function jest(
   _options: unknown,
 ): Promise<TSESLint.FlatConfig.Config[]> {
+  const pluginJest = await interopDefault(import('eslint-plugin-jest'))
+
   return [
     {
       files: ['**/__mocks__/**/*', '**/*.{spec,test}.{js,cjs,mjs,jsx,ts,tsx}'],

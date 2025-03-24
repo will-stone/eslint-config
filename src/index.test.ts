@@ -32,6 +32,7 @@ test('should load default configs', async () => {
       dependencies: { bar: '^4.2.1', foo: '^9.0.0' },
     }),
   })
+
   await expect(config()).resolves.toStrictEqual([
     expect.objectContaining({ name: 'will-stone/ignores' }),
     expect.objectContaining({ name: 'will-stone/git-ignore' }),
@@ -74,6 +75,7 @@ test.each([
   vol.fromJSON({
     'package.json': JSON.stringify({ dependencies: { [dep]: '^9.0.0' } }),
   })
+
   await expect(config()).resolves.toStrictEqual(
     expect.arrayContaining(
       configNames.map((configName) =>
@@ -99,6 +101,7 @@ test('should not load any auto-configs if forced off', async () => {
       },
     }),
   })
+
   await expect(
     config({
       jest: false,
@@ -123,6 +126,7 @@ test('should load auto-configs if forced on', async () => {
   vol.fromJSON({
     'package.json': JSON.stringify({ dependencies: { lorem: '^9.0.0' } }),
   })
+
   await expect(
     config({
       jest: true,
@@ -164,6 +168,7 @@ test('should load multiple auto-configs', async () => {
       dependencies: { react: '^9.0.0', vitest: '^9.0.0' },
     }),
   })
+
   await expect(config()).resolves.toStrictEqual(
     expect.arrayContaining([
       expect.objectContaining({ name: 'will-stone/react' }),

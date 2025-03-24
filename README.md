@@ -10,6 +10,19 @@ My personal [ESLint](https://eslint.org/) config.
 npm i -D eslint @will-stone/eslint-config
 ```
 
+### Optional Peer Dependencies
+
+If you are using any of the following packages, you will also need to install
+the corresponding plugin.
+
+| Package       | Plugin                                          |
+| ------------- | ----------------------------------------------- |
+| `astro`       | `astro-eslint-parser eslint-plugin-astro`       |
+| `jest`        | `eslint-plugin-jest`                            |
+| `react`       | `eslint-plugin-react eslint-plugin-react-hooks` |
+| `tailwindcss` | `eslint-plugin-tailwindcss`                     |
+| `vitest`      | `@vitest/eslint-plugin`                         |
+
 ### Create config file
 
 ```js
@@ -29,20 +42,6 @@ For example:
     "lint": "eslint .",
     "lint:fix": "eslint . --fix"
   }
-}
-```
-
-### VS Code support (auto fix)
-
-Install
-[VS Code ESLint extension](https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint).
-
-Add the following settings to your `.vscode/settings.json`:
-
-```jsonc
-{
-  // Enable the ESlint flat config support
-  "eslint.experimental.useFlatConfig": true,
 }
 ```
 

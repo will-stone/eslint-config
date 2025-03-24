@@ -1,15 +1,18 @@
-import pluginTypescript from '@typescript-eslint/eslint-plugin'
-import * as parserTypescript from '@typescript-eslint/parser'
 import type { TSESLint } from '@typescript-eslint/utils'
 
 import type { Options } from '../types.js'
+import { interopDefault } from '../utils/interop-default.js'
 
-// eslint-disable-next-line require-await
 export async function typescript(
   rawOptions?: Options['typescript'],
 ): Promise<TSESLint.FlatConfig.Config[]> {
   const options =
     !rawOptions || typeof rawOptions === 'boolean' ? {} : rawOptions
+
+  const [pluginTypescript, parserTypescript] = await Promise.all([
+    interopDefault(import('@typescript-eslint/eslint-plugin')),
+    interopDefault(import('@typescript-eslint/parser')),
+  ] as const)
 
   return [
     {
@@ -121,6 +124,7 @@ export async function typescript(
               '@typescript-eslint/no-implied-eval': 'off',
               '@typescript-eslint/no-meaningless-void-operator': 'off',
               '@typescript-eslint/no-misused-promises': 'off',
+              '@typescript-eslint/no-misused-spread': 'off',
               '@typescript-eslint/no-mixed-enums': 'off',
               '@typescript-eslint/no-redundant-type-constituents': 'off',
               '@typescript-eslint/no-unnecessary-boolean-literal-compare':

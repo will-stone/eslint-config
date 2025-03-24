@@ -1,4 +1,17 @@
 {
-  "cSpell.words": ["fixup", "TSES"],
+  "cSpell.words": [
+    "activedescendant",
+    "canonicalurl",
+    "fetchcontent",
+    "fixup",
+    "getentrybyslug",
+    "multilines",
+    "proptypes",
+    "setstate",
+    "spinbutton",
+    "textnodes",
+    "treegrid",
+    "TSES"
+  ],
   "typescript.tsdk": "node_modules/typescript/lib"
 }

@@ -1,26 +1,33 @@
 import parserTypescript from '@typescript-eslint/parser'
 import type { TSESLint } from '@typescript-eslint/utils'
-import parserAstro from 'astro-eslint-parser'
-import pluginAstro from 'eslint-plugin-astro'
 
-// eslint-disable-next-line require-await
+import { interopDefault } from '../utils/interop-default.js'
+
 export async function astro(
   _options: unknown,
 ): Promise<TSESLint.FlatConfig.Config[]> {
+  const [pluginAstro, parserAstro] = await Promise.all([
+    interopDefault(import('eslint-plugin-astro')),
+    interopDefault(import('astro-eslint-parser')),
+  ] as const)
+
   return [
     {
       files: ['**/*.astro'],
       languageOptions: {
+        globals: pluginAstro.environments.astro.globals,
         parser: parserAstro,
         parserOptions: {
           extraFileExtensions: ['.astro'],
           parser: parserTypescript,
         },
+        sourceType: 'module',
       },
       name: 'will-stone/astro',
       plugins: {
         astro: pluginAstro,
       },
+      processor: 'astro/client-side-ts',
       rules: {
         // Astro passes Components to the view which this rule doesn't like.
         'no-useless-assignment': 'off',

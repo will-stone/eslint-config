@@ -1,16 +1,18 @@
-import { fixupPluginRules } from '@eslint/compat'
 import type { TSESLint } from '@typescript-eslint/utils'
-// @ts-expect-error -- no types
-import pluginJsxA11y from 'eslint-plugin-jsx-a11y'
-import pluginReact from 'eslint-plugin-react'
-// @ts-expect-error -- no types
-import pluginReactHooks from 'eslint-plugin-react-hooks'
 import globals from 'globals'
 
-// eslint-disable-next-line require-await
+import { interopDefault } from '../utils/interop-default.js'
+
 export async function react(
   _options: unknown,
 ): Promise<TSESLint.FlatConfig.Config[]> {
+  const [pluginJsxA11y, pluginReact, pluginReactHooks] = await Promise.all([
+    // @ts-expect-error -- no types
+    interopDefault(import('eslint-plugin-jsx-a11y')),
+    interopDefault(import('eslint-plugin-react')),
+    interopDefault(import('eslint-plugin-react-hooks')),
+  ] as const)
+
   return [
     {
       files: ['**/*.{jsx,tsx}'],
@@ -25,9 +27,8 @@ export async function react(
       name: 'will-stone/react',
       plugins: {
         'jsx-a11y': pluginJsxA11y,
-        // @ts-expect-error -- no idea why this is tripping.
         react: pluginReact,
-        'react-hooks': fixupPluginRules(pluginReactHooks),
+        'react-hooks': pluginReactHooks,
       },
       rules: {
         'jsx-a11y/alt-text': 'error',
