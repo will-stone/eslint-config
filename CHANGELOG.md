@@ -1,5 +1,12 @@
 # Changelog
 
+## [15.0.2](https://github.com/will-stone/eslint-config/compare/v15.0.1...v15.0.2) (2025-03-24)
+
+### Patches
+
+- Update docs to use pnpm
+  ([d620b24](https://github.com/will-stone/eslint-config/commit/d620b2498282486d94a83762c867b35cbceb0b30))
+
 ## [15.0.1](https://github.com/will-stone/eslint-config/compare/v15.0.0...v15.0.1) (2025-03-24)
 
 ### Patches
