@@ -1,5 +1,12 @@
 # Changelog
 
+## [15.0.3](https://github.com/will-stone/eslint-config/compare/v15.0.2...v15.0.3) (2025-03-24)
+
+### Patches
+
+- Remove deprecated unicorn/no-instanceof-array rule
+  ([0a149e6](https://github.com/will-stone/eslint-config/commit/0a149e68dc5a6f2889b09352c4f81322927da33e))
+
 ## [15.0.2](https://github.com/will-stone/eslint-config/compare/v15.0.1...v15.0.2) (2025-03-24)
 
 ### Patches
