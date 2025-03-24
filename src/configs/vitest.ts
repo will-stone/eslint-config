@@ -1,6 +1,5 @@
-import { fixupPluginRules } from '@eslint/compat'
 import type { TSESLint } from '@typescript-eslint/utils'
-import pluginVitest from 'eslint-plugin-vitest'
+import pluginVitest from '@vitest/eslint-plugin'
 
 // eslint-disable-next-line require-await
 export async function vitest(
@@ -10,7 +9,7 @@ export async function vitest(
     {
       files: ['**/*.{spec,test}.{js,cjs,mjs,jsx,ts,tsx}'],
       name: 'will-stone/vitest',
-      plugins: { vitest: fixupPluginRules(pluginVitest) },
+      plugins: { vitest: pluginVitest },
       rules: {
         'vitest/consistent-test-filename': 'warn',
         'vitest/consistent-test-it': 'warn',
@@ -61,17 +60,31 @@ export async function vitest(
         'vitest/no-import-node-test': 'warn',
         // Every test must have an expect, this is covered by expect-expect rule.
         'vitest/prefer-expect-assertions': 'off',
+        'vitest/prefer-strict-boolean-matchers': 'warn',
         // These two could be dangerous as you may actually want to ensure that
         // something is exactly `false` or `true`, and not something that
         // equates to that if run through Boolean().
         'vitest/prefer-to-be-falsy': 'off',
         'vitest/prefer-to-be-truthy': 'off',
         'vitest/require-local-test-context-for-concurrent-snapshots': 'error',
+        'vitest/require-mock-type-parameters': 'warn',
         // No need to nest everything in useless describe blocks:
         'vitest/require-top-level-describe': 'off',
         'vitest/valid-describe-callback': 'error',
         'vitest/valid-expect': 'error',
+        'vitest/valid-expect-in-promise': 'error',
         'vitest/valid-title': 'warn',
+
+        'vitest/prefer-vi-mocked': 'warn',
+
+        'vitest/padding-around-after-all-blocks': 'warn',
+        'vitest/padding-around-after-each-blocks': 'warn',
+        'vitest/padding-around-all': 'warn',
+        'vitest/padding-around-before-all-blocks': 'warn',
+        'vitest/padding-around-before-each-blocks': 'warn',
+        'vitest/padding-around-describe-blocks': 'warn',
+        'vitest/padding-around-expect-groups': 'warn',
+        'vitest/padding-around-test-blocks': 'warn',
       },
     },
   ]
