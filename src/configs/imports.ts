@@ -1,6 +1,5 @@
 import type { TSESLint } from '@typescript-eslint/utils'
 import * as pluginImport from 'eslint-plugin-import-x'
-import pluginSimpleImport from 'eslint-plugin-simple-import-sort'
 
 // eslint-disable-next-line require-await
 export async function imports(): Promise<TSESLint.FlatConfig.Config[]> {
@@ -9,7 +8,6 @@ export async function imports(): Promise<TSESLint.FlatConfig.Config[]> {
       name: 'will-stone/imports',
       plugins: {
         'import-x': pluginImport,
-        'simple-import-sort': pluginSimpleImport,
       },
       rules: {
         'import-x/consistent-type-specifier-style': [
@@ -23,8 +21,6 @@ export async function imports(): Promise<TSESLint.FlatConfig.Config[]> {
         'import-x/no-empty-named-blocks': 'warn',
         'import-x/no-rename-default': 'off',
         'import-x/prefer-default-export': 'off',
-        'simple-import-sort/exports': 'warn',
-        'simple-import-sort/imports': 'warn',
 
         // The rest of the rules, off until required
         'import-x/default': 'off',
@@ -62,7 +58,16 @@ export async function imports(): Promise<TSESLint.FlatConfig.Config[]> {
         'import-x/no-unused-modules': 'off',
         'import-x/no-useless-path-segments': 'off',
         'import-x/no-webpack-loader-syntax': 'off',
-        'import-x/order': 'off',
+        'import-x/order': [
+          'warn',
+          {
+            alphabetize: {
+              caseInsensitive: true,
+              order: 'asc',
+            },
+            'newlines-between': 'always',
+          },
+        ],
         'import-x/unambiguous': 'off',
       },
     },
