@@ -108,5 +108,6 @@
     "eslint-plugin-tailwindcss": {
       "optional": true
     }
-  }
+  },
+  "packageManager": "pnpm@10.6.5"
 }
