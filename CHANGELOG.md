@@ -1,5 +1,14 @@
 # Changelog
 
+## [15.0.0](https://github.com/will-stone/eslint-config/compare/v14.0.0...v15.0.0) (2025-03-24)
+
+### Major changes
+
+- Replace import ordering plugin
+  ([f31fdf1](https://github.com/will-stone/eslint-config/commit/f31fdf192eefbba1973cb36c46e396cb5a7822a2))
+- Support more Unicorn rules
+  ([6b88cfe](https://github.com/will-stone/eslint-config/commit/6b88cfefdd49b2547bc3357e34b7c8c4c50a8a26))
+
 ## [14.0.0](https://github.com/will-stone/eslint-config/compare/v13.0.0...v14.0.0) (2025-03-24)
 
 ### Major changes
