@@ -1,5 +1,12 @@
 # Changelog
 
+## [15.0.1](https://github.com/will-stone/eslint-config/compare/v15.0.0...v15.0.1) (2025-03-24)
+
+### Patches
+
+- Fix Tailwind plugin not loading
+  ([d6a737a](https://github.com/will-stone/eslint-config/commit/d6a737a6b320a06511d65822c1d824f65db1bd09))
+
 ## [15.0.0](https://github.com/will-stone/eslint-config/compare/v14.0.0...v15.0.0) (2025-03-24)
 
 ### Major changes
