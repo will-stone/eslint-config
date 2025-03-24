@@ -51,9 +51,6 @@ the following to your `package.json`:
 
 ```json
 {
-  "scripts": {
-    "prepare": "husky"
-  },
   "lint-staged": {
     "*.{js,jsx,ts,tsx}": ["eslint --fix"]
   }
