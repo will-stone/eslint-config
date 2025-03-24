@@ -49,7 +49,6 @@ export async function unicorn(): Promise<TSESLint.FlatConfig.Config[]> {
         'unicorn/no-empty-file': 'off',
         'unicorn/no-for-loop': 'warn',
         'unicorn/no-hex-escape': 'warn',
-        'unicorn/no-instanceof-array': 'warn',
         'unicorn/no-instanceof-builtins': 'warn',
         'unicorn/no-invalid-fetch-options': 'error',
         'unicorn/no-invalid-remove-event-listener': 'error',
