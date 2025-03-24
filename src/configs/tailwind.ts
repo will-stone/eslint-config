@@ -1,14 +1,17 @@
 import type { TSESLint } from '@typescript-eslint/utils'
 
 import type { Options } from '../model.js'
+import { interopDefault } from '../utils/interop-default.js'
 
 export async function tailwind(
   rawOptions?: Options['tailwind'],
 ): Promise<TSESLint.FlatConfig.Config[]> {
   const options = !rawOptions || rawOptions === true ? {} : rawOptions
 
-  // @ts-expect-error -- no types
-  const plugin = await import('eslint-plugin-tailwindcss')
+  const plugin = await interopDefault(
+    // @ts-expect-error -- no types
+    import('eslint-plugin-tailwindcss'),
+  )
 
   return [
     {
