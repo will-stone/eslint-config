@@ -1,5 +1,15 @@
 # Changelog
 
+## [14.0.0](https://github.com/will-stone/eslint-config/compare/v13.0.0...v14.0.0) (2025-03-24)
+
+### Major changes
+
+- Lazy load plugins. Check README as you will now need to manually install
+  plugins for some configs
+  ([871b9c5](https://github.com/will-stone/eslint-config/commit/871b9c54541f1cc8e35467f5cc8e92ccef23c0e2))
+- Migrate Vitest plugin, adding new rules
+  ([ca099b2](https://github.com/will-stone/eslint-config/commit/ca099b2076b3b142ff06809b1f42b65032851107))
+
 ## [13.0.0](https://github.com/will-stone/eslint-config/compare/v12.1.0...v13.0.0) (2025-02-02)
 
 ### Major changes
