@@ -7,7 +7,7 @@ My personal [ESLint](https://eslint.org/) config.
 ### Install
 
 ```bash
-npm i -D eslint @will-stone/eslint-config
+pnpm add -D eslint @will-stone/eslint-config
 ```
 
 ### Optional Peer Dependencies
@@ -39,8 +39,7 @@ For example:
 ```json
 {
   "scripts": {
-    "lint": "eslint .",
-    "lint:fix": "eslint . --fix"
+    "lint": "eslint ."
   }
 }
 ```
@@ -53,7 +52,7 @@ the following to your `package.json`:
 ```json
 {
   "scripts": {
-    "prepare": "husky install"
+    "prepare": "husky"
   },
   "lint-staged": {
     "*.{js,jsx,ts,tsx}": ["eslint --fix"]
@@ -64,9 +63,9 @@ the following to your `package.json`:
 and then
 
 ```bash
-npm i -D husky lint-staged
-npx husky install
-npx husky add .husky/pre-commit "npx --no lint-staged"
+pnpm add -D husky lint-staged
+pnpm husky init
+echo "lint-staged" > .husky/pre-commit
 ```
 
 ## Credits
