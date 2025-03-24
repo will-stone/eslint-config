@@ -22,15 +22,12 @@
     "predev": "npm run build",
     "dev": "tsup src/index.ts --format esm --shims --watch & config-inspector --config ./eslint-config-for-inspector.js",
     "lint": "npm run stub && eslint .",
-    "prepare": "simple-git-hooks",
+    "prepare": "husky",
     "prepublishOnly": "npm run build",
     "release": "release-it",
     "stub": "tsup src/index.ts --format esm",
     "test": "vitest",
     "typecheck": "tsc --noEmit"
-  },
-  "simple-git-hooks": {
-    "pre-commit": "npx --no lint-staged"
   },
   "lint-staged": {
     "*.{js,ts}": [
@@ -70,11 +67,11 @@
     "eslint-plugin-react": "^7.37.4",
     "eslint-plugin-react-hooks": "^5.2.0",
     "eslint-plugin-tailwindcss": "^3.18.0",
+    "husky": "^9.1.7",
     "lint-staged": "^15.5.0",
     "memfs": "^4.17.0",
     "prettier": "^3.5.3",
     "release-it": "^18.1.2",
-    "simple-git-hooks": "^2.12.1",
     "tsup": "^8.4.0",
     "typescript": "^5.8.2",
     "vitest": "^3.0.9"
