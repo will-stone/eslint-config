@@ -1,5 +1,12 @@
 # Changelog
 
+## [15.0.5](https://github.com/will-stone/eslint-config/compare/v15.0.4...v15.0.5) (2025-04-01)
+
+### Patches
+
+- Upgrade deps within SemVer
+  ([07e894a](https://github.com/will-stone/eslint-config/commit/07e894a0b2efb634061b9f289a08194ebbb03db0))
+
 ## [15.0.4](https://github.com/will-stone/eslint-config/compare/v15.0.3...v15.0.4) (2025-03-24)
 
 ### Patches
