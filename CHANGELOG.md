@@ -1,5 +1,12 @@
 # Changelog
 
+## [15.2.0](https://github.com/will-stone/eslint-config/compare/v15.1.0...v15.2.0) (2025-04-19)
+
+### Minor changes
+
+- Disable fixable option of vitest/no-focused-tests rule
+  ([63e75e5](https://github.com/will-stone/eslint-config/commit/63e75e5098bb7c9e52a793e0fe1d48da1e563f64))
+
 ## [15.1.0](https://github.com/will-stone/eslint-config/compare/v15.0.7...v15.1.0) (2025-04-19)
 
 ### Minor changes
