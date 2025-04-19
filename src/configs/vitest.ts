@@ -22,7 +22,7 @@ export async function vitest(
         'vitest/no-conditional-tests': 'warn',
         'vitest/no-disabled-tests': 'warn',
         'vitest/no-duplicate-hooks': 'warn',
-        'vitest/no-focused-tests': 'warn',
+        'vitest/no-focused-tests': ['warn', { fixable: false }],
         'vitest/no-interpolation-in-snapshots': 'warn',
         'vitest/no-large-snapshots': 'warn',
         'vitest/no-mocks-import': 'warn',
