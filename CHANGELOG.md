@@ -1,5 +1,12 @@
 # Changelog
 
+## [16.0.0](https://github.com/will-stone/eslint-config/compare/v15.2.0...v16.0.0) (2025-04-19)
+
+### Major changes
+
+- Lint package.json
+  ([542cc2b](https://github.com/will-stone/eslint-config/commit/542cc2be532af59b976dcc60ac3ef4a421e076e2))
+
 ## [15.2.0](https://github.com/will-stone/eslint-config/compare/v15.1.0...v15.2.0) (2025-04-19)
 
 ### Minor changes
