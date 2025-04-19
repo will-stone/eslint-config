@@ -60,7 +60,7 @@
     "@types/node": "^22.14.1",
     "@typescript-eslint/utils": "^8.30.1",
     "@vitest/eslint-plugin": "^1.1.43",
-    "@will-stone/prettier-config": "^9.0.2",
+    "@will-stone/prettier-config": "^10.0.0",
     "astro-eslint-parser": "^1.2.2",
     "eslint-plugin-astro": "^1.3.1",
     "eslint-plugin-jest": "^28.11.0",
