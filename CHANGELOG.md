@@ -1,5 +1,12 @@
 # Changelog
 
+## [15.1.0](https://github.com/will-stone/eslint-config/compare/v15.0.7...v15.1.0) (2025-04-19)
+
+### Minor changes
+
+- Support vitest/prefer-describe-function-title
+  ([c6c691c](https://github.com/will-stone/eslint-config/commit/c6c691c71a733e65f5c68c673896c27f297558a4))
+
 ## [15.0.7](https://github.com/will-stone/eslint-config/compare/v15.0.6...v15.0.7) (2025-04-19)
 
 ### Patches
