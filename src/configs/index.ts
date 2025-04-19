@@ -4,6 +4,7 @@ import { ignores } from './ignores.js'
 import { imports } from './imports.js'
 import { jest } from './jest.js'
 import { node } from './node.js'
+import { packageJson } from './package-json.js'
 import { react } from './react.js'
 import { tailwind } from './tailwind.js'
 import { typescript } from './typescript.js'
@@ -16,6 +17,7 @@ export const defaultConfigs = [
   { config: imports, name: 'Imports' },
   { config: unicorn, name: 'Unicorn' },
   { config: node, name: 'Node' },
+  { config: packageJson, name: 'package.json' },
 ] as const
 
 export const autoConfigs = [
