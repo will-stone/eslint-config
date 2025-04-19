@@ -1,5 +1,12 @@
 # Changelog
 
+## [15.0.7](https://github.com/will-stone/eslint-config/compare/v15.0.6...v15.0.7) (2025-04-19)
+
+### Patches
+
+- Upgrade release-it for real this time 🙄
+  ([a072589](https://github.com/will-stone/eslint-config/commit/a072589940679ac4ea6654cfd1b1b1e3dad9a065))
+
 ## [15.0.6](https://github.com/will-stone/eslint-config/compare/v15.0.5...v15.0.6) (2025-04-19)
 
 ### Patches
