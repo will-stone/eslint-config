@@ -52,7 +52,7 @@ the following to your `package.json`:
 ```json
 {
   "lint-staged": {
-    "*.{js,jsx,ts,tsx}": ["eslint --fix"]
+    "*.{js,jsx,ts,tsx,json}": ["eslint --fix"]
   }
 }
 ```
