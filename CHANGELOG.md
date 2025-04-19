@@ -1,5 +1,13 @@
 # Changelog
 
+## [16.0.1](https://github.com/will-stone/eslint-config/compare/v16.0.0...v16.0.1) (2025-04-19)
+
+### Patches
+
+- Update README to include instructions on linting json now config lints
+  package.json
+  ([a8e097b](https://github.com/will-stone/eslint-config/commit/a8e097b2e4a5e0c005e9f62decf31d8d5e3e8bff))
+
 ## [16.0.0](https://github.com/will-stone/eslint-config/compare/v15.2.0...v16.0.0) (2025-04-19)
 
 ### Major changes
