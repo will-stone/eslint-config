@@ -33,6 +33,7 @@ export async function vitest(
         'vitest/no-test-return-statement': 'warn',
         'vitest/prefer-called-with': 'warn',
         'vitest/prefer-comparison-matcher': 'warn',
+        'vitest/prefer-describe-function-title': 'warn',
         'vitest/prefer-each': 'warn',
         'vitest/prefer-equality-matcher': 'warn',
         'vitest/prefer-expect-resolves': 'warn',
