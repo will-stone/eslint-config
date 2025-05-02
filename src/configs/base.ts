@@ -153,7 +153,7 @@ export async function base(): Promise<TSESLint.FlatConfig.Config[]> {
         'no-octal': 'error',
         'no-octal-escape': 'error',
         'no-param-reassign': 'error',
-        'no-plusplus': 'error',
+        'no-plusplus': 'off',
         'no-promise-executor-return': 'error',
         'no-proto': 'error',
         'no-prototype-builtins': 'error',
