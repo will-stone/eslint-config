@@ -1,5 +1,12 @@
 # Changelog
 
+## [16.1.0](https://github.com/will-stone/eslint-config/compare/v16.0.1...v16.1.0) (2025-05-02)
+
+### Minor changes
+
+- Turn off no-plusplus rule
+  ([440ac8e](https://github.com/will-stone/eslint-config/commit/440ac8e5444892d2805edac3ae95e95206a8775f))
+
 ## [16.0.1](https://github.com/will-stone/eslint-config/compare/v16.0.0...v16.0.1) (2025-04-19)
 
 ### Patches
