@@ -1,5 +1,12 @@
 # Changelog
 
+## [16.2.0](https://github.com/will-stone/eslint-config/compare/v16.1.0...v16.2.0) (2025-05-08)
+
+### Minor changes
+
+- Turn off no-non-null-assertion
+  ([3fedf18](https://github.com/will-stone/eslint-config/commit/3fedf18b9f8bcc2b853cc7c3f840ae8b978fcb01))
+
 ## [16.1.0](https://github.com/will-stone/eslint-config/compare/v16.0.1...v16.1.0) (2025-05-02)
 
 ### Minor changes
