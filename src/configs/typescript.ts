@@ -94,7 +94,7 @@ export async function typescript(
         '@typescript-eslint/no-misused-new': 'error',
         '@typescript-eslint/no-namespace': 'error',
         '@typescript-eslint/no-non-null-asserted-optional-chain': 'error',
-        '@typescript-eslint/no-non-null-assertion': 'warn',
+        '@typescript-eslint/no-non-null-assertion': 'off',
         '@typescript-eslint/no-this-alias': 'error',
         '@typescript-eslint/no-unsafe-function-type': 'warn',
         '@typescript-eslint/no-wrapper-object-types': 'error',
