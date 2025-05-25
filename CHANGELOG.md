@@ -1,5 +1,19 @@
 # Changelog
 
+## [17.0.0](https://github.com/will-stone/eslint-config/compare/v16.2.0...v17.0.0) (2025-05-25)
+
+### Major changes
+
+- Support all package.json rules
+  ([ec7c969](https://github.com/will-stone/eslint-config/commit/ec7c9699bef29b708d5b3ec4016a1551e7fa33c2))
+- Support new Unicorn rules
+  ([bceb105](https://github.com/will-stone/eslint-config/commit/bceb105c5a432e08ad8379d01bfbb87569c7846e))
+
+### Patches
+
+- Turn off another TS requires-types rule
+  ([a09e217](https://github.com/will-stone/eslint-config/commit/a09e2176a7beef44b765d59646ae1c9de6d7b8ce))
+
 ## [16.2.0](https://github.com/will-stone/eslint-config/compare/v16.1.0...v16.2.0) (2025-05-08)
 
 ### Minor changes

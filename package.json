@@ -1,6 +1,6 @@
 {
   "name": "@will-stone/eslint-config",
-  "version": "16.2.0",
+  "version": "17.0.0",
   "description": "Will Stone's ESLint config",
   "keywords": [
     "eslint-config"
