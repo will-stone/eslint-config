@@ -1,5 +1,14 @@
 # Changelog
 
+## [17.1.0](https://github.com/will-stone/eslint-config/compare/v17.0.0...v17.1.0) (2025-05-25)
+
+### Minor changes
+
+- Turn of package-json/require-files
+  ([8ed8682](https://github.com/will-stone/eslint-config/commit/8ed8682a2a6b6a3d25729c77d8a511dffe6fe713))
+
+  Too restrictive for non-packages.
+
 ## [17.0.0](https://github.com/will-stone/eslint-config/compare/v16.2.0...v17.0.0) (2025-05-25)
 
 ### Major changes
