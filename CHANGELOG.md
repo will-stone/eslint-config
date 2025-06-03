@@ -1,5 +1,21 @@
 # Changelog
 
+## [18.0.0](https://github.com/will-stone/eslint-config/compare/v17.1.0...v18.0.0) (2025-06-03)
+
+### Major changes
+
+- Add support for linting TSDoc
+  ([d9bda6a](https://github.com/will-stone/eslint-config/commit/d9bda6aa3357e8ae178532f6896084a009d7d671))
+- Add package-json/require-type rule
+  ([6b644f4](https://github.com/will-stone/eslint-config/commit/6b644f4ac65346e7548675ea9d75ac5a108a1ab1))
+- Add support for n/no-top-level-await
+  ([e212146](https://github.com/will-stone/eslint-config/commit/e212146afb2b50f899825bff7068a59be0448a58))
+- Use updated glob pattern for finding files
+  ([ccc267a](https://github.com/will-stone/eslint-config/commit/ccc267a27523bc3d9fa099f3017e48b7df1bde7c))
+
+  Based on antfu's:
+  https://github.com/antfu/eslint-config/blob/main/src/globs.ts
+
 ## [17.1.0](https://github.com/will-stone/eslint-config/compare/v17.0.0...v17.1.0) (2025-05-25)
 
 ### Minor changes
