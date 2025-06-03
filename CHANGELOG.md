@@ -1,5 +1,12 @@
 # Changelog
 
+## [18.1.0](https://github.com/will-stone/eslint-config/compare/v18.0.0...v18.1.0) (2025-06-03)
+
+### Minor changes
+
+- Turn off no-top-level-await for Astro files
+  ([055a368](https://github.com/will-stone/eslint-config/commit/055a3688277b7f0dd77b0a2c2a98d01c64b627a9))
+
 ## [18.0.0](https://github.com/will-stone/eslint-config/compare/v17.1.0...v18.0.0) (2025-06-03)
 
 ### Major changes
