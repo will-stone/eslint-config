@@ -37,6 +37,7 @@ export async function node(): Promise<TSESLint.FlatConfig.Config[]> {
         'n/no-missing-import': 'off',
         'n/no-missing-require': 'off',
         'n/no-restricted-import': 'off',
+        'n/no-top-level-await': ['error', { ignoreBin: false }],
         'n/no-unpublished-bin': 'off',
         'n/no-unpublished-import': 'off',
         'n/no-unpublished-require': 'off',
