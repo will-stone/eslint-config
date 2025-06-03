@@ -14,7 +14,6 @@ export const GLOB_TESTS = [
 
 export const GLOB_ASTRO = '**/*.astro'
 export const GLOB_ASTRO_TS = '**/*.astro/*.ts'
-export const GLOB_MARKDOWN = '**/*.md'
 export const GLOB_TAILWIND = '**/*.{jsx,tsx,astro}'
 
 export const GLOB_EXCLUDE = [

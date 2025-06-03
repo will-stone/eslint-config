@@ -38,6 +38,7 @@
     "eslint-plugin-jsx-a11y": "^6.10.2",
     "eslint-plugin-n": "^17.19.0",
     "eslint-plugin-package-json": "^0.33.2",
+    "eslint-plugin-tsdoc": "^0.4.0",
     "eslint-plugin-unicorn": "^59.0.1",
     "globals": "^16.2.0",
     "globby": "^14.1.0",

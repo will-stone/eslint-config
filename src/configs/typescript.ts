@@ -1,6 +1,6 @@
 import type { TSESLint } from '@typescript-eslint/utils'
 
-import { GLOB_ASTRO_TS, GLOB_MARKDOWN, GLOB_TS, GLOB_TSX } from '../globs.js'
+import { GLOB_ASTRO_TS, GLOB_TS, GLOB_TSX } from '../globs.js'
 import type { Options } from '../types.js'
 import { interopDefault } from '../utils/interop-default.js'
 
@@ -17,7 +17,7 @@ export async function typescript(
 
   return [
     {
-      files: [GLOB_ASTRO_TS, GLOB_MARKDOWN, GLOB_TS, GLOB_TSX],
+      files: [GLOB_ASTRO_TS, GLOB_TS, GLOB_TSX],
       languageOptions: {
         parser: parserTypescript,
         parserOptions: {

@@ -40,6 +40,8 @@ test('should load default configs', async () => {
     expect.objectContaining({ name: 'will-stone/imports' }),
     expect.objectContaining({ name: 'will-stone/unicorn' }),
     expect.objectContaining({ name: 'will-stone/node' }),
+    expect.objectContaining({ name: 'will-stone/package.json' }),
+    expect.objectContaining({ name: 'will-stone/tsdoc' }),
   ])
   expect(logSpy).not.toHaveBeenCalled()
 })
@@ -117,6 +119,8 @@ test('should not load any auto-configs if forced off', async () => {
     expect.objectContaining({ name: 'will-stone/imports' }),
     expect.objectContaining({ name: 'will-stone/unicorn' }),
     expect.objectContaining({ name: 'will-stone/node' }),
+    expect.objectContaining({ name: 'will-stone/package.json' }),
+    expect.objectContaining({ name: 'will-stone/tsdoc' }),
   ])
   expect(logSpy).not.toHaveBeenCalled()
 })
@@ -143,6 +147,8 @@ test('should load auto-configs if forced on', async () => {
       expect.objectContaining({ name: 'will-stone/imports' }),
       expect.objectContaining({ name: 'will-stone/unicorn' }),
       expect.objectContaining({ name: 'will-stone/node' }),
+      expect.objectContaining({ name: 'will-stone/package.json' }),
+      expect.objectContaining({ name: 'will-stone/tsdoc' }),
       expect.objectContaining({ name: 'will-stone/jest/base' }),
       expect.objectContaining({ name: 'will-stone/jest/globals' }),
       expect.objectContaining({ name: 'will-stone/jest/typescript' }),

@@ -7,6 +7,7 @@ import { node } from './node.js'
 import { packageJson } from './package-json.js'
 import { react } from './react.js'
 import { tailwind } from './tailwind.js'
+import { tsdoc } from './tsdoc.js'
 import { typescript } from './typescript.js'
 import { unicorn } from './unicorn.js'
 import { vitest } from './vitest.js'
@@ -18,6 +19,7 @@ export const defaultConfigs = [
   { config: unicorn, name: 'Unicorn' },
   { config: node, name: 'Node' },
   { config: packageJson, name: 'package.json' },
+  { config: tsdoc, name: 'TSDoc' },
 ] as const
 
 export const autoConfigs = [

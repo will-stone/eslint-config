@@ -6,6 +6,7 @@ export async function packageJson(): Promise<TSESLint.FlatConfig.Config[]> {
   return [
     {
       ...pluginPackageJson.configs.recommended,
+      name: 'will-stone/package.json',
       rules: {
         'package-json/no-empty-fields': 'error',
         'package-json/no-redundant-files': 'error',
