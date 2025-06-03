@@ -17,6 +17,7 @@ export async function packageJson(): Promise<TSESLint.FlatConfig.Config[]> {
         'package-json/require-files': 'off',
         'package-json/require-keywords': 'error',
         'package-json/require-name': 'error',
+        'package-json/require-type': 'error',
         // This rule is a little too strict as it's better to use "exports".
         'package-json/require-types': 'off',
         'package-json/require-version': 'error',
