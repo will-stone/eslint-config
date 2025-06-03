@@ -88,6 +88,8 @@ export async function astro(
         'astro/prefer-class-list-directive': 'off',
         'astro/prefer-object-class-list': 'off',
         'astro/prefer-split-class-list': 'off',
+
+        'n/no-top-level-await': 'off',
       },
     },
   ]
