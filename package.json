@@ -19,14 +19,13 @@
     "dist"
   ],
   "scripts": {
-    "build": "tsup src/index.ts --format esm --clean --dts --shims",
+    "build": "tsdown",
     "predev": "pnpm build",
-    "dev": "tsup src/index.ts --format esm --shims --watch & config-inspector --config ./eslint-config-for-inspector.js",
-    "lint": "pnpm stub && eslint .",
+    "dev": "tsdown --watch & config-inspector --config ./eslint-config-for-inspector.js",
+    "lint": "pnpm build && eslint .",
     "prepare": "husky",
     "prepublishOnly": "pnpm build",
     "release": "release-it",
-    "stub": "tsup src/index.ts --format esm",
     "test": "vitest",
     "typecheck": "tsc --noEmit"
   },
@@ -65,7 +64,7 @@
     "memfs": "^4.17.2",
     "prettier": "^3.5.3",
     "release-it": "^19.0.2",
-    "tsup": "^8.5.0",
+    "tsdown": "^0.12.6",
     "typescript": "^5.8.3",
     "vitest": "^3.1.4"
   },
