@@ -1,6 +1,7 @@
 import parserTypescript from '@typescript-eslint/parser'
 import type { TSESLint } from '@typescript-eslint/utils'
 
+import { GLOB_ASTRO } from '../globs.js'
 import { interopDefault } from '../utils/interop-default.js'
 
 export async function astro(
@@ -13,7 +14,7 @@ export async function astro(
 
   return [
     {
-      files: ['**/*.astro'],
+      files: [GLOB_ASTRO],
       languageOptions: {
         globals: pluginAstro.environments.astro.globals,
         parser: parserAstro,

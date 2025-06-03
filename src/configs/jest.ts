@@ -1,6 +1,7 @@
 import type { TSESLint } from '@typescript-eslint/utils'
 import globals from 'globals'
 
+import { GLOB_TESTS } from '../globs.js'
 import { interopDefault } from '../utils/interop-default.js'
 
 export async function jest(
@@ -10,14 +11,14 @@ export async function jest(
 
   return [
     {
-      files: ['**/__mocks__/**/*', '**/*.{spec,test}.{js,cjs,mjs,jsx,ts,tsx}'],
+      files: GLOB_TESTS,
       languageOptions: {
         globals: globals.jest,
       },
       name: 'will-stone/jest/globals',
     },
     {
-      files: ['**/*.{spec,test}.{js,cjs,mjs,jsx,ts,tsx}'],
+      files: [GLOB_TESTS],
       name: 'will-stone/jest/base',
       plugins: {
         jest: pluginJest,

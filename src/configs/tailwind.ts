@@ -1,5 +1,6 @@
 import type { TSESLint } from '@typescript-eslint/utils'
 
+import { GLOB_TAILWIND } from '../globs.js'
 import type { Options } from '../model.js'
 import { interopDefault } from '../utils/interop-default.js'
 
@@ -15,7 +16,7 @@ export async function tailwind(
 
   return [
     {
-      files: ['**/*.{jsx,tsx,astro}'],
+      files: [GLOB_TAILWIND],
       name: 'will-stone/tailwind',
       plugins: { tailwindcss: plugin },
       rules: {

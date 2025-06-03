@@ -1,5 +1,6 @@
 import type { TSESLint } from '@typescript-eslint/utils'
 
+import { GLOB_TESTS } from '../globs.js'
 import { interopDefault } from '../utils/interop-default.js'
 
 export async function vitest(
@@ -9,7 +10,7 @@ export async function vitest(
 
   return [
     {
-      files: ['**/*.{spec,test}.{js,cjs,mjs,jsx,ts,tsx}'],
+      files: GLOB_TESTS,
       name: 'will-stone/vitest',
       plugins: { vitest: pluginVitest },
       rules: {

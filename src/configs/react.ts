@@ -1,6 +1,7 @@
 import type { TSESLint } from '@typescript-eslint/utils'
 import globals from 'globals'
 
+import { GLOB_SRC } from '../globs.js'
 import { interopDefault } from '../utils/interop-default.js'
 
 export async function react(
@@ -15,7 +16,7 @@ export async function react(
 
   return [
     {
-      files: ['**/*.{jsx,tsx}'],
+      files: [GLOB_SRC],
       languageOptions: {
         globals: globals.browser,
         parserOptions: {
