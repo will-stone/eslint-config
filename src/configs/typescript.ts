@@ -1,7 +1,8 @@
 import type { TSESLint } from '@typescript-eslint/utils'
 
-import { GLOB_ASTRO_TS, GLOB_TS, GLOB_TSX } from '../globs.js'
 import type { Options } from '../types.js'
+
+import { GLOB_ASTRO_TS, GLOB_TS, GLOB_TSX } from '../globs.js'
 import { interopDefault } from '../utils/interop-default.js'
 
 export async function typescript(

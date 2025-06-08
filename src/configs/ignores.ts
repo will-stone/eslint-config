@@ -1,4 +1,5 @@
 import type { TSESLint } from '@typescript-eslint/utils'
+
 import gitignore from 'eslint-config-flat-gitignore'
 
 import { GLOB_EXCLUDE } from '../globs.js'

@@ -1,4 +1,5 @@
 import type { TSESLint } from '@typescript-eslint/utils'
+
 // The ESLint browser environment defines all browser globals as valid,
 // Even though most people don't know some of them exist (e.g. `name` or `status`).
 // This is dangerous as it hides accidentally undefined variables.

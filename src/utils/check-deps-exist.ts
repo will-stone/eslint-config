@@ -1,7 +1,7 @@
-import { readFileSync } from 'node:fs'
+import type { PackageJson } from 'type-fest'
 
 import { globbySync } from 'globby'
-import type { PackageJson } from 'type-fest'
+import { readFileSync } from 'node:fs'
 
 /**
  * Given an array of dependency names, this will scan all package.json files in

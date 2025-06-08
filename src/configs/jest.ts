@@ -1,4 +1,5 @@
 import type { TSESLint } from '@typescript-eslint/utils'
+
 import globals from 'globals'
 
 import { GLOB_TESTS } from '../globs.js'

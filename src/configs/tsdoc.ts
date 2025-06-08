@@ -1,4 +1,5 @@
 import type { TSESLint } from '@typescript-eslint/utils'
+
 import pluginTsdoc from 'eslint-plugin-tsdoc'
 
 import { GLOB_TS, GLOB_TSX } from '../globs.js'

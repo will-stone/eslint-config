@@ -1,4 +1,5 @@
 import type { TSESLint } from '@typescript-eslint/utils'
+
 import pluginNode from 'eslint-plugin-n'
 import globals from 'globals'
 

@@ -1,4 +1,5 @@
 import type { TSESLint } from '@typescript-eslint/utils'
+
 import pluginUnicorn from 'eslint-plugin-unicorn'
 
 // eslint-disable-next-line require-await

@@ -1,5 +1,6 @@
-import parserTypescript from '@typescript-eslint/parser'
 import type { TSESLint } from '@typescript-eslint/utils'
+
+import parserTypescript from '@typescript-eslint/parser'
 
 import { GLOB_ASTRO } from '../globs.js'
 import { interopDefault } from '../utils/interop-default.js'

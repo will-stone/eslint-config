@@ -1,7 +1,8 @@
 import type { TSESLint } from '@typescript-eslint/utils'
 
-import { autoConfigs, defaultConfigs } from './configs/index.js'
 import type { Options } from './model.js'
+
+import { autoConfigs, defaultConfigs } from './configs/index.js'
 import { checkDepsExist } from './utils/check-deps-exist.js'
 
 /**

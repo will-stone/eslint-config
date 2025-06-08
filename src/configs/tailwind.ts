@@ -1,7 +1,8 @@
 import type { TSESLint } from '@typescript-eslint/utils'
 
-import { GLOB_TAILWIND } from '../globs.js'
 import type { Options } from '../model.js'
+
+import { GLOB_TAILWIND } from '../globs.js'
 import { interopDefault } from '../utils/interop-default.js'
 
 export async function tailwind(
