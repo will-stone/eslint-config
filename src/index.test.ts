@@ -73,7 +73,7 @@ test.each([
     dep: 'vitest',
     name: 'Vitest',
   },
-])('should load auto configs', async ({ name, configNames, dep }) => {
+])('should load auto configs', async ({ configNames, dep, name }) => {
   const logSpy = vi.spyOn(console, 'log').mockImplementation(() => null)
   vol.fromJSON({
     'package.json': JSON.stringify({ dependencies: { [dep]: '^9.0.0' } }),

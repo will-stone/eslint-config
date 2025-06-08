@@ -244,15 +244,7 @@ export async function base(): Promise<TSESLint.FlatConfig.Config[]> {
         'require-yield': 'error',
         // Sorting imports is handled by simple-import-sort
         'sort-imports': 'off',
-        'sort-keys': [
-          'error',
-          'asc',
-          {
-            allowLineSeparatedGroups: true,
-            caseSensitive: false,
-            natural: true,
-          },
-        ],
+        'sort-keys': 'off',
         // Not required as one-var rule is set to 'error' and so there will
         // never be vars to sort.
         'sort-vars': 'off',
