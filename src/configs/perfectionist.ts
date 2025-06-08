@@ -12,6 +12,7 @@ export async function perfectionist(): Promise<TSESLint.FlatConfig.Config[]> {
       },
       rules: {
         'perfectionist/sort-imports': 'warn',
+        'perfectionist/sort-named-imports': 'warn',
       },
     },
   ]
