@@ -1,5 +1,18 @@
 # Changelog
 
+## [19.0.0](https://github.com/will-stone/eslint-config/compare/v18.1.0...v19.0.0) (2025-06-10)
+
+### Major changes
+
+- Sort types
+  ([8aecd85](https://github.com/will-stone/eslint-config/commit/8aecd850dd3e5f8360bdf0c8a4cf6bd9f3834b7a))
+- Auto sort objects
+  ([c0f1617](https://github.com/will-stone/eslint-config/commit/c0f1617a869ffcb8bd5fbca4e1fa3d721863bb86))
+- Sort named imports
+  ([e13b8c6](https://github.com/will-stone/eslint-config/commit/e13b8c6679af7db7d57bdcc8b9aa51d876fa2fae))
+- Replace import-x with Stylistic and Perfectionist
+  ([728fcc2](https://github.com/will-stone/eslint-config/commit/728fcc298e738ae7582fcd0b945a4bee7a59b15e))
+
 ## [18.1.0](https://github.com/will-stone/eslint-config/compare/v18.0.0...v18.1.0) (2025-06-03)
 
 ### Minor changes
