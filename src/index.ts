@@ -34,12 +34,13 @@ async function config(
     console.log('Auto-configured plugins:')
   }
 
-  for await (const autoConfig of enabledAutoConfigs) {
-    // eslint-disable-next-line no-console
-    console.log(`- ${autoConfig.name}`)
-    const autoConfigOptions = options?.[autoConfig.optionName]
-    configs.push(await autoConfig.config(autoConfigOptions))
-  }
+  await Promise.all(
+    enabledAutoConfigs.map(async (autoConfig) => {
+      // eslint-disable-next-line no-console
+      console.log(`- ${autoConfig.name}`)
+      configs.push(await autoConfig.config(options?.[autoConfig.optionName]))
+    }),
+  )
 
   const merged = configs.flat()
 
