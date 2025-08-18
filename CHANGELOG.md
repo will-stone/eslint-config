@@ -1,5 +1,26 @@
 # Changelog
 
+## [20.0.0](https://github.com/will-stone/eslint-config/compare/v19.0.0...v20.0.0) (2025-08-18)
+
+### Major changes
+
+- Migrate from TSDoc to JSDoc plugin
+  ([2c0f543](https://github.com/will-stone/eslint-config/commit/2c0f543436cc48d1e176656456aaa381aec63a43))
+- Remove support for Jest
+  ([18221ad](https://github.com/will-stone/eslint-config/commit/18221ad04097dd0445b02b9d976be04968fba86c))
+
+### Minor changes
+
+- TypeScript now a default config
+  ([407849f](https://github.com/will-stone/eslint-config/commit/407849ff3958e8adb8c376e7ef83ceac901fbe1a))
+
+### Patches
+
+- Refactor how configs receive options
+  ([db0bb27](https://github.com/will-stone/eslint-config/commit/db0bb273cbcda8a967a7e4131b663aead8d929d7))
+- Load auto configs in parallel
+  ([c5178cd](https://github.com/will-stone/eslint-config/commit/c5178cd50e8453120386c81109e75b94ee9bc47b))
+
 ## [19.0.0](https://github.com/will-stone/eslint-config/compare/v18.1.0...v19.0.0) (2025-06-10)
 
 ### Major changes
