@@ -1,4 +1,4 @@
-import config from './dist/index.js'
+import config from './src/index.js'
 
 export default config({
   astro: true,

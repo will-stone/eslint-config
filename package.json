@@ -20,9 +20,8 @@
   ],
   "scripts": {
     "build": "tsdown",
-    "predev": "pnpm build",
-    "dev": "tsdown --watch & config-inspector --config ./eslint-config-for-inspector.js",
-    "lint": "pnpm build && eslint .",
+    "dev": "config-inspector --config ./eslint-config-for-inspector.js",
+    "lint": "eslint .",
     "prepare": "husky",
     "prepublishOnly": "pnpm build",
     "release": "release-it",
@@ -62,6 +61,7 @@
     "eslint-plugin-react-hooks": "^5.2.0",
     "eslint-plugin-tailwindcss": "^3.18.0",
     "husky": "^9.1.7",
+    "jiti": "^2.5.1",
     "lint-staged": "^16.1.0",
     "memfs": "^4.17.2",
     "prettier": "^3.5.3",
@@ -103,7 +103,7 @@
       "optional": true
     }
   },
-  "packageManager": "pnpm@10.11.1",
+  "packageManager": "pnpm@10.14.0",
   "engines": {
     "node": ">=22"
   },

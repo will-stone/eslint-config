@@ -11,6 +11,10 @@ export type Options = {
         cssFiles?: string[]
       }
     | boolean
-  typescript?: boolean
+  typescript?:
+    | boolean
+    | {
+        tsconfigPath?: string
+      }
   vitest?: boolean
 }
