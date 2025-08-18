@@ -1,7 +1,6 @@
 import { astro } from './astro.js'
 import { base } from './base.js'
 import { ignores } from './ignores.js'
-import { jest } from './jest.js'
 import { node } from './node.js'
 import { packageJson } from './package-json.js'
 import { perfectionist } from './perfectionist.js'
@@ -36,12 +35,6 @@ export const autoConfigs = [
     dep: 'astro',
     name: 'Astro.js',
     optionName: 'astro',
-  },
-  {
-    config: jest,
-    dep: 'jest',
-    name: 'Jest',
-    optionName: 'jest',
   },
   {
     config: react,

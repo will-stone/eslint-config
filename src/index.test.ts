@@ -49,11 +49,6 @@ test('should load default configs', async () => {
 
 test.each([
   {
-    configNames: ['jest/base', 'jest/globals', 'jest/typescript'],
-    dep: 'jest',
-    name: 'Jest',
-  },
-  {
     configNames: ['react'],
     dep: 'react',
     name: 'React',
@@ -96,7 +91,6 @@ test('should not load any auto-configs if forced off', async () => {
   vol.fromJSON({
     'package.json': JSON.stringify({
       dependencies: {
-        jest: '^9.0.0',
         react: '^9.0.0',
         tailwindcss: '^9.0.0',
         typescript: '^9.0.0',
@@ -107,7 +101,6 @@ test('should not load any auto-configs if forced off', async () => {
 
   await expect(
     config({
-      jest: false,
       react: false,
       tailwind: false,
       typescript: false,
@@ -134,7 +127,6 @@ test('should load auto-configs if forced on', async () => {
 
   await expect(
     config({
-      jest: true,
       react: true,
       tailwind: true,
       typescript: true,
@@ -150,9 +142,6 @@ test('should load auto-configs if forced on', async () => {
       expect.objectContaining({ name: 'will-stone/node' }),
       expect.objectContaining({ name: 'will-stone/package.json' }),
       expect.objectContaining({ name: 'will-stone/tsdoc' }),
-      expect.objectContaining({ name: 'will-stone/jest/base' }),
-      expect.objectContaining({ name: 'will-stone/jest/globals' }),
-      expect.objectContaining({ name: 'will-stone/jest/typescript' }),
       expect.objectContaining({ name: 'will-stone/react' }),
       expect.objectContaining({ name: 'will-stone/tailwind' }),
       expect.objectContaining({ name: 'will-stone/typescript' }),
@@ -161,7 +150,6 @@ test('should load auto-configs if forced on', async () => {
   )
   expect(logSpy).toHaveBeenNthCalledWith(1, 'Auto-configured plugins:')
   expect(logSpy).toHaveBeenNthCalledWith(2, '- Typescript')
-  expect(logSpy).toHaveBeenNthCalledWith(3, '- Jest')
   expect(logSpy).toHaveBeenNthCalledWith(4, '- React')
   expect(logSpy).toHaveBeenNthCalledWith(5, '- Tailwind')
   expect(logSpy).toHaveBeenNthCalledWith(6, '- Vitest')

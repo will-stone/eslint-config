@@ -3,7 +3,6 @@
  */
 export type Options = {
   astro?: boolean
-  jest?: boolean
   react?: boolean
   tailwind?:
     | {

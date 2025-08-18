@@ -18,7 +18,6 @@ the corresponding plugin.
 | Package       | Plugin                                          |
 | ------------- | ----------------------------------------------- |
 | `astro`       | `astro-eslint-parser eslint-plugin-astro`       |
-| `jest`        | `eslint-plugin-jest`                            |
 | `react`       | `eslint-plugin-react eslint-plugin-react-hooks` |
 | `tailwindcss` | `eslint-plugin-tailwindcss`                     |
 | `vitest`      | `@vitest/eslint-plugin`                         |
