@@ -23,7 +23,6 @@
     "dev": "config-inspector --config ./eslint-config-for-inspector.js",
     "lint": "eslint .",
     "prepare": "husky",
-    "prepublishOnly": "pnpm build",
     "release": "release-it",
     "test": "vitest",
     "typecheck": "tsc --noEmit"
