@@ -5,13 +5,13 @@ import type { ConfigContext } from '../model.js'
 import { astro } from './astro.js'
 import { base } from './base.js'
 import { ignores } from './ignores.js'
+import { jsdoc } from './jsdoc.js'
 import { node } from './node.js'
 import { packageJson } from './package-json.js'
 import { perfectionist } from './perfectionist.js'
 import { react } from './react.js'
 import { style } from './style.js'
 import { tailwind } from './tailwind.js'
-import { tsdoc } from './tsdoc.js'
 import { typescript } from './typescript.js'
 import { unicorn } from './unicorn.js'
 import { vitest } from './vitest.js'
@@ -25,7 +25,7 @@ export const defaultConfigs: {
   { config: unicorn, name: 'Unicorn' },
   { config: node, name: 'Node' },
   { config: packageJson, name: 'package.json' },
-  { config: tsdoc, name: 'TSDoc' },
+  { config: jsdoc, name: 'JSDoc' },
   { config: style, name: 'Style' },
   { config: perfectionist, name: 'Perfectionist' },
 ]

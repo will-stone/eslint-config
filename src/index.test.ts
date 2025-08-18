@@ -41,7 +41,7 @@ test('should load default configs', async () => {
     expect.objectContaining({ name: 'will-stone/unicorn' }),
     expect.objectContaining({ name: 'will-stone/node' }),
     expect.objectContaining({ name: 'will-stone/package.json' }),
-    expect.objectContaining({ name: 'will-stone/tsdoc' }),
+    expect.objectContaining({ name: 'will-stone/jsdoc' }),
     expect.objectContaining({ name: 'will-stone/style' }),
     expect.objectContaining({ name: 'will-stone/perfectionist' }),
   ])
@@ -114,7 +114,7 @@ test('should not load any auto-configs if forced off', async () => {
     expect.objectContaining({ name: 'will-stone/unicorn' }),
     expect.objectContaining({ name: 'will-stone/node' }),
     expect.objectContaining({ name: 'will-stone/package.json' }),
-    expect.objectContaining({ name: 'will-stone/tsdoc' }),
+    expect.objectContaining({ name: 'will-stone/jsdoc' }),
     expect.objectContaining({ name: 'will-stone/style' }),
     expect.objectContaining({ name: 'will-stone/perfectionist' }),
   ])
@@ -142,7 +142,7 @@ test('should load auto-configs if forced on', async () => {
       expect.objectContaining({ name: 'will-stone/unicorn' }),
       expect.objectContaining({ name: 'will-stone/node' }),
       expect.objectContaining({ name: 'will-stone/package.json' }),
-      expect.objectContaining({ name: 'will-stone/tsdoc' }),
+      expect.objectContaining({ name: 'will-stone/jsdoc' }),
       expect.objectContaining({ name: 'will-stone/style' }),
       expect.objectContaining({ name: 'will-stone/perfectionist' }),
       expect.objectContaining({ name: 'will-stone/react' }),
