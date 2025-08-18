@@ -4,8 +4,7 @@ import pluginTsdoc from 'eslint-plugin-tsdoc'
 
 import { GLOB_TS, GLOB_TSX } from '../globs.js'
 
-// eslint-disable-next-line require-await
-export async function tsdoc(): Promise<TSESLint.FlatConfig.Config[]> {
+export function tsdoc(): TSESLint.FlatConfig.Config[] {
   return [
     {
       files: [GLOB_TS, GLOB_TSX],

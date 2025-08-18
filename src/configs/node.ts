@@ -3,8 +3,7 @@ import type { TSESLint } from '@typescript-eslint/utils'
 import pluginNode from 'eslint-plugin-n'
 import globals from 'globals'
 
-// eslint-disable-next-line require-await
-export async function node(): Promise<TSESLint.FlatConfig.Config[]> {
+export function node(): TSESLint.FlatConfig.Config[] {
   return [
     {
       languageOptions: { globals: globals.node },

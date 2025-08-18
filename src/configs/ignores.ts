@@ -4,8 +4,7 @@ import gitignore from 'eslint-config-flat-gitignore'
 
 import { GLOB_EXCLUDE } from '../globs.js'
 
-// eslint-disable-next-line require-await
-export async function ignores(): Promise<TSESLint.FlatConfig.Config[]> {
+export function ignores(): TSESLint.FlatConfig.Config[] {
   return [
     {
       ignores: GLOB_EXCLUDE,

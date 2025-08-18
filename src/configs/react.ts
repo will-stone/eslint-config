@@ -2,11 +2,13 @@ import type { TSESLint } from '@typescript-eslint/utils'
 
 import globals from 'globals'
 
+import type { ConfigContext } from '../model.js'
+
 import { GLOB_SRC } from '../globs.js'
 import { interopDefault } from '../utils/interop-default.js'
 
 export async function react(
-  _options: unknown,
+  _configContext: ConfigContext,
 ): Promise<TSESLint.FlatConfig.Config[]> {
   const [pluginJsxA11y, pluginReact, pluginReactHooks] = await Promise.all([
     // @ts-expect-error -- no types

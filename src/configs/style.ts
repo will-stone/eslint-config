@@ -2,8 +2,7 @@ import type { TSESLint } from '@typescript-eslint/utils'
 
 import stylistic from '@stylistic/eslint-plugin'
 
-// eslint-disable-next-line require-await
-export async function style(): Promise<TSESLint.FlatConfig.Config[]> {
+export function style(): TSESLint.FlatConfig.Config[] {
   return [
     {
       name: 'will-stone/style',

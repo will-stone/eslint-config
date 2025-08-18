@@ -17,3 +17,10 @@ export type Options = {
       }
   vitest?: boolean
 }
+
+/**
+ * A context of data and options passed to all configs.
+ */
+export type ConfigContext = {
+  options: Options
+}

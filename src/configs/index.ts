@@ -1,3 +1,7 @@
+import type { TSESLint } from '@typescript-eslint/utils'
+
+import type { ConfigContext } from '../model.js'
+
 import { astro } from './astro.js'
 import { base } from './base.js'
 import { ignores } from './ignores.js'
@@ -12,7 +16,10 @@ import { typescript } from './typescript.js'
 import { unicorn } from './unicorn.js'
 import { vitest } from './vitest.js'
 
-export const defaultConfigs = [
+export const defaultConfigs: {
+  config: (configContext: ConfigContext) => TSESLint.FlatConfig.Config[]
+  name: string
+}[] = [
   { config: ignores, name: 'Ignores' },
   { config: base, name: 'Base' },
   { config: unicorn, name: 'Unicorn' },
@@ -21,7 +28,7 @@ export const defaultConfigs = [
   { config: tsdoc, name: 'TSDoc' },
   { config: style, name: 'Style' },
   { config: perfectionist, name: 'Perfectionist' },
-] as const
+]
 
 export const autoConfigs = [
   {
@@ -54,4 +61,12 @@ export const autoConfigs = [
     name: 'Vitest',
     optionName: 'vitest',
   },
-] as const
+] as const satisfies {
+  config: (
+    configContext: ConfigContext,
+  ) => Promise<TSESLint.FlatConfig.Config[]>
+  dep: string
+  name: string
+  optionName: string
+  requiredPlugins: string[]
+}[]

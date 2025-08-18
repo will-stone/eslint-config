@@ -1,13 +1,13 @@
 import type { TSESLint } from '@typescript-eslint/utils'
 
-import type { Options } from '../types.js'
+import type { ConfigContext } from '../model.js'
 
 import { GLOB_ASTRO_TS, GLOB_TS, GLOB_TSX } from '../globs.js'
 import { interopDefault } from '../utils/interop-default.js'
 
-export async function typescript(
-  rawOptions?: Options['typescript'],
-): Promise<TSESLint.FlatConfig.Config[]> {
+export async function typescript({
+  options: { typescript: rawOptions },
+}: ConfigContext): Promise<TSESLint.FlatConfig.Config[]> {
   const options =
     !rawOptions || typeof rawOptions === 'boolean' ? {} : rawOptions
 

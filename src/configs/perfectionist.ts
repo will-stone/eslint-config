@@ -2,8 +2,7 @@ import type { TSESLint } from '@typescript-eslint/utils'
 
 import pluginPerfectionist from 'eslint-plugin-perfectionist'
 
-// eslint-disable-next-line require-await
-export async function perfectionist(): Promise<TSESLint.FlatConfig.Config[]> {
+export function perfectionist(): TSESLint.FlatConfig.Config[] {
   return [
     {
       name: 'will-stone/perfectionist',

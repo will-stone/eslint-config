@@ -1,13 +1,13 @@
 import type { TSESLint } from '@typescript-eslint/utils'
 
-import type { Options } from '../model.js'
+import type { ConfigContext } from '../model.js'
 
 import { GLOB_TAILWIND } from '../globs.js'
 import { interopDefault } from '../utils/interop-default.js'
 
-export async function tailwind(
-  rawOptions?: Options['tailwind'],
-): Promise<TSESLint.FlatConfig.Config[]> {
+export async function tailwind({
+  options: { tailwind: rawOptions },
+}: ConfigContext): Promise<TSESLint.FlatConfig.Config[]> {
   const options = !rawOptions || rawOptions === true ? {} : rawOptions
 
   const plugin = await interopDefault(

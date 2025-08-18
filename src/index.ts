@@ -1,24 +1,22 @@
 import type { TSESLint } from '@typescript-eslint/utils'
 
-import type { Options } from './model.js'
+import type { ConfigContext, Options } from './model.js'
 
 import { autoConfigs, defaultConfigs } from './configs/index.js'
 import { checkDepsExist } from './utils/check-deps-exist.js'
+
+const defaultOptions = {}
 
 /**
  * Construct an array of ESLint flat config items.
  */
 async function config(
-  options?: Options,
+  options: Options = defaultOptions,
 ): Promise<TSESLint.FlatConfig.Config[]> {
   const configs: TSESLint.FlatConfig.Config[][] = []
 
   const autoConfigDeps = Object.values(autoConfigs).map(({ dep }) => dep)
   const existingAutoConfigDeps = checkDepsExist(autoConfigDeps)
-
-  for await (const defaultConfig of defaultConfigs) {
-    configs.push(await defaultConfig.config())
-  }
 
   const enabledAutoConfigs = autoConfigs.filter(({ dep, optionName }) => {
     return (
@@ -34,11 +32,19 @@ async function config(
     console.log('Auto-configured plugins:')
   }
 
+  const configContext: ConfigContext = {
+    options,
+  }
+
+  for (const defaultConfig of defaultConfigs) {
+    configs.push(defaultConfig.config(configContext))
+  }
+
   await Promise.all(
     enabledAutoConfigs.map(async (autoConfig) => {
       // eslint-disable-next-line no-console
       console.log(`- ${autoConfig.name}`)
-      configs.push(await autoConfig.config(options?.[autoConfig.optionName]))
+      configs.push(await autoConfig.config(configContext))
     }),
   )
 
