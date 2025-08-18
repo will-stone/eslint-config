@@ -38,11 +38,12 @@ test('should load default configs', async () => {
     expect.objectContaining({ name: 'will-stone/ignores' }),
     expect.objectContaining({ name: 'will-stone/git-ignore' }),
     expect.objectContaining({ name: 'will-stone/base' }),
-    expect.objectContaining({ name: 'will-stone/imports' }),
     expect.objectContaining({ name: 'will-stone/unicorn' }),
     expect.objectContaining({ name: 'will-stone/node' }),
     expect.objectContaining({ name: 'will-stone/package.json' }),
     expect.objectContaining({ name: 'will-stone/tsdoc' }),
+    expect.objectContaining({ name: 'will-stone/style' }),
+    expect.objectContaining({ name: 'will-stone/perfectionist' }),
   ])
   expect(logSpy).not.toHaveBeenCalled()
 })
@@ -110,11 +111,12 @@ test('should not load any auto-configs if forced off', async () => {
     expect.objectContaining({ name: 'will-stone/ignores' }),
     expect.objectContaining({ name: 'will-stone/git-ignore' }),
     expect.objectContaining({ name: 'will-stone/base' }),
-    expect.objectContaining({ name: 'will-stone/imports' }),
     expect.objectContaining({ name: 'will-stone/unicorn' }),
     expect.objectContaining({ name: 'will-stone/node' }),
     expect.objectContaining({ name: 'will-stone/package.json' }),
     expect.objectContaining({ name: 'will-stone/tsdoc' }),
+    expect.objectContaining({ name: 'will-stone/style' }),
+    expect.objectContaining({ name: 'will-stone/perfectionist' }),
   ])
   expect(logSpy).not.toHaveBeenCalled()
 })
@@ -137,11 +139,12 @@ test('should load auto-configs if forced on', async () => {
       expect.objectContaining({ name: 'will-stone/ignores' }),
       expect.objectContaining({ name: 'will-stone/git-ignore' }),
       expect.objectContaining({ name: 'will-stone/base' }),
-      expect.objectContaining({ name: 'will-stone/imports' }),
       expect.objectContaining({ name: 'will-stone/unicorn' }),
       expect.objectContaining({ name: 'will-stone/node' }),
       expect.objectContaining({ name: 'will-stone/package.json' }),
       expect.objectContaining({ name: 'will-stone/tsdoc' }),
+      expect.objectContaining({ name: 'will-stone/style' }),
+      expect.objectContaining({ name: 'will-stone/perfectionist' }),
       expect.objectContaining({ name: 'will-stone/react' }),
       expect.objectContaining({ name: 'will-stone/tailwind' }),
       expect.objectContaining({ name: 'will-stone/typescript' }),
@@ -150,10 +153,10 @@ test('should load auto-configs if forced on', async () => {
   )
   expect(logSpy).toHaveBeenNthCalledWith(1, 'Auto-configured plugins:')
   expect(logSpy).toHaveBeenNthCalledWith(2, '- Typescript')
-  expect(logSpy).toHaveBeenNthCalledWith(4, '- React')
-  expect(logSpy).toHaveBeenNthCalledWith(5, '- Tailwind')
-  expect(logSpy).toHaveBeenNthCalledWith(6, '- Vitest')
-  expect(logSpy).toHaveBeenCalledTimes(6)
+  expect(logSpy).toHaveBeenNthCalledWith(3, '- React')
+  expect(logSpy).toHaveBeenNthCalledWith(4, '- Tailwind')
+  expect(logSpy).toHaveBeenNthCalledWith(5, '- Vitest')
+  expect(logSpy).toHaveBeenCalledTimes(5)
 })
 
 test('should load multiple auto-configs', async () => {
