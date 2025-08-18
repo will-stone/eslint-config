@@ -1,20 +1,17 @@
 import type { TSESLint } from '@typescript-eslint/utils'
 
+import pluginTypescript from '@typescript-eslint/eslint-plugin'
+import parserTypescript from '@typescript-eslint/parser'
+
 import type { ConfigContext } from '../model.js'
 
 import { GLOB_ASTRO_TS, GLOB_TS, GLOB_TSX } from '../globs.js'
-import { interopDefault } from '../utils/interop-default.js'
 
-export async function typescript({
+export function typescript({
   options: { typescript: rawOptions },
-}: ConfigContext): Promise<TSESLint.FlatConfig.Config[]> {
+}: ConfigContext): TSESLint.FlatConfig.Config[] {
   const options =
     !rawOptions || typeof rawOptions === 'boolean' ? {} : rawOptions
-
-  const [pluginTypescript, parserTypescript] = await Promise.all([
-    interopDefault(import('@typescript-eslint/eslint-plugin')),
-    interopDefault(import('@typescript-eslint/parser')),
-  ] as const)
 
   return [
     {

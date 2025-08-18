@@ -28,15 +28,10 @@ export const defaultConfigs: {
   { config: jsdoc, name: 'JSDoc' },
   { config: style, name: 'Style' },
   { config: perfectionist, name: 'Perfectionist' },
+  { config: typescript, name: 'Typescript' },
 ]
 
 export const autoConfigs = [
-  {
-    config: typescript,
-    dep: 'typescript',
-    name: 'Typescript',
-    optionName: 'typescript',
-  },
   {
     config: astro,
     dep: 'astro',
@@ -68,5 +63,4 @@ export const autoConfigs = [
   dep: string
   name: string
   optionName: string
-  requiredPlugins: string[]
 }[]

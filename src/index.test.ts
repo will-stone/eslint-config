@@ -44,6 +44,7 @@ test('should load default configs', async () => {
     expect.objectContaining({ name: 'will-stone/jsdoc' }),
     expect.objectContaining({ name: 'will-stone/style' }),
     expect.objectContaining({ name: 'will-stone/perfectionist' }),
+    expect.objectContaining({ name: 'will-stone/typescript' }),
   ])
   expect(logSpy).not.toHaveBeenCalled()
 })
@@ -58,11 +59,6 @@ test.each([
     configNames: ['tailwind'],
     dep: 'tailwindcss',
     name: 'Tailwind',
-  },
-  {
-    configNames: ['typescript'],
-    dep: 'typescript',
-    name: 'Typescript',
   },
   {
     configNames: ['vitest'],
@@ -117,6 +113,7 @@ test('should not load any auto-configs if forced off', async () => {
     expect.objectContaining({ name: 'will-stone/jsdoc' }),
     expect.objectContaining({ name: 'will-stone/style' }),
     expect.objectContaining({ name: 'will-stone/perfectionist' }),
+    expect.objectContaining({ name: 'will-stone/typescript' }),
   ])
   expect(logSpy).not.toHaveBeenCalled()
 })
@@ -145,18 +142,17 @@ test('should load auto-configs if forced on', async () => {
       expect.objectContaining({ name: 'will-stone/jsdoc' }),
       expect.objectContaining({ name: 'will-stone/style' }),
       expect.objectContaining({ name: 'will-stone/perfectionist' }),
+      expect.objectContaining({ name: 'will-stone/typescript' }),
       expect.objectContaining({ name: 'will-stone/react' }),
       expect.objectContaining({ name: 'will-stone/tailwind' }),
-      expect.objectContaining({ name: 'will-stone/typescript' }),
       expect.objectContaining({ name: 'will-stone/vitest' }),
     ]),
   )
   expect(logSpy).toHaveBeenNthCalledWith(1, 'Auto-configured plugins:')
-  expect(logSpy).toHaveBeenNthCalledWith(2, '- Typescript')
-  expect(logSpy).toHaveBeenNthCalledWith(3, '- React')
-  expect(logSpy).toHaveBeenNthCalledWith(4, '- Tailwind')
-  expect(logSpy).toHaveBeenNthCalledWith(5, '- Vitest')
-  expect(logSpy).toHaveBeenCalledTimes(5)
+  expect(logSpy).toHaveBeenNthCalledWith(2, '- React')
+  expect(logSpy).toHaveBeenNthCalledWith(3, '- Tailwind')
+  expect(logSpy).toHaveBeenNthCalledWith(4, '- Vitest')
+  expect(logSpy).toHaveBeenCalledTimes(4)
 })
 
 test('should load multiple auto-configs', async () => {
