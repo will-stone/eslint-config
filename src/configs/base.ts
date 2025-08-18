@@ -25,9 +25,8 @@ export function base(): TSESLint.FlatConfig.Config[] {
       name: 'will-stone/base',
       rules: {
         /**
-         * Built-in rules
+         * Built-in rules.
          */
-
         'accessor-pairs': 'error',
         'array-callback-return': [
           'error',

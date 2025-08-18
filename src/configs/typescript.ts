@@ -39,8 +39,8 @@ export async function typescript({
       },
       rules: {
         /**
-         * Recommended to turn off these eslint built-in rules
-         * https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/src/configs/eslint-recommended.ts
+         * Recommended to turn off these eslint built-in rules.
+         * @see https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/src/configs/eslint-recommended.ts
          */
         // ts(2335) & ts(2377)
         'constructor-super': 'off',
@@ -82,8 +82,8 @@ export async function typescript({
         'valid-typeof': 'off',
 
         /**
-         * TS Recommended
-         * https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/src/configs/recommended.ts
+         * TS Recommended.
+         * @see https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/src/configs/recommended.ts
          */
         '@typescript-eslint/adjacent-overload-signatures': 'error',
         '@typescript-eslint/ban-ts-comment': 'error',
@@ -107,7 +107,7 @@ export async function typescript({
         'no-empty-function': 'off',
 
         /**
-         * These require type checking
+         * These require type checking.
          */
         ...(options?.tsconfigPath
           ? {
@@ -176,7 +176,7 @@ export async function typescript({
           : {}),
 
         /**
-         * Superseded by TS rules below
+         * Superseded by TS rules below.
          */
         'class-methods-use-this': 'off',
         'default-param-last': 'off',
@@ -192,7 +192,7 @@ export async function typescript({
         'no-useless-constructor': 'off',
 
         /**
-         * The rest
+         * The rest.
          */
         '@typescript-eslint/array-type': ['warn', { default: 'array' }],
         '@typescript-eslint/ban-tslint-comment': 'warn',

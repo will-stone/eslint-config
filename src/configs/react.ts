@@ -183,8 +183,8 @@ export async function react(
         'jsx-a11y/tabindex-no-positive': 'error',
 
         /**
-         * Off for Prettier
-         * https://github.com/prettier/eslint-config-prettier/blob/main/index.js
+         * Off for Prettier.
+         * @see https://github.com/prettier/eslint-config-prettier/blob/main/index.js
          */
         'react/jsx-child-element-spacing': 'off',
         'react/jsx-closing-bracket-location': 'off',
@@ -203,7 +203,7 @@ export async function react(
         'react/jsx-wrap-multilines': 'off',
 
         /**
-         * React
+         * React.
          */
         'react/boolean-prop-naming': 'error',
         'react/button-has-type': 'error',
@@ -302,7 +302,7 @@ export async function react(
         'react/void-dom-elements-no-children': 'error',
 
         /**
-         * Hooks
+         * Hooks.
          */
         'react-hooks/exhaustive-deps': 'warn',
         'react-hooks/rules-of-hooks': 'error',
