@@ -29,7 +29,6 @@ export function jsdoc(): TSESLint.FlatConfig.Config[] {
         'jsdoc/convert-to-jsdoc-comments': 'off',
         'jsdoc/empty-tags': 'warn',
         'jsdoc/implements-on-classes': 'off',
-
         'jsdoc/imports-as-dependencies': 'off',
         'jsdoc/informative-docs': 'warn',
         'jsdoc/lines-before-block': 'off',
