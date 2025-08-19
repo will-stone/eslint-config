@@ -87,7 +87,7 @@ export async function vitest(
         'vitest/valid-describe-callback': 'error',
         'vitest/valid-expect': 'error',
         'vitest/valid-expect-in-promise': 'error',
-        'vitest/valid-title': 'warn',
+        'vitest/valid-title': ['warn', { ignoreTypeOfDescribeName: true }],
       },
     },
   ]
