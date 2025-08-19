@@ -1,5 +1,19 @@
 # Changelog
 
+## [20.1.0](https://github.com/will-stone/eslint-config/compare/v20.0.0...v20.1.0) (2025-08-19)
+
+### Minor changes
+
+- Stop padding groups of Vitest expect statements
+  ([2e18a86](https://github.com/will-stone/eslint-config/commit/2e18a86dae0f66b4ade689830b7e934140b6bee6))
+- Sort Flux Standard Actions
+  ([9a3a2e1](https://github.com/will-stone/eslint-config/commit/9a3a2e1e205bc554b7cfd28bab636e1d8a5e3dfe))
+
+### Patches
+
+- Fix `vitest/valid-title` rule tripping when test title is a function
+  ([ed3c8c5](https://github.com/will-stone/eslint-config/commit/ed3c8c5daf30e04947b5becb9156ac6f2eb38df3))
+
 ## [20.0.0](https://github.com/will-stone/eslint-config/compare/v19.0.0...v20.0.0) (2025-08-18)
 
 ### Major changes
