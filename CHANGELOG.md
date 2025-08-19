@@ -1,5 +1,14 @@
 # Changelog
 
+## [20.1.1](https://github.com/will-stone/eslint-config/compare/v20.1.0...v20.1.1) (2025-08-19)
+
+### Patches
+
+- Remove deprecated rules
+  ([b780610](https://github.com/will-stone/eslint-config/commit/b78061090f187ba72e4eca4b7712a171290374b6))
+- Support all Stylistic rules but off
+  ([4757985](https://github.com/will-stone/eslint-config/commit/4757985f6517d55d5d355d4121dba5b878da2823))
+
 ## [20.1.0](https://github.com/will-stone/eslint-config/compare/v20.0.0...v20.1.0) (2025-08-19)
 
 ### Minor changes
