@@ -256,8 +256,6 @@ export function typescript({
         '@typescript-eslint/prefer-for-of': 'off',
         '@typescript-eslint/prefer-function-type': 'warn',
         '@typescript-eslint/prefer-literal-enum-member': 'error',
-        // TODO Not sure if required yet. Might be too strict and produce noisy code.
-        '@typescript-eslint/typedef': 'off',
         '@typescript-eslint/unified-signatures': 'error',
       },
     },
