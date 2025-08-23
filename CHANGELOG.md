@@ -1,5 +1,12 @@
 # Changelog
 
+## [20.2.0](https://github.com/will-stone/eslint-config/compare/v20.1.2...v20.2.0) (2025-08-23)
+
+### Minor changes
+
+- Sort exports
+  ([ef7bf22](https://github.com/will-stone/eslint-config/commit/ef7bf222c3d0d1dd710bb348469713b1f882b63d))
+
 ## [20.1.2](https://github.com/will-stone/eslint-config/compare/v20.1.1...v20.1.2) (2025-08-23)
 
 ### Patches
