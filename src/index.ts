@@ -40,13 +40,15 @@ async function config(
     configs.push(defaultConfig.config(configContext))
   }
 
-  await Promise.all(
-    enabledAutoConfigs.map(async (autoConfig) => {
+  const activatedAutoConfigs = await Promise.all(
+    enabledAutoConfigs.map((autoConfig) => {
       // eslint-disable-next-line no-console
       console.log(`- ${autoConfig.name}`)
-      configs.push(await autoConfig.config(configContext))
+      return autoConfig.config(configContext)
     }),
   )
+
+  configs.push(...activatedAutoConfigs)
 
   const merged = configs.flat()
 
