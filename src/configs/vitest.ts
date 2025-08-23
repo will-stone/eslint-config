@@ -18,6 +18,7 @@ export async function vitest(
       rules: {
         'vitest/consistent-test-filename': 'warn',
         'vitest/consistent-test-it': 'warn',
+        'vitest/consistent-vitest-vi': 'warn',
         'vitest/expect-expect': 'error',
         // Expect as much as you like. Is there any benefit to limiting this?
         'vitest/max-expects': 'off',
@@ -35,6 +36,8 @@ export async function vitest(
         'vitest/no-hooks': 'off',
         'vitest/no-identical-title': 'warn',
         'vitest/no-import-node-test': 'warn',
+        // I like importing Vitest globals.
+        'vitest/no-importing-vitest-globals': 'off',
         'vitest/no-interpolation-in-snapshots': 'warn',
         'vitest/no-large-snapshots': 'warn',
         'vitest/no-mocks-import': 'warn',
@@ -51,6 +54,8 @@ export async function vitest(
         'vitest/padding-around-describe-blocks': 'warn',
         'vitest/padding-around-expect-groups': 'off',
         'vitest/padding-around-test-blocks': 'warn',
+        'vitest/prefer-called-once': 'warn',
+        'vitest/prefer-called-times': 'off',
         'vitest/prefer-called-with': 'warn',
         'vitest/prefer-comparison-matcher': 'warn',
         'vitest/prefer-describe-function-title': 'warn',
@@ -61,6 +66,7 @@ export async function vitest(
         'vitest/prefer-expect-resolves': 'warn',
         'vitest/prefer-hooks-in-order': 'warn',
         'vitest/prefer-hooks-on-top': 'warn',
+        'vitest/prefer-importing-vitest-globals': 'warn',
         'vitest/prefer-lowercase-title': 'warn',
         'vitest/prefer-mock-promise-shorthand': 'warn',
         'vitest/prefer-snapshot-hint': 'warn',
@@ -88,6 +94,7 @@ export async function vitest(
         'vitest/valid-expect': 'error',
         'vitest/valid-expect-in-promise': 'error',
         'vitest/valid-title': ['warn', { ignoreTypeOfDescribeName: true }],
+        'vitest/warn-todo': 'warn',
       },
     },
   ]
