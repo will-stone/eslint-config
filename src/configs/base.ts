@@ -176,6 +176,7 @@ export function base(): TSESLint.FlatConfig.Config[] {
         'no-ternary': 'off',
         'no-this-before-super': 'error',
         'no-throw-literal': 'error',
+        'no-unassigned-vars': 'error',
         'no-undef': 'error',
         'no-undef-init': 'warn',
         'no-undefined': 'off',
