@@ -1,5 +1,16 @@
 # Changelog
 
+## [20.1.2](https://github.com/will-stone/eslint-config/compare/v20.1.1...v20.1.2) (2025-08-23)
+
+### Patches
+
+- Fix auto eslint configs running in random order
+  ([2b48bf6](https://github.com/will-stone/eslint-config/commit/2b48bf69b72b1f25b9ceeba7169a965d9c9f08ea))
+- Require latest ESLint
+  ([af1ccb2](https://github.com/will-stone/eslint-config/commit/af1ccb2d3c7cb92c6b7bbbd313d4caac1566e895))
+- Upgrade all deps
+  ([2baa421](https://github.com/will-stone/eslint-config/commit/2baa421b39c60c67c7960a088a608894df262851))
+
 ## [20.1.1](https://github.com/will-stone/eslint-config/compare/v20.1.0...v20.1.1) (2025-08-19)
 
 ### Patches
