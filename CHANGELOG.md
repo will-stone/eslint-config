@@ -1,5 +1,18 @@
 # Changelog
 
+## [21.0.0](https://github.com/will-stone/eslint-config/compare/v20.2.0...v21.0.0) (2025-08-23)
+
+### Major changes
+
+- Add support for all package.json rules
+  ([2aeb6ba](https://github.com/will-stone/eslint-config/commit/2aeb6ba78307a56e82a5ecfa57c61274469228e2))
+- Add support for no-unassigned-vars
+  ([cd819c6](https://github.com/will-stone/eslint-config/commit/cd819c63e763b8646a2d782c3e8a79d77eff2936))
+- Add support for more Vitest rules
+  ([143954d](https://github.com/will-stone/eslint-config/commit/143954d28b4e5a3de2113ec8f036ee1abf79acb0))
+- Add support for more unicorn rules
+  ([36898dd](https://github.com/will-stone/eslint-config/commit/36898dd8cb429a242eadc606cda5c69e48f22deb))
+
 ## [20.2.0](https://github.com/will-stone/eslint-config/compare/v20.1.2...v20.2.0) (2025-08-23)
 
 ### Minor changes
