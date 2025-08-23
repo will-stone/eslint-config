@@ -1,5 +1,12 @@
 # Changelog
 
+## [21.1.0](https://github.com/will-stone/eslint-config/compare/v21.0.0...v21.1.0) (2025-08-23)
+
+### Minor changes
+
+- Support extra configs as subsequent arguments
+  ([de10e65](https://github.com/will-stone/eslint-config/commit/de10e655e82cab50bad2dc83872c9d4f2d96d2a3))
+
 ## [21.0.0](https://github.com/will-stone/eslint-config/compare/v20.2.0...v21.0.0) (2025-08-23)
 
 ### Major changes
