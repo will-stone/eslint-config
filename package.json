@@ -22,7 +22,7 @@
   "scripts": {
     "build": "tsdown",
     "dev": "config-inspector --config ./eslint-config-for-inspector.js",
-    "lint": "eslint .",
+    "lint": "eslint . --concurrency=auto",
     "prepare": "husky",
     "release": "release-it",
     "test": "vitest",
