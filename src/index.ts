@@ -1,4 +1,7 @@
 import type { TSESLint } from '@typescript-eslint/utils'
+import type { Linter } from 'eslint'
+
+import tseslint from 'typescript-eslint'
 
 import type { ConfigContext, Options } from './model.js'
 
@@ -8,9 +11,9 @@ import { checkDepsExist } from './utils/check-deps-exist.js'
 const defaultOptions = {}
 
 /**
- * Construct an array of ESLint flat config items.
+ * The shared configuration factory.
  */
-async function config(
+async function configImpl(
   options: Options = defaultOptions,
 ): Promise<TSESLint.FlatConfig.Config[]> {
   const configs: TSESLint.FlatConfig.Config[][] = []
@@ -54,5 +57,19 @@ async function config(
 
   return merged
 }
+
+/**
+ * An ESLint Flat Config factory function that auto-configures to your
+ * environment.
+ *
+ * @param options - Tweak the factory's behaviour.
+ * @param extraConfigs - Each extra argument is an optional Flat Config.
+ * @returns An array of ESLint Flat Configs.
+ */
+const config = async (
+  options?: Options,
+  ...extraConfigs: (TSESLint.FlatConfig.Config | Linter.Config)[]
+): Promise<(TSESLint.FlatConfig.Config | Linter.Config)[]> =>
+  tseslint.config(await configImpl(options), ...extraConfigs)
 
 export default config
