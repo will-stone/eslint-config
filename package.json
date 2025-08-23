@@ -6,6 +6,7 @@
     "eslint-config"
   ],
   "homepage": "https://github.com/will-stone/eslint-config#readme",
+  "bugs": "https://github.com/will-stone/eslint-config/issues",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/will-stone/eslint-config.git"
