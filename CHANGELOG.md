@@ -1,5 +1,12 @@
 # Changelog
 
+## [21.2.0](https://github.com/will-stone/eslint-config/compare/v21.1.0...v21.2.0) (2025-08-24)
+
+### Minor changes
+
+- Only log loaded auto plugins on DEBUG=ws
+  ([dbcd6dc](https://github.com/will-stone/eslint-config/commit/dbcd6dc77bf822fbc37910de42fc108fda3569c8))
+
 ## [21.1.0](https://github.com/will-stone/eslint-config/compare/v21.0.0...v21.1.0) (2025-08-23)
 
 ### Minor changes
