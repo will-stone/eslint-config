@@ -7,6 +7,7 @@ import type { ConfigContext, Options } from './model.js'
 
 import { autoConfigs, defaultConfigs } from './configs/index.js'
 import { checkDepsExist } from './utils/check-deps-exist.js'
+import { log } from './utils/log.js'
 
 const defaultOptions = {}
 
@@ -30,11 +31,6 @@ async function configImpl(
     )
   })
 
-  if (enabledAutoConfigs.length > 0) {
-    // eslint-disable-next-line no-console
-    console.log('Auto-configured plugins:')
-  }
-
   const configContext: ConfigContext = {
     options,
   }
@@ -45,8 +41,7 @@ async function configImpl(
 
   const activatedAutoConfigs = await Promise.all(
     enabledAutoConfigs.map((autoConfig) => {
-      // eslint-disable-next-line no-console
-      console.log(`- ${autoConfig.name}`)
+      log(`Auto-configured ${autoConfig.name} plugin`)
       return autoConfig.config(configContext)
     }),
   )
