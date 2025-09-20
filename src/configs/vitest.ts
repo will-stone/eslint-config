@@ -20,6 +20,7 @@ export async function vitest(
         'vitest/consistent-test-it': 'warn',
         'vitest/consistent-vitest-vi': 'warn',
         'vitest/expect-expect': 'error',
+        'vitest/hoisted-apis-on-top': 'error',
         // Expect as much as you like. Is there any benefit to limiting this?
         'vitest/max-expects': 'off',
         'vitest/max-nested-describe': 'warn',
@@ -64,6 +65,7 @@ export async function vitest(
         // Every test must have an expect, this is covered by expect-expect rule.
         'vitest/prefer-expect-assertions': 'off',
         'vitest/prefer-expect-resolves': 'warn',
+        'vitest/prefer-expect-type-of': 'warn',
         'vitest/prefer-hooks-in-order': 'warn',
         'vitest/prefer-hooks-on-top': 'warn',
         'vitest/prefer-importing-vitest-globals': 'warn',
