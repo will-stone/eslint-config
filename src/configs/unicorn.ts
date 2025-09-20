@@ -107,6 +107,7 @@ export function unicorn(): TSESLint.FlatConfig.Config[] {
         'unicorn/prefer-bigint-literals': 'warn',
         'unicorn/prefer-blob-reading-methods': 'error',
         'unicorn/prefer-class-fields': 'warn',
+        'unicorn/prefer-classlist-toggle': 'warn',
         'unicorn/prefer-code-point': 'error',
         'unicorn/prefer-date-now': 'warn',
         'unicorn/prefer-default-parameters': 'warn',
