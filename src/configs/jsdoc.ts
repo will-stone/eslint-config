@@ -72,6 +72,7 @@ export function jsdoc(): TSESLint.FlatConfig.Config[] {
         'jsdoc/require-returns-type': 'off',
         'jsdoc/require-template': 'off',
         'jsdoc/require-throws': 'warn',
+        'jsdoc/require-throws-description': 'error',
         'jsdoc/require-yields': 'warn',
         'jsdoc/require-yields-check': 'warn',
         'jsdoc/sort-tags': 'warn',
