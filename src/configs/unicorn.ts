@@ -40,6 +40,7 @@ export function unicorn(): TSESLint.FlatConfig.Config[] {
         'unicorn/no-array-method-this-argument': 'warn',
         'unicorn/no-array-reduce': 'error',
         'unicorn/no-array-reverse': 'error',
+        'unicorn/no-array-sort': 'error',
         'unicorn/no-await-expression-member': 'warn',
         'unicorn/no-await-in-promise-methods': 'error',
         'unicorn/no-console-spaces': 'warn',
