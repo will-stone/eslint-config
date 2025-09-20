@@ -45,7 +45,6 @@ export function style(): TSESLint.FlatConfig.Config[] {
         '@stylistic/jsx-newline': 'off',
         '@stylistic/jsx-one-expression-per-line': 'off',
         '@stylistic/jsx-pascal-case': 'off',
-        '@stylistic/jsx-props-no-multi-spaces': 'off',
         '@stylistic/jsx-quotes': 'off',
         '@stylistic/jsx-self-closing-comp': 'off',
         '@stylistic/jsx-sort-props': 'off',
