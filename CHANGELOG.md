@@ -1,5 +1,51 @@
 # Changelog
 
+## [21.3.0](https://github.com/will-stone/eslint-config/compare/v21.2.0...v21.3.0) (2025-09-20)
+
+### Minor changes
+
+- Add jsdoc/require-yields-description
+  ([55ede9a](https://github.com/will-stone/eslint-config/commit/55ede9a5285549f116e297fee9deaa4e3bd97e04))
+- Add jsdoc/require-throws-description
+  ([27e9fdd](https://github.com/will-stone/eslint-config/commit/27e9fdd5302bfbb91126eae373406f321509e5d5))
+- Add jsdoc/require-next-description
+  ([525a150](https://github.com/will-stone/eslint-config/commit/525a1500bdb5097c0e480341637d8a31b51b8a39))
+- Add jsdoc/reject-function-type
+  ([5fddf97](https://github.com/will-stone/eslint-config/commit/5fddf974a3934910f8a4a6a766141217e2c010d6))
+- Add jsdoc/reject-any-type
+  ([a2e577f](https://github.com/will-stone/eslint-config/commit/a2e577fd57a3d9e4a80e4ef049fc3220c9689b58))
+- Add package-json/valid-directories
+  ([4c6c0f0](https://github.com/will-stone/eslint-config/commit/4c6c0f0c6d5d73025bffa157e328390ccc821999))
+- Add unicorn/require-module-attributes
+  ([e36a3b1](https://github.com/will-stone/eslint-config/commit/e36a3b12581fbddee6252166a9a5eddba4e4ea1b))
+- Add unicorn/prefer-classlist-toggle
+  ([2cee694](https://github.com/will-stone/eslint-config/commit/2cee694566f37f509ce6073011bffd2adbe46c47))
+- Add unicorn/prefer-bigint-literals
+  ([77cb8fe](https://github.com/will-stone/eslint-config/commit/77cb8fe6fbae307256751f2083baae3938742ad4))
+- Add unicorn/no-array-sort
+  ([797be01](https://github.com/will-stone/eslint-config/commit/797be010ffe06bedaced73afc0a5aef3a06885c8))
+- Upgrade all deps
+  ([9fde2a5](https://github.com/will-stone/eslint-config/commit/9fde2a59728e0c57b357dbd05db64269a781fdcb))
+- Add vitest/hoisted-apis-on-top and vitest/prefer-expect-type-of rules
+  ([316012b](https://github.com/will-stone/eslint-config/commit/316012bdcbc908e15237e3527e692a5a54cfd733))
+- Add preserve-caught-error rule
+  ([02fbb64](https://github.com/will-stone/eslint-config/commit/02fbb6418dee25135915a4753a67f88460a3c03b))
+
+### Patches
+
+- Add jsdoc/type-formatting (off)
+  ([8414b15](https://github.com/will-stone/eslint-config/commit/8414b155ed231756c2b7b32dfc0ce7f11d4ca355))
+- Add jsdoc/required-tags (off)
+  ([4c2f78e](https://github.com/will-stone/eslint-config/commit/4c2f78e4507ab3041babce1b658e86504121c485))
+- Add jsdoc/require-yields-type (off)
+  ([8112bbc](https://github.com/will-stone/eslint-config/commit/8112bbce3ef939839e55e3dc44e3ed0a2b7f36ad))
+- Add jsdoc/require-throws-type (off)
+  ([e3ac7f2](https://github.com/will-stone/eslint-config/commit/e3ac7f2122b8e4220862ce29fd340955ebdd68e3))
+- Add jsdoc/require-next-type (off)
+  ([adfb758](https://github.com/will-stone/eslint-config/commit/adfb75892caf52aafcc83f5384f392155985ea01))
+- Remove deprecated rule
+  ([8ebbe99](https://github.com/will-stone/eslint-config/commit/8ebbe99e500d0d34eeecdeabbfc2319513a4d34b))
+
 ## [21.2.0](https://github.com/will-stone/eslint-config/compare/v21.1.0...v21.2.0) (2025-08-24)
 
 ### Minor changes
