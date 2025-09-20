@@ -44,6 +44,7 @@ export function jsdoc(): TSESLint.FlatConfig.Config[] {
         'jsdoc/no-restricted-syntax': 'off',
         'jsdoc/no-types': 'warn',
         'jsdoc/no-undefined-types': 'off',
+        'jsdoc/reject-any-type': 'error',
         'jsdoc/require-asterisk-prefix': 'warn',
         'jsdoc/require-description': 'off',
         'jsdoc/require-description-complete-sentence': 'warn',
