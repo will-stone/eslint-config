@@ -82,6 +82,7 @@ export function jsdoc(): TSESLint.FlatConfig.Config[] {
         'jsdoc/sort-tags': 'warn',
         'jsdoc/tag-lines': 'off',
         'jsdoc/text-escaping': 'off',
+        'jsdoc/type-formatting': 'off',
         'jsdoc/valid-types': 'off',
       },
     },
