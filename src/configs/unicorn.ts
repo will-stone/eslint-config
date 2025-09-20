@@ -158,6 +158,7 @@ export function unicorn(): TSESLint.FlatConfig.Config[] {
         'unicorn/prevent-abbreviations': 'off',
         'unicorn/relative-url-style': 'warn',
         'unicorn/require-array-join-separator': 'warn',
+        'unicorn/require-module-attributes': 'warn',
         'unicorn/require-module-specifiers': 'warn',
         'unicorn/require-number-to-fixed-digits-argument': 'warn',
         'unicorn/require-post-message-target-origin': 'error',
