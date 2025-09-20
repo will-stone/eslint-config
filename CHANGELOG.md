@@ -1,5 +1,13 @@
 # Changelog
 
+## [21.4.0](https://github.com/will-stone/eslint-config/compare/v21.3.0...v21.4.0) (2025-09-20)
+
+### Minor changes
+
+- Change debug logs to show when using `--debug` flag rather than using own env
+  var
+  ([392e220](https://github.com/will-stone/eslint-config/commit/392e220096cdba4c636fb89acda080efac9267e0))
+
 ## [21.3.0](https://github.com/will-stone/eslint-config/compare/v21.2.0...v21.3.0) (2025-09-20)
 
 ### Minor changes
