@@ -55,6 +55,7 @@ export function jsdoc(): TSESLint.FlatConfig.Config[] {
         // TODO let's possibly turn this one on in time as it requires JSDoc
         // everywhere, which is technically the right thing to do.
         'jsdoc/require-jsdoc': 'off',
+        'jsdoc/require-next-description': 'error',
         // TODO Should we be documenting everything?
         'jsdoc/require-param': 'off',
         'jsdoc/require-param-description': 'warn',
