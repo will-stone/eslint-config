@@ -4,8 +4,7 @@
 
 ### Minor changes
 
-- Change debug logs to show when using `--debug` flag rather than using own env
-  var
+- Change debug logs to show when using `--debug` flag rather than using own env var
   ([392e220](https://github.com/will-stone/eslint-config/commit/392e220096cdba4c636fb89acda080efac9267e0))
 
 ## [21.3.0](https://github.com/will-stone/eslint-config/compare/v21.2.0...v21.3.0) (2025-09-20)
@@ -176,8 +175,7 @@
 - Use updated glob pattern for finding files
   ([ccc267a](https://github.com/will-stone/eslint-config/commit/ccc267a27523bc3d9fa099f3017e48b7df1bde7c))
 
-  Based on antfu's:
-  https://github.com/antfu/eslint-config/blob/main/src/globs.ts
+  Based on antfu's: https://github.com/antfu/eslint-config/blob/main/src/globs.ts
 
 ## [17.1.0](https://github.com/will-stone/eslint-config/compare/v17.0.0...v17.1.0) (2025-05-25)
 
@@ -220,8 +218,7 @@
 
 ### Patches
 
-- Update README to include instructions on linting json now config lints
-  package.json
+- Update README to include instructions on linting json now config lints package.json
   ([a8e097b](https://github.com/will-stone/eslint-config/commit/a8e097b2e4a5e0c005e9f62decf31d8d5e3e8bff))
 
 ## [16.0.0](https://github.com/will-stone/eslint-config/compare/v15.2.0...v16.0.0) (2025-04-19)
@@ -307,8 +304,7 @@
 
 ### Major changes
 
-- Lazy load plugins. Check README as you will now need to manually install
-  plugins for some configs
+- Lazy load plugins. Check README as you will now need to manually install plugins for some configs
   ([871b9c5](https://github.com/will-stone/eslint-config/commit/871b9c54541f1cc8e35467f5cc8e92ccef23c0e2))
 - Migrate Vitest plugin, adding new rules
   ([ca099b2](https://github.com/will-stone/eslint-config/commit/ca099b2076b3b142ff06809b1f42b65032851107))
@@ -382,8 +378,7 @@
 
 ### Patches
 
-- Fix unable to scan for deps when either deps or devDeps is missing from a
-  package.json file
+- Fix unable to scan for deps when either deps or devDeps is missing from a package.json file
   ([13a4a74](https://github.com/will-stone/eslint-config/commit/13a4a747a532e3463439b44d82c99036749e7820))
 
 ## [11.0.0](https://github.com/will-stone/eslint-config/compare/v10.0.2...v11.0.0) (2024-08-11)
@@ -488,8 +483,7 @@
 
 ### Major Changes
 
-- 44b0164: Stopped supporting Prettier from ESLint as it's slower than running
-  Prettier directly:
+- 44b0164: Stopped supporting Prettier from ESLint as it's slower than running Prettier directly:
   https://prettier.io/docs/en/integrating-with-linters.html#notes
 - 44b0164: Removed unsupported `eslint-plugin-switch-case` plugin.
 
@@ -507,27 +501,25 @@
 
 ### Minor Changes
 
-- 447a526: Added support for `astro/missing-client-only-directive-value=error`,
-  and `@typescript-eslint/only-throw-error=off`.
+- 447a526: Added support for `astro/missing-client-only-directive-value=error`, and
+  `@typescript-eslint/only-throw-error=off`.
 
 ## 7.1.0
 
 ### Minor Changes
 
-- f176446: Added support for
-  "@typescript-eslint/use-unknown-in-catch-callback-variable" (off).
+- f176446: Added support for "@typescript-eslint/use-unknown-in-catch-callback-variable" (off).
 
 ## 7.0.0
 
-Why the massive jump in versions? I originally had an npm package published
-under the same name. It was deprecated but npm doesn't allow for overwriting
-versions. The last major of that old config was v6, so going with v7 so I can
-start again.
+Why the massive jump in versions? I originally had an npm package published under the same name. It
+was deprecated but npm doesn't allow for overwriting versions. The last major of that old config was
+v6, so going with v7 so I can start again.
 
 ### Major Changes
 
-- 7d73d56: Release first stable version. Updated all configs and deps, adding
-  support for new rules, such as `react/checked-requires-onchange-or-readonly`.
+- 7d73d56: Release first stable version. Updated all configs and deps, adding support for new rules,
+  such as `react/checked-requires-onchange-or-readonly`.
 
 ## 0.15.0
 
@@ -630,8 +622,7 @@ start again.
 ### Minor Changes
 
 - 6bcfc6f: `no-object-constructor` error.
-- c2daa78: Turn off `class-methods-use-this` ruke, which can quite often be not
-  be required.
+- c2daa78: Turn off `class-methods-use-this` ruke, which can quite often be not be required.
 
 ## 0.6.0
 
@@ -649,9 +640,8 @@ start again.
 
 ### Minor Changes
 
-- 5891e9c: No changes (hopefully). Migrated from old will-stone/dx repo to this
-  standalone one, whilst converting to TS and exporing both ESM and CJS
-  versions.
+- 5891e9c: No changes (hopefully). Migrated from old will-stone/dx repo to this standalone one,
+  whilst converting to TS and exporing both ESM and CJS versions.
 
 ## 0.4.0
 
@@ -727,8 +717,8 @@ start again.
 
 ### Patch Changes
 
-- Fixed no browser globals available. Puting these in all files for now, but
-  maybe should be based on something else?
+- Fixed no browser globals available. Puting these in all files for now, but maybe should be based
+  on something else?
 
 ## 0.0.3
 

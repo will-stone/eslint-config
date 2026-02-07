@@ -5,9 +5,7 @@ import type { ConfigContext } from '../model.js'
 import { GLOB_TESTS } from '../globs.js'
 import { interopDefault } from '../utils/interop-default.js'
 
-export async function vitest(
-  _configContext: ConfigContext,
-): Promise<TSESLint.FlatConfig.Config[]> {
+export async function vitest(_configContext: ConfigContext): Promise<TSESLint.FlatConfig.Config[]> {
   const pluginVitest = await interopDefault(import('@vitest/eslint-plugin'))
 
   return [

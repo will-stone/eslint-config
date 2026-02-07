@@ -7,9 +7,7 @@ import type { ConfigContext } from '../model.js'
 import { GLOB_SRC } from '../globs.js'
 import { interopDefault } from '../utils/interop-default.js'
 
-export async function react(
-  _configContext: ConfigContext,
-): Promise<TSESLint.FlatConfig.Config[]> {
+export async function react(_configContext: ConfigContext): Promise<TSESLint.FlatConfig.Config[]> {
   const [pluginJsxA11y, pluginReact, pluginReactHooks] = await Promise.all([
     // @ts-expect-error -- no types
     interopDefault(import('eslint-plugin-jsx-a11y')),
@@ -49,15 +47,7 @@ export async function react(
         'jsx-a11y/control-has-associated-label': [
           'off',
           {
-            ignoreElements: [
-              'audio',
-              'canvas',
-              'embed',
-              'input',
-              'textarea',
-              'tr',
-              'video',
-            ],
+            ignoreElements: ['audio', 'canvas', 'embed', 'input', 'textarea', 'tr', 'video'],
             ignoreRoles: [
               'grid',
               'listbox',
@@ -131,26 +121,10 @@ export async function react(
           {
             fieldset: ['radiogroup', 'presentation'],
             li: ['menuitem', 'option', 'row', 'tab', 'treeitem'],
-            ol: [
-              'listbox',
-              'menu',
-              'menubar',
-              'radiogroup',
-              'tablist',
-              'tree',
-              'treegrid',
-            ],
+            ol: ['listbox', 'menu', 'menubar', 'radiogroup', 'tablist', 'tree', 'treegrid'],
             table: ['grid'],
             td: ['gridcell'],
-            ul: [
-              'listbox',
-              'menu',
-              'menubar',
-              'radiogroup',
-              'tablist',
-              'tree',
-              'treegrid',
-            ],
+            ul: ['listbox', 'menu', 'menubar', 'radiogroup', 'tablist', 'tree', 'treegrid'],
           },
         ],
         'jsx-a11y/no-noninteractive-tabindex': [
@@ -166,14 +140,7 @@ export async function react(
           'error',
           {
             allowExpressionValues: true,
-            handlers: [
-              'onClick',
-              'onMouseDown',
-              'onMouseUp',
-              'onKeyPress',
-              'onKeyDown',
-              'onKeyUp',
-            ],
+            handlers: ['onClick', 'onMouseDown', 'onMouseUp', 'onKeyPress', 'onKeyDown', 'onKeyUp'],
           },
         ],
         'jsx-a11y/prefer-tag-over-role': 'error',

@@ -7,9 +7,7 @@ import type { ConfigContext } from '../model.js'
 import { GLOB_ASTRO } from '../globs.js'
 import { interopDefault } from '../utils/interop-default.js'
 
-export async function astro(
-  _configContext: ConfigContext,
-): Promise<TSESLint.FlatConfig.Config[]> {
+export async function astro(_configContext: ConfigContext): Promise<TSESLint.FlatConfig.Config[]> {
   const [pluginAstro, parserAstro] = await Promise.all([
     interopDefault(import('eslint-plugin-astro')),
     interopDefault(import('astro-eslint-parser')),

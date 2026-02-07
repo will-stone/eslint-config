@@ -17,10 +17,7 @@ export function unicorn(): TSESLint.FlatConfig.Config[] {
         'unicorn/consistent-destructuring': 'warn',
         'unicorn/consistent-empty-array-spread': 'warn',
         'unicorn/consistent-existence-index-check': 'warn',
-        'unicorn/consistent-function-scoping': [
-          'error',
-          { checkArrowFunctions: false },
-        ],
+        'unicorn/consistent-function-scoping': ['error', { checkArrowFunctions: false }],
         'unicorn/custom-error-definition': 'warn',
         'unicorn/empty-brace-spaces': 'warn',
         'unicorn/error-message': 'error',

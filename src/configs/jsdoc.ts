@@ -19,10 +19,7 @@ export function jsdoc(): TSESLint.FlatConfig.Config[] {
         'jsdoc/check-param-names': 'warn',
         'jsdoc/check-property-names': 'off',
         'jsdoc/check-syntax': 'off',
-        'jsdoc/check-tag-names': [
-          'warn',
-          { definedTags: ['jest-environment'], typed: false },
-        ],
+        'jsdoc/check-tag-names': ['warn', { definedTags: ['jest-environment'], typed: false }],
         'jsdoc/check-template-names': 'off',
         'jsdoc/check-types': 'off',
         'jsdoc/check-values': 'warn',

@@ -57,9 +57,7 @@ export const autoConfigs = [
     optionName: 'vitest',
   },
 ] as const satisfies {
-  config: (
-    configContext: ConfigContext,
-  ) => Promise<TSESLint.FlatConfig.Config[]>
+  config: (configContext: ConfigContext) => Promise<TSESLint.FlatConfig.Config[]>
   dep: string
   name: string
   optionName: string

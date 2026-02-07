@@ -12,8 +12,8 @@ pnpm add -D eslint @will-stone/eslint-config
 
 ### Optional Peer Dependencies
 
-If you are using any of the following packages, you will also need to install
-the corresponding plugin.
+If you are using any of the following packages, you will also need to install the corresponding
+plugin.
 
 | Package       | Plugin                                          |
 | ------------- | ----------------------------------------------- |
@@ -45,8 +45,8 @@ For example:
 
 ### Lint Staged
 
-If you would like to apply lint and auto-fix before every commit, you can add
-the following to your `package.json`:
+If you would like to apply lint and auto-fix before every commit, you can add the following to your
+`package.json`:
 
 ```json
 {
@@ -66,6 +66,5 @@ echo "lint-staged" > .husky/pre-commit
 
 ## Credits
 
-Inspired by the excellent
-[Flat eslint-config](https://github.com/antfu/eslint-config) by
+Inspired by the excellent [Flat eslint-config](https://github.com/antfu/eslint-config) by
 [Anthony Fu](https://github.com/antfu).

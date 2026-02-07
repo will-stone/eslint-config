@@ -10,8 +10,7 @@ import { GLOB_ASTRO_TS, GLOB_TS, GLOB_TSX } from '../globs.js'
 export function typescript({
   options: { typescript: rawOptions },
 }: ConfigContext): TSESLint.FlatConfig.Config[] {
-  const options =
-    !rawOptions || typeof rawOptions === 'boolean' ? {} : rawOptions
+  const options = !rawOptions || typeof rawOptions === 'boolean' ? {} : rawOptions
 
   return [
     {
@@ -126,8 +125,7 @@ export function typescript({
               '@typescript-eslint/no-misused-spread': 'off',
               '@typescript-eslint/no-mixed-enums': 'off',
               '@typescript-eslint/no-redundant-type-constituents': 'off',
-              '@typescript-eslint/no-unnecessary-boolean-literal-compare':
-                'off',
+              '@typescript-eslint/no-unnecessary-boolean-literal-compare': 'off',
               '@typescript-eslint/no-unnecessary-condition': 'off',
               '@typescript-eslint/no-unnecessary-qualifier': 'off',
               '@typescript-eslint/no-unnecessary-template-expression': 'error',
@@ -167,8 +165,7 @@ export function typescript({
               '@typescript-eslint/strict-boolean-expressions': 'off',
               '@typescript-eslint/switch-exhaustiveness-check': 'off',
               '@typescript-eslint/unbound-method': 'off',
-              '@typescript-eslint/use-unknown-in-catch-callback-variable':
-                'off',
+              '@typescript-eslint/use-unknown-in-catch-callback-variable': 'off',
             }
           : {}),
 
@@ -233,8 +230,7 @@ export function typescript({
         '@typescript-eslint/no-restricted-imports': 'off',
         '@typescript-eslint/no-restricted-types': 'off',
         '@typescript-eslint/no-shadow': ['error'],
-        '@typescript-eslint/no-unnecessary-parameter-property-assignment':
-          'error',
+        '@typescript-eslint/no-unnecessary-parameter-property-assignment': 'error',
         '@typescript-eslint/no-unnecessary-type-constraint': 'warn',
         '@typescript-eslint/no-unsafe-declaration-merging': 'error',
         '@typescript-eslint/no-unused-expressions': ['error'],

@@ -8,15 +8,10 @@ import { readFileSync } from 'node:fs'
  * the project, and return whether each exists in either a dependencies or
  * devDependencies field.
  */
-export function checkDepsExist<T extends string>(
-  depNames: readonly T[],
-): Record<T, boolean> {
+export function checkDepsExist<T extends string>(depNames: readonly T[]): Record<T, boolean> {
   const depCount = depNames.length
 
-  const allPackageJsonPaths = globbySync([
-    '**/package.json',
-    '!**/node_modules/**',
-  ])
+  const allPackageJsonPaths = globbySync(['**/package.json', '!**/node_modules/**'])
 
   const hasPackageMap: Record<string, boolean> = {}
 
@@ -33,11 +28,7 @@ export function checkDepsExist<T extends string>(
     const package_ = JSON.parse(data) as PackageJson
 
     for (const depName of depNames) {
-      if (
-        package_ &&
-        (package_.dependencies?.[depName] ||
-          package_.devDependencies?.[depName])
-      ) {
+      if (package_ && (package_.dependencies?.[depName] || package_.devDependencies?.[depName])) {
         hasPackageMap[depName] = true
         foundCount = foundCount + 1
         // Stop checking if all deps found.
