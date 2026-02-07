@@ -4,6 +4,7 @@ import { fs, vol } from 'memfs'
 import { beforeEach, expect, test, vi } from 'vitest'
 
 import config from './index.js'
+import * as Log from './utils/log.js'
 
 // Point node's file-system at virtual file system.
 vi.mock('node:fs', () => fs)
@@ -27,7 +28,7 @@ beforeEach(() => {
 })
 
 test('should load default configs', async () => {
-  const logSpy = vi.spyOn(console, 'log').mockImplementation(() => null)
+  const logSpy = vi.spyOn(Log, 'log').mockImplementation(() => null)
   vol.fromJSON({
     'package.json': JSON.stringify({
       dependencies: { bar: '^4.2.1', foo: '^9.0.0' },
@@ -66,7 +67,7 @@ test.each([
     name: 'Vitest',
   },
 ])('should load auto configs', async ({ configNames, dep, name }) => {
-  const logSpy = vi.spyOn(console, 'log').mockImplementation(() => null)
+  const logSpy = vi.spyOn(Log, 'log').mockImplementation(() => null)
   vol.fromJSON({
     'package.json': JSON.stringify({ dependencies: { [dep]: '^9.0.0' } }),
   })
@@ -78,13 +79,13 @@ test.each([
       ),
     ),
   )
-  expect(logSpy).toHaveBeenNthCalledWith(1, 'Auto-configured plugins:')
-  expect(logSpy).toHaveBeenNthCalledWith(2, `- ${name}`)
-  expect(logSpy).toHaveBeenCalledTimes(2)
+  expect(logSpy).toHaveBeenNthCalledWith(1, `Auto-configured ${name} plugin`)
+  expect(logSpy).toHaveBeenCalledOnce()
 })
 
 test('should not load any auto-configs if forced off', async () => {
-  const logSpy = vi.spyOn(console, 'log').mockImplementation(() => null)
+  const logSpy = vi.spyOn(Log, 'log').mockImplementation(() => null)
+
   vol.fromJSON({
     'package.json': JSON.stringify({
       dependencies: {
@@ -119,7 +120,8 @@ test('should not load any auto-configs if forced off', async () => {
 })
 
 test('should load auto-configs if forced on', async () => {
-  const logSpy = vi.spyOn(console, 'log').mockImplementation(() => null)
+  const logSpy = vi.spyOn(Log, 'log').mockImplementation(() => null)
+
   vol.fromJSON({
     'package.json': JSON.stringify({ dependencies: { lorem: '^9.0.0' } }),
   })
@@ -148,15 +150,14 @@ test('should load auto-configs if forced on', async () => {
       expect.objectContaining({ name: 'will-stone/vitest' }),
     ]),
   )
-  expect(logSpy).toHaveBeenNthCalledWith(1, 'Auto-configured plugins:')
-  expect(logSpy).toHaveBeenNthCalledWith(2, '- React')
-  expect(logSpy).toHaveBeenNthCalledWith(3, '- Tailwind')
-  expect(logSpy).toHaveBeenNthCalledWith(4, '- Vitest')
-  expect(logSpy).toHaveBeenCalledTimes(4)
+  expect(logSpy).toHaveBeenNthCalledWith(1, 'Auto-configured React plugin')
+  expect(logSpy).toHaveBeenNthCalledWith(2, 'Auto-configured Tailwind plugin')
+  expect(logSpy).toHaveBeenNthCalledWith(3, 'Auto-configured Vitest plugin')
+  expect(logSpy).toHaveBeenCalledTimes(3)
 })
 
 test('should load multiple auto-configs', async () => {
-  const logSpy = vi.spyOn(console, 'log').mockImplementation(() => null)
+  const logSpy = vi.spyOn(Log, 'log').mockImplementation(() => null)
   vol.fromJSON({
     'package.json': JSON.stringify({
       dependencies: { react: '^9.0.0', vitest: '^9.0.0' },
@@ -169,8 +170,7 @@ test('should load multiple auto-configs', async () => {
       expect.objectContaining({ name: 'will-stone/vitest' }),
     ]),
   )
-  expect(logSpy).toHaveBeenNthCalledWith(1, 'Auto-configured plugins:')
-  expect(logSpy).toHaveBeenNthCalledWith(2, `- React`)
-  expect(logSpy).toHaveBeenNthCalledWith(3, `- Vitest`)
-  expect(logSpy).toHaveBeenCalledTimes(3)
+  expect(logSpy).toHaveBeenNthCalledWith(1, 'Auto-configured React plugin')
+  expect(logSpy).toHaveBeenNthCalledWith(2, 'Auto-configured Vitest plugin')
+  expect(logSpy).toHaveBeenCalledTimes(2)
 })
