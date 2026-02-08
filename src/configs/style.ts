@@ -47,7 +47,6 @@ export function style(): TSESLint.FlatConfig.Config[] {
         '@stylistic/jsx-pascal-case': 'off',
         '@stylistic/jsx-quotes': 'off',
         '@stylistic/jsx-self-closing-comp': 'off',
-        '@stylistic/jsx-sort-props': 'off',
         '@stylistic/jsx-tag-spacing': 'off',
         '@stylistic/jsx-wrap-multilines': 'off',
         '@stylistic/key-spacing': 'off',

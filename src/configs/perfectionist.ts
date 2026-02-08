@@ -40,7 +40,7 @@ export function perfectionist(): TSESLint.FlatConfig.Config[] {
         'perfectionist/sort-imports': ['warn', { type: 'natural' }],
         'perfectionist/sort-interfaces': 'off',
         'perfectionist/sort-intersection-types': 'off',
-        'perfectionist/sort-jsx-props': 'off',
+        'perfectionist/sort-jsx-props': ['warn', { type: 'natural' }],
         'perfectionist/sort-maps': 'off',
         'perfectionist/sort-modules': 'off',
         'perfectionist/sort-named-exports': ['warn', { type: 'natural' }],
