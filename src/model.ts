@@ -10,11 +10,7 @@ export type Options = {
         cssFiles?: string[]
       }
     | boolean
-  typescript?:
-    | boolean
-    | {
-        tsconfigPath?: string
-      }
+  typescript?: boolean
   vitest?: boolean
 }
 

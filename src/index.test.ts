@@ -7,14 +7,15 @@ import config from './index.js'
 import * as Log from './utils/log.js'
 
 // Point node's file-system at virtual file system.
-vi.mock('node:fs', () => fs)
+// @ts-expect-error -- memfs and node:fs don't agree on type but it works.
+vi.mock(import('node:fs'), () => fs)
 
 // Inject package path look-up tool with virtual file system.
-vi.mock('globby', async (importOriginal) => {
+vi.mock(import('globby'), async (importOriginal) => {
   const original = await importOriginal<typeof Globby>()
   return {
     ...original,
-    globbySync: (paths: string[]) =>
+    globbySync: (paths) =>
       original.globbySync(paths, {
         // @ts-expect-error -- memfs and globby don't agree on type, but it works.
         fs,
@@ -28,7 +29,7 @@ beforeEach(() => {
 })
 
 test('should load default configs', async () => {
-  const logSpy = vi.spyOn(Log, 'log').mockImplementation(() => null)
+  const logSpy = vi.spyOn(Log, 'log').mockReturnValue()
   vol.fromJSON({
     'package.json': JSON.stringify({
       dependencies: { bar: '^4.2.1', foo: '^9.0.0' },
@@ -67,7 +68,7 @@ test.each([
     name: 'Vitest',
   },
 ])('should load auto configs', async ({ configNames, dep, name }) => {
-  const logSpy = vi.spyOn(Log, 'log').mockImplementation(() => null)
+  const logSpy = vi.spyOn(Log, 'log').mockReturnValue()
   vol.fromJSON({
     'package.json': JSON.stringify({ dependencies: { [dep]: '^9.0.0' } }),
   })
@@ -84,7 +85,7 @@ test.each([
 })
 
 test('should not load any auto-configs if forced off', async () => {
-  const logSpy = vi.spyOn(Log, 'log').mockImplementation(() => null)
+  const logSpy = vi.spyOn(Log, 'log').mockReturnValue()
 
   vol.fromJSON({
     'package.json': JSON.stringify({
@@ -120,7 +121,7 @@ test('should not load any auto-configs if forced off', async () => {
 })
 
 test('should load auto-configs if forced on', async () => {
-  const logSpy = vi.spyOn(Log, 'log').mockImplementation(() => null)
+  const logSpy = vi.spyOn(Log, 'log').mockReturnValue()
 
   vol.fromJSON({
     'package.json': JSON.stringify({ dependencies: { lorem: '^9.0.0' } }),
@@ -157,7 +158,7 @@ test('should load auto-configs if forced on', async () => {
 })
 
 test('should load multiple auto-configs', async () => {
-  const logSpy = vi.spyOn(Log, 'log').mockImplementation(() => null)
+  const logSpy = vi.spyOn(Log, 'log').mockReturnValue()
   vol.fromJSON({
     'package.json': JSON.stringify({
       dependencies: { react: '^9.0.0', vitest: '^9.0.0' },
