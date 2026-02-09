@@ -141,6 +141,7 @@ export function typescript({
               '@typescript-eslint/no-unsafe-return': 'off',
               '@typescript-eslint/no-unsafe-type-assertion': 'off',
               '@typescript-eslint/no-unsafe-unary-minus': 'off',
+              '@typescript-eslint/no-useless-default-assignment': 'off',
               '@typescript-eslint/non-nullable-type-assertion-style': 'off',
               '@typescript-eslint/only-throw-error': 'off',
               '@typescript-eslint/prefer-destructuring': 'off',
@@ -163,6 +164,7 @@ export function typescript({
               '@typescript-eslint/restrict-template-expressions': 'off',
               '@typescript-eslint/return-await': 'off',
               '@typescript-eslint/strict-boolean-expressions': 'off',
+              '@typescript-eslint/strict-void-return': 'off',
               '@typescript-eslint/switch-exhaustiveness-check': 'off',
               '@typescript-eslint/unbound-method': 'off',
               '@typescript-eslint/use-unknown-in-catch-callback-variable': 'off',
@@ -181,6 +183,7 @@ export function typescript({
         'no-restricted-imports': 'off',
         'no-shadow': 'off',
         'no-unused-expressions': 'off',
+        'no-unused-private-class-members': 'off',
         'no-unused-vars': 'off',
         'no-use-before-define': 'off',
         'no-useless-constructor': 'off',
@@ -234,6 +237,7 @@ export function typescript({
         '@typescript-eslint/no-unnecessary-type-constraint': 'warn',
         '@typescript-eslint/no-unsafe-declaration-merging': 'error',
         '@typescript-eslint/no-unused-expressions': ['error'],
+        '@typescript-eslint/no-unused-private-class-members': 'error',
         '@typescript-eslint/no-unused-vars': [
           'error',
           {
