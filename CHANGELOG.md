@@ -1,5 +1,32 @@
 # Changelog
 
+## [22.0.0](https://github.com/will-stone/eslint-config/compare/v21.4.0...v22.0.0) (2026-02-09)
+
+### Major changes
+
+- Begin supporting type aware linting
+  ([a30e2a9](https://github.com/will-stone/eslint-config/commit/a30e2a997a877270b855577605714c607f441684))
+- Support more Vitest rules
+  ([8cb1c7b](https://github.com/will-stone/eslint-config/commit/8cb1c7bd2035de343531a2f61dfca481d97e1a3c))
+- Support and turn on astro/no-unsafe-inline-scripts
+  ([d50a3f1](https://github.com/will-stone/eslint-config/commit/d50a3f1a10f630630fe75140af0fef1e67df4e4f))
+- Support more TS rules
+  ([f41622d](https://github.com/will-stone/eslint-config/commit/f41622dfa5f0099091073d7a505b50978056801b))
+
+### Minor changes
+
+- Change @stylistic/jsx-sort-props for perfectionist/sort-jsx-props
+  ([4df00f2](https://github.com/will-stone/eslint-config/commit/4df00f234682e89a32d483c8f475dcddff81e0ab))
+
+### Patches
+
+- Support @stylistic/exp-list-style (off), not required with Prettier
+  ([42f9ba9](https://github.com/will-stone/eslint-config/commit/42f9ba92c12409f7f6124366654747037cb7cae6))
+- Fix not all eslint configs being automatically activated
+  ([5d6b2ad](https://github.com/will-stone/eslint-config/commit/5d6b2ad9301c1bfed019908c2256a94a7eb1e664))
+- Upgrade all deps
+  ([5f41d9e](https://github.com/will-stone/eslint-config/commit/5f41d9e6aa8f7e6a4d4c75c27ef31a628a89e7da))
+
 ## [21.4.0](https://github.com/will-stone/eslint-config/compare/v21.3.0...v21.4.0) (2025-09-20)
 
 ### Minor changes
