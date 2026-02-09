@@ -41,6 +41,7 @@ export async function astro(_configContext: ConfigContext): Promise<TSESLint.Fla
         'astro/no-deprecated-astro-resolve': 'error',
         'astro/no-deprecated-getentrybyslug': 'error',
         'astro/no-exports-from-components': 'error',
+        'astro/no-unsafe-inline-scripts': 'error',
         'astro/no-unused-define-vars-in-style': 'error',
         'astro/semi': 'off',
         'astro/sort-attributes': 'warn',
