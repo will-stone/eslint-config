@@ -6,10 +6,12 @@ import { beforeEach, expect, test, vi } from 'vitest'
 import { checkDepsExist } from './check-deps-exist.js'
 
 // Point node's file-system at virtual file system.
-vi.mock('node:fs', () => fs)
+// @ts-expect-error -- memfs and node:fs don't agree on type but it works.
+vi.mock(import('node:fs'), () => fs)
 
 // Inject package path look-up tool with virtual file system.
-vi.mock('globby', async (importOriginal) => {
+// @ts-expect-error -- memfs and globby don't agree on type but it works.
+vi.mock(import('globby'), async (importOriginal) => {
   const original = await importOriginal<typeof Globby>()
   return {
     ...original,
@@ -65,7 +67,6 @@ test('should not find deps only in peerDependencies', () => {
 
 test('should exit early if all deps found', () => {
   const readFileSpy = vi.spyOn(fs, 'readFileSync')
-
   expect(checkDepsExist(['bar'])).toStrictEqual({ bar: true })
   expect(readFileSpy).toHaveBeenCalledOnce()
 })
