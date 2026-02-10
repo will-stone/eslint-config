@@ -1,5 +1,21 @@
 # Changelog
 
+## [23.0.0](https://github.com/will-stone/eslint-config/compare/v22.0.0...v23.0.0) (2026-02-10)
+
+### Major changes
+
+- Upgrade react-hooks and support recommended-latest
+  ([2a563f8](https://github.com/will-stone/eslint-config/commit/2a563f8ba63ae5c45fe7b2a0e7ceec6cf6ba2957))
+- Upgrade jsdoc and support new rules
+  ([16eba75](https://github.com/will-stone/eslint-config/commit/16eba755e8e4d0c3717533c21e16d507f9b32cb9))
+
+### Patches
+
+- Turn off new stylistic rule
+  ([fc134f9](https://github.com/will-stone/eslint-config/commit/fc134f9a65497635610fde981e9fc7a6b51ea52e))
+- Upgrade deps within SemVer
+  ([de90c5a](https://github.com/will-stone/eslint-config/commit/de90c5a2e32a86e55cf1e874e50c5efebca22ee1))
+
 ## [22.0.0](https://github.com/will-stone/eslint-config/compare/v21.4.0...v22.0.0) (2026-02-09)
 
 ### Major changes
