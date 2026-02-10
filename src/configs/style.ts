@@ -24,6 +24,7 @@ export function style(): TSESLint.FlatConfig.Config[] {
         '@stylistic/curly-newline': 'off',
         '@stylistic/dot-location': 'off',
         '@stylistic/eol-last': 'off',
+        '@stylistic/exp-jsx-props-style': 'off',
         '@stylistic/exp-list-style': 'off',
         '@stylistic/function-call-argument-newline': 'off',
         '@stylistic/function-call-spacing': 'off',
