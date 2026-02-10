@@ -267,18 +267,20 @@ export async function react(_configContext: ConfigContext): Promise<TSESLint.Fla
         'react/static-property-placement': 'error',
         'react/style-prop-object': 'error',
         'react/void-dom-elements-no-children': 'error',
-
-        /**
-         * Hooks.
-         */
-        'react-hooks/exhaustive-deps': 'warn',
-        'react-hooks/rules-of-hooks': 'error',
       },
       settings: {
         react: {
           version: 'detect',
         },
       },
+    },
+    {
+      files: [GLOB_SRC],
+      languageOptions: {
+        globals: globals.browser,
+      },
+      name: 'will-stone/react-hooks',
+      ...pluginReactHooks.configs.flat['recommended-latest'],
     },
   ]
 }
