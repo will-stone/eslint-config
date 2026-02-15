@@ -1,5 +1,25 @@
 # Changelog
 
+## [24.0.0](https://github.com/will-stone/eslint-config/compare/v23.0.0...v24.0.0) (2026-02-15)
+
+### Major changes
+
+- Upgrade Perfectionist and support new rules
+  ([5a30efe](https://github.com/will-stone/eslint-config/commit/5a30efed59cc32da9b6df97194396ebb75130695))
+- Upgrade package-json and support new rules
+  ([aa9ca65](https://github.com/will-stone/eslint-config/commit/aa9ca65d89dc9e07554349c01951cc388b23fd2d))
+- Upgrade unicorn and support new rules
+  ([29b7435](https://github.com/will-stone/eslint-config/commit/29b7435d2b5dbcff1caea49c5e160029b2250085))
+- Upgrade package.json and remove deprecated rule
+  ([1d7de7f](https://github.com/will-stone/eslint-config/commit/1d7de7fc6af2d23fab1dbae2c02b969dcdc217a8))
+- Upgrade Perfectionist and migrate customGroups
+  ([696ece7](https://github.com/will-stone/eslint-config/commit/696ece73d7bba79ab138c4bc8327ce8e16ed0307))
+
+### Patches
+
+- Upgrade astro deps
+  ([253fd23](https://github.com/will-stone/eslint-config/commit/253fd23c75e539bc7ab80c04625434c4f471fa29))
+
 ## [23.0.0](https://github.com/will-stone/eslint-config/compare/v22.0.0...v23.0.0) (2026-02-10)
 
 ### Major changes
