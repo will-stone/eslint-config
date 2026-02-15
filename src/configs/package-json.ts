@@ -44,7 +44,6 @@ export function packageJson(): TSESLint.FlatConfig.Config[] {
         'package-json/valid-license': 'error',
         'package-json/valid-name': 'error',
         'package-json/valid-optionalDependencies': 'error',
-        'package-json/valid-package-definition': 'error',
         'package-json/valid-peerDependencies': 'error',
         'package-json/valid-repository-directory': 'error',
         'package-json/valid-scripts': 'error',
