@@ -20,7 +20,7 @@
     "dist"
   ],
   "scripts": {
-    "build": "tsdown",
+    "build": "vite build",
     "dev": "config-inspector --config ./eslint-config-for-inspector.js",
     "lint": "eslint . --concurrency=auto",
     "lint:debug": "DEBUG=ws eslint . --concurrency=auto",
@@ -41,11 +41,11 @@
     "eslint-plugin-jsdoc": "^62.5.4",
     "eslint-plugin-jsx-a11y": "^6.10.2",
     "eslint-plugin-n": "^17.23.2",
-    "eslint-plugin-package-json": "^0.56.4",
-    "eslint-plugin-perfectionist": "^4.15.1",
-    "eslint-plugin-unicorn": "^61.0.2",
-    "globals": "^16.5.0",
-    "globby": "^14.1.0",
+    "eslint-plugin-package-json": "^0.88.2",
+    "eslint-plugin-perfectionist": "^5.5.0",
+    "eslint-plugin-unicorn": "^63.0.0",
+    "globals": "^17.3.0",
+    "globby": "^16.1.0",
     "type-fest": "^5.4.4",
     "typescript-eslint": "^8.55.0"
   },
@@ -70,8 +70,9 @@
     "memfs": "^4.56.10",
     "prettier": "^3.8.1",
     "release-it": "^19.2.4",
-    "tsdown": "^0.15.12",
     "typescript": "^5.9.3",
+    "vite": "^7.3.1",
+    "vite-plugin-dts": "^4.5.4",
     "vitest": "^4.0.18"
   },
   "peerDependencies": {
@@ -103,7 +104,7 @@
       "optional": true
     }
   },
-  "packageManager": "pnpm@10.28.2",
+  "packageManager": "pnpm@10.29.3",
   "engines": {
     "node": ">=22"
   },
