@@ -1,5 +1,12 @@
 # Changelog
 
+## [25.1.0](https://github.com/will-stone/eslint-config/compare/v25.0.0...v25.1.0) (2026-02-15)
+
+### Minor changes
+
+- Don't require homepage on private packages
+  ([b5816ec](https://github.com/will-stone/eslint-config/commit/b5816ec35f6f3bc2b80032374a7955e70e5d4f19))
+
 ## [25.0.0](https://github.com/will-stone/eslint-config/compare/v24.0.0...v25.0.0) (2026-02-15)
 
 ### Major changes
