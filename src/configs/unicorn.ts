@@ -28,6 +28,7 @@ export function unicorn(): TSESLint.FlatConfig.Config[] {
         'unicorn/filename-case': 'error',
         // TODO Not sure if this is useful yet
         'unicorn/import-style': 'off',
+        'unicorn/isolated-functions': 'off',
         'unicorn/new-for-builtins': 'warn',
         'unicorn/no-abusive-eslint-disable': 'error',
         'unicorn/no-accessor-recursion': 'error',
@@ -47,6 +48,7 @@ export function unicorn(): TSESLint.FlatConfig.Config[] {
         'unicorn/no-empty-file': 'off',
         'unicorn/no-for-loop': 'warn',
         'unicorn/no-hex-escape': 'warn',
+        'unicorn/no-immediate-mutation': 'warn',
         'unicorn/no-instanceof-builtins': 'warn',
         'unicorn/no-invalid-fetch-options': 'error',
         'unicorn/no-invalid-remove-event-listener': 'error',
@@ -84,6 +86,7 @@ export function unicorn(): TSESLint.FlatConfig.Config[] {
         'unicorn/no-unreadable-iife': 'error',
         // Recommended config turned this off so I will too
         'unicorn/no-unused-properties': 'off',
+        'unicorn/no-useless-collection-argument': 'warn',
         'unicorn/no-useless-error-capture-stack-trace': 'warn',
         'unicorn/no-useless-fallback-in-spread': 'warn',
         'unicorn/no-useless-length-check': 'warn',
@@ -138,6 +141,7 @@ export function unicorn(): TSESLint.FlatConfig.Config[] {
         'unicorn/prefer-query-selector': 'warn',
         'unicorn/prefer-reflect-apply': 'warn',
         'unicorn/prefer-regexp-test': 'warn',
+        'unicorn/prefer-response-static-json': 'warn',
         'unicorn/prefer-set-has': 'warn',
         'unicorn/prefer-set-size': 'warn',
         'unicorn/prefer-single-call': 'warn',
