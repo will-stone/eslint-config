@@ -1,5 +1,12 @@
 # Changelog
 
+## [25.0.0](https://github.com/will-stone/eslint-config/compare/v24.0.0...v25.0.0) (2026-02-15)
+
+### Major changes
+
+- Sort JSX props using Perfectionist
+  ([b7712b2](https://github.com/will-stone/eslint-config/commit/b7712b2bafb953585aed1d27469dfbd8a567e662))
+
 ## [24.0.0](https://github.com/will-stone/eslint-config/compare/v23.0.0...v24.0.0) (2026-02-15)
 
 ### Major changes
