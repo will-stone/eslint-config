@@ -1,5 +1,12 @@
 # Changelog
 
+## [25.2.0](https://github.com/will-stone/eslint-config/compare/v25.1.0...v25.2.0) (2026-02-15)
+
+### Minor changes
+
+- Don't require author, keywords, or license on private packages
+  ([980066d](https://github.com/will-stone/eslint-config/commit/980066d6c1a9c1757019ef7ac76e252c090b9295))
+
 ## [25.1.0](https://github.com/will-stone/eslint-config/compare/v25.0.0...v25.1.0) (2026-02-15)
 
 ### Minor changes
