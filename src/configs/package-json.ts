@@ -25,7 +25,7 @@ export function packageJson(): TSESLint.FlatConfig.Config[] {
         'package-json/require-engines': 'error',
         'package-json/require-exports': 'off',
         'package-json/require-files': ['error', { ignorePrivate: true }],
-        'package-json/require-homepage': 'error',
+        'package-json/require-homepage': ['error', { ignorePrivate: true }],
         'package-json/require-keywords': 'error',
         'package-json/require-license': 'error',
         'package-json/require-name': 'error',
