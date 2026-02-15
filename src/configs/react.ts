@@ -215,8 +215,8 @@ export async function react(_configContext: ConfigContext): Promise<TSESLint.Fla
         'react/jsx-pascal-case': 'error',
         'react/jsx-props-no-spread-multi': 'error',
         'react/jsx-props-no-spreading': 'off',
-        // TODO there's other options in this one that could be useful.
-        'react/jsx-sort-props': ['warn', { reservedFirst: true }],
+        // Covered by Perfectionist.
+        'react/jsx-sort-props': 'off',
         'react/jsx-uses-react': 'error',
         'react/jsx-uses-vars': 'error',
         'react/no-access-state-in-setstate': 'error',
