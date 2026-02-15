@@ -5,12 +5,12 @@ import pluginPerfectionist from 'eslint-plugin-perfectionist'
 const sortOrder = [
   // Flux standard actions.
   {
-    customGroups: {
-      type: '^type$',
-      payload: '^payload$',
-      error: '^error$',
-      meta: '^meta$',
-    },
+    customGroups: [
+      { elementNamePattern: '^type$', groupName: 'type' },
+      { elementNamePattern: '^payload$', groupName: 'payload' },
+      { elementNamePattern: '^error$', groupName: 'error' },
+      { elementNamePattern: '^meta$', groupName: 'meta' },
+    ],
     groups: ['type', 'payload', 'error', 'meta'],
     useConfigurationIf: {
       allNamesMatchPattern: '^type|payload|meta|error$',
