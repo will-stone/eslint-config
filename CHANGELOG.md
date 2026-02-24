@@ -1,5 +1,12 @@
 # Changelog
 
+## [25.2.1](https://github.com/will-stone/eslint-config/compare/v25.2.0...v25.2.1) (2026-02-24)
+
+### Patches
+
+- Automatically get TS eslint base rules
+  ([533ade6](https://github.com/will-stone/eslint-config/commit/533ade6779821c2c40bcbab0223766bc4b8f78f0))
+
 ## [25.2.0](https://github.com/will-stone/eslint-config/compare/v25.1.0...v25.2.0) (2026-02-15)
 
 ### Minor changes
