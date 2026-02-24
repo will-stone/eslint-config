@@ -5,6 +5,21 @@ import parserTypescript from '@typescript-eslint/parser'
 
 import { GLOB_ASTRO_TS, GLOB_TS, GLOB_TSX } from '../globs.js'
 
+const eslintRuleTweaks: Record<string, unknown> = {}
+
+// @ts-expect-error -- type appears to be incorrect here as it iterates correctly.
+for (const config of pluginTypescript.configs['flat/all']) {
+  for (const [ruleName, value] of Object.entries(config.rules || {})) {
+    if (
+      !ruleName.startsWith('@typescript') &&
+      // Deprecated rules.
+      !['no-new-symbol', 'no-return-await'].includes(ruleName)
+    ) {
+      eslintRuleTweaks[ruleName] = value
+    }
+  }
+}
+
 export function typescript(): TSESLint.FlatConfig.Config[] {
   return [
     {
@@ -20,73 +35,96 @@ export function typescript(): TSESLint.FlatConfig.Config[] {
         '@typescript-eslint': pluginTypescript,
       },
       rules: {
-        /**
-         * Recommended to turn off these eslint built-in rules.
-         * @see https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/src/configs/eslint-recommended.ts
-         */
-        // ts(2335) & ts(2377)
-        'constructor-super': 'off',
-        // ts(2378)
-        'getter-return': 'off',
-        // ts(2588)
-        'no-const-assign': 'off',
-        // ts(2300)
-        'no-dupe-args': 'off',
-        // ts(2393) & ts(2300)
-        'no-dupe-class-members': 'off',
-        // ts(1117)
-        'no-dupe-keys': 'off',
-        // ts(2539)
-        'no-func-assign': 'off',
-        // ts(2539) & ts(2540)
-        'no-import-assign': 'off',
-        // ts(2349)
-        'no-obj-calls': 'off',
-        // ts(2408)
-        'no-setter-return': 'off',
-        // ts(2376)
-        'no-this-before-super': 'off',
-        // ts(2304)
-        'no-undef': 'off',
-        // ts(7027)
-        'no-unreachable': 'off',
-        // ts(2365) & ts(2360) & ts(2358)
-        'no-unsafe-negation': 'off',
-        // ts transpiles let/const to var, so no need for vars any more
-        'no-var': 'error',
-        // ts provides better types with const
-        'prefer-const': 'warn',
-        // ts provides better types with rest args over arguments
-        'prefer-rest-params': 'error',
-        // ts transpiles spread to apply, so no need for manual apply
-        'prefer-spread': 'error',
-        // ts(2367)
-        'valid-typeof': 'off',
+        ...eslintRuleTweaks,
 
         /**
          * TS Recommended.
          * @see https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/src/configs/recommended.ts
          */
         '@typescript-eslint/adjacent-overload-signatures': 'error',
+        '@typescript-eslint/array-type': ['warn', { default: 'array' }],
         '@typescript-eslint/ban-ts-comment': 'error',
+        '@typescript-eslint/ban-tslint-comment': 'warn',
+        '@typescript-eslint/class-literal-property-style': 'warn',
+        '@typescript-eslint/class-methods-use-this': 'off',
+        '@typescript-eslint/consistent-generic-constructors': 'warn',
+        '@typescript-eslint/consistent-indexed-object-style': 'warn',
+        '@typescript-eslint/consistent-type-assertions': 'error',
+        '@typescript-eslint/consistent-type-definitions': ['warn', 'type'],
+        '@typescript-eslint/consistent-type-imports': [
+          'warn',
+          {
+            fixStyle: 'separate-type-imports',
+            prefer: 'type-imports',
+          },
+        ],
+        '@typescript-eslint/default-param-last': ['error'],
+        '@typescript-eslint/explicit-function-return-type': 'off',
+        '@typescript-eslint/explicit-member-accessibility': [
+          'warn',
+          { accessibility: 'no-public' },
+        ],
         '@typescript-eslint/explicit-module-boundary-types': 'warn',
+        '@typescript-eslint/init-declarations': 'off',
+        '@typescript-eslint/max-params': 'off',
+        '@typescript-eslint/member-ordering': 'error',
+        '@typescript-eslint/method-signature-style': 'warn',
         '@typescript-eslint/no-array-constructor': 'error',
+        '@typescript-eslint/no-confusing-non-null-assertion': 'warn',
+        '@typescript-eslint/no-dupe-class-members': 'error',
+        '@typescript-eslint/no-duplicate-enum-values': 'error',
+        '@typescript-eslint/no-dynamic-delete': 'off',
         '@typescript-eslint/no-empty-function': 'error',
         '@typescript-eslint/no-empty-object-type': 'error',
         '@typescript-eslint/no-explicit-any': 'warn',
+        '@typescript-eslint/no-extra-non-null-assertion': 'warn',
+        '@typescript-eslint/no-extraneous-class': 'error',
+        '@typescript-eslint/no-import-type-side-effects': 'warn',
         '@typescript-eslint/no-inferrable-types': 'error',
+        '@typescript-eslint/no-invalid-this': 'error',
+        '@typescript-eslint/no-invalid-void-type': 'error',
+        '@typescript-eslint/no-loop-func': 'error',
+        '@typescript-eslint/no-magic-numbers': 'off',
         '@typescript-eslint/no-misused-new': 'error',
         '@typescript-eslint/no-namespace': 'error',
+        '@typescript-eslint/no-non-null-asserted-nullish-coalescing': 'error',
         '@typescript-eslint/no-non-null-asserted-optional-chain': 'error',
         '@typescript-eslint/no-non-null-assertion': 'off',
+        '@typescript-eslint/no-redeclare': 'error',
+        '@typescript-eslint/no-require-imports': 'error',
+        '@typescript-eslint/no-restricted-imports': 'off',
+        '@typescript-eslint/no-restricted-types': 'off',
+        '@typescript-eslint/no-shadow': ['error'],
         '@typescript-eslint/no-this-alias': 'error',
+        '@typescript-eslint/no-unnecessary-parameter-property-assignment': 'error',
+        '@typescript-eslint/no-unnecessary-type-constraint': 'warn',
+        '@typescript-eslint/no-unsafe-declaration-merging': 'error',
         '@typescript-eslint/no-unsafe-function-type': 'warn',
+        '@typescript-eslint/no-unused-expressions': ['error'],
+        '@typescript-eslint/no-unused-private-class-members': 'error',
+        '@typescript-eslint/no-unused-vars': [
+          'error',
+          {
+            // Useful for extracting args from props and ignoring them:
+            // { style: _style, ...restProps }
+            argsIgnorePattern: '^_',
+            varsIgnorePattern: '[iI]gnored',
+          },
+        ],
+        '@typescript-eslint/no-use-before-define': 'error',
+        '@typescript-eslint/no-useless-constructor': 'error',
+        '@typescript-eslint/no-useless-empty-export': 'warn',
         '@typescript-eslint/no-wrapper-object-types': 'error',
+        '@typescript-eslint/parameter-properties': 'off',
         '@typescript-eslint/prefer-as-const': 'error',
+        '@typescript-eslint/prefer-enum-initializers': 'error',
+        // Unicorn does this better by providing a fixer
+        '@typescript-eslint/prefer-for-of': 'off',
+        '@typescript-eslint/prefer-function-type': 'warn',
+        '@typescript-eslint/prefer-literal-enum-member': 'error',
         '@typescript-eslint/prefer-namespace-keyword': 'error',
         '@typescript-eslint/triple-slash-reference': 'error',
-        'no-array-constructor': 'off',
-        'no-empty-function': 'off',
+        '@typescript-eslint/unified-signatures': 'error',
 
         /**
          * These require type checking.
@@ -152,93 +190,6 @@ export function typescript(): TSESLint.FlatConfig.Config[] {
         '@typescript-eslint/switch-exhaustiveness-check': 'off',
         '@typescript-eslint/unbound-method': 'off',
         '@typescript-eslint/use-unknown-in-catch-callback-variable': 'off',
-
-        /**
-         * Superseded by TS rules below.
-         */
-        'class-methods-use-this': 'off',
-        'default-param-last': 'off',
-        'no-duplicate-imports': 'off',
-        'no-invalid-this': 'off',
-        'no-loop-func': 'off',
-        'no-redeclare': 'off',
-        'no-restricted-imports': 'off',
-        'no-shadow': 'off',
-        'no-unused-expressions': 'off',
-        'no-unused-private-class-members': 'off',
-        'no-unused-vars': 'off',
-        'no-use-before-define': 'off',
-        'no-useless-constructor': 'off',
-
-        /**
-         * The rest.
-         */
-        '@typescript-eslint/array-type': ['warn', { default: 'array' }],
-        '@typescript-eslint/ban-tslint-comment': 'warn',
-        '@typescript-eslint/class-literal-property-style': 'warn',
-        '@typescript-eslint/class-methods-use-this': 'off',
-        '@typescript-eslint/consistent-generic-constructors': 'warn',
-        '@typescript-eslint/consistent-indexed-object-style': 'warn',
-        '@typescript-eslint/consistent-type-assertions': 'error',
-        '@typescript-eslint/consistent-type-definitions': ['warn', 'type'],
-        '@typescript-eslint/consistent-type-imports': [
-          'warn',
-          {
-            fixStyle: 'separate-type-imports',
-            prefer: 'type-imports',
-          },
-        ],
-        '@typescript-eslint/default-param-last': ['error'],
-        '@typescript-eslint/explicit-function-return-type': 'off',
-        '@typescript-eslint/explicit-member-accessibility': [
-          'warn',
-          { accessibility: 'no-public' },
-        ],
-        '@typescript-eslint/init-declarations': 'off',
-        '@typescript-eslint/max-params': 'off',
-        '@typescript-eslint/member-ordering': 'error',
-        '@typescript-eslint/method-signature-style': 'warn',
-        '@typescript-eslint/no-confusing-non-null-assertion': 'warn',
-        '@typescript-eslint/no-dupe-class-members': 'error',
-        '@typescript-eslint/no-duplicate-enum-values': 'error',
-        '@typescript-eslint/no-dynamic-delete': 'off',
-        '@typescript-eslint/no-extra-non-null-assertion': 'warn',
-        '@typescript-eslint/no-extraneous-class': 'error',
-        '@typescript-eslint/no-import-type-side-effects': 'warn',
-        '@typescript-eslint/no-invalid-this': 'error',
-        '@typescript-eslint/no-invalid-void-type': 'error',
-        '@typescript-eslint/no-loop-func': 'error',
-        '@typescript-eslint/no-magic-numbers': 'off',
-        '@typescript-eslint/no-non-null-asserted-nullish-coalescing': 'error',
-        '@typescript-eslint/no-redeclare': 'error',
-        '@typescript-eslint/no-require-imports': 'error',
-        '@typescript-eslint/no-restricted-imports': 'off',
-        '@typescript-eslint/no-restricted-types': 'off',
-        '@typescript-eslint/no-shadow': ['error'],
-        '@typescript-eslint/no-unnecessary-parameter-property-assignment': 'error',
-        '@typescript-eslint/no-unnecessary-type-constraint': 'warn',
-        '@typescript-eslint/no-unsafe-declaration-merging': 'error',
-        '@typescript-eslint/no-unused-expressions': ['error'],
-        '@typescript-eslint/no-unused-private-class-members': 'error',
-        '@typescript-eslint/no-unused-vars': [
-          'error',
-          {
-            // Useful for extracting args from props and ignoring them:
-            // { style: _style, ...restProps }
-            argsIgnorePattern: '^_',
-            varsIgnorePattern: '[iI]gnored',
-          },
-        ],
-        '@typescript-eslint/no-use-before-define': 'error',
-        '@typescript-eslint/no-useless-constructor': 'error',
-        '@typescript-eslint/no-useless-empty-export': 'warn',
-        '@typescript-eslint/parameter-properties': 'off',
-        '@typescript-eslint/prefer-enum-initializers': 'error',
-        // Unicorn does this better by providing a fixer
-        '@typescript-eslint/prefer-for-of': 'off',
-        '@typescript-eslint/prefer-function-type': 'warn',
-        '@typescript-eslint/prefer-literal-enum-member': 'error',
-        '@typescript-eslint/unified-signatures': 'error',
       },
     },
   ]
