@@ -4,8 +4,6 @@ export default config({
   astro: true,
   react: true,
   tailwind: true,
-  typescript: {
-    tsconfigPath: './tsconfig.json',
-  },
+  typescript: true,
   vitest: true,
 })
