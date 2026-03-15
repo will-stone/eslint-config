@@ -55,6 +55,7 @@
     "@commits-with-character/conventional-changelog-preset": "^5.1.1",
     "@eslint/config-inspector": "^1.4.2",
     "@release-it/conventional-changelog": "^10.0.5",
+    "@types/eslint-plugin-tailwindcss": "^3.17.0",
     "@types/node": "^24.10.13",
     "@typescript-eslint/utils": "^8.55.0",
     "@vitest/eslint-plugin": "^1.6.7",

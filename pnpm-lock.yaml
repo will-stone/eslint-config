@@ -72,6 +72,9 @@ importers:
       '@release-it/conventional-changelog':
         specifier: ^10.0.5
         version: 10.0.5(conventional-commits-filter@5.0.0)(conventional-commits-parser@6.2.1)(release-it@19.2.4(@types/node@24.10.13))
+      '@types/eslint-plugin-tailwindcss':
+        specifier: ^3.17.0
+        version: 3.17.0
       '@types/node':
         specifier: ^24.10.13
         version: 24.10.13
@@ -1068,6 +1071,12 @@ packages:
 
   '@types/deep-eql@4.0.2':
     resolution: {integrity: sha512-c9h9dVVMigMPc4bwTvC5dxqtqJZwQPePsWjPlpSOnojbor6pGqdk541lfA7AqFQr5pB1BRdq0juY9db81BwyFw==}
+
+  '@types/eslint-plugin-tailwindcss@3.17.0':
+    resolution: {integrity: sha512-ucQGf2YIdTcndYcxRU3UdZgmhUHsOlbIF4BaRtl0op+7k2JmqM2i3aXZ6XIcfZgVq1ZKov7VM5c/BR81ukmkyg==}
+
+  '@types/eslint@9.6.1':
+    resolution: {integrity: sha512-FXx2pKgId/WyYo2jXw63kk7/+TY7u7AziEJxJAnSFzHlqTAS3Ync6SvgYAN/k4/PQpnnVuzoMuVnByKK2qp0ag==}
 
   '@types/estree@1.0.8':
     resolution: {integrity: sha512-dWHzHa2WqEXI/O1E9OjrocMTKJl2mSrEolh1Iomrv6U+JuNwaHXsXx9bLu5gG7BUWFIN0skIQJQ/L1rIex4X6w==}
@@ -4603,6 +4612,15 @@ snapshots:
       '@types/ms': 2.1.0
 
   '@types/deep-eql@4.0.2': {}
+
+  '@types/eslint-plugin-tailwindcss@3.17.0':
+    dependencies:
+      '@types/eslint': 9.6.1
+
+  '@types/eslint@9.6.1':
+    dependencies:
+      '@types/estree': 1.0.8
+      '@types/json-schema': 7.0.15
 
   '@types/estree@1.0.8': {}
 

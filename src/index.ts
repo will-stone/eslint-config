@@ -25,9 +25,9 @@ async function configImpl(
   const enabledAutoConfigs = autoConfigs.filter(({ dep, optionName }) => {
     return (
       // Is forced on.
-      options?.[optionName] ||
+      Boolean(options[optionName]) ||
       // Is present and not forced off.
-      (existingAutoConfigDeps[dep] && options?.[optionName] !== false)
+      (existingAutoConfigDeps[dep] && options[optionName] !== false)
     )
   })
 
@@ -40,7 +40,7 @@ async function configImpl(
   }
 
   const activatedAutoConfigs = await Promise.all(
-    enabledAutoConfigs.map((autoConfig) => {
+    enabledAutoConfigs.map(async (autoConfig) => {
       log(`Auto-configured ${autoConfig.name} plugin`)
       return autoConfig.config(configContext)
     }),

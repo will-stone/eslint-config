@@ -76,6 +76,7 @@ test.each([
   await expect(config()).resolves.toStrictEqual(
     expect.arrayContaining(
       configNames.map((configName) =>
+        // eslint-disable-next-line @typescript-eslint/no-unsafe-return
         expect.objectContaining({ name: `will-stone/${configName}` }),
       ),
     ),

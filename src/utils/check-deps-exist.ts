@@ -26,7 +26,10 @@ export function checkDepsExist<T extends string>(depNames: readonly T[]): Record
     const package_ = JSON.parse(data) as PackageJson
 
     for (const depName of depNames) {
-      if (package_ && (package_.dependencies?.[depName] || package_.devDependencies?.[depName])) {
+      if (
+        typeof package_.dependencies?.[depName] === 'string' ||
+        typeof package_.devDependencies?.[depName] === 'string'
+      ) {
         hasPackageMap[depName] = true
         // Stop checking if all deps found.
         if (checkAllFound()) {

@@ -8,17 +8,16 @@ import { interopDefault } from '../utils/interop-default.js'
 export async function tailwind({
   options: { tailwind: rawOptions },
 }: ConfigContext): Promise<TSESLint.FlatConfig.Config[]> {
-  const options = !rawOptions || rawOptions === true ? {} : rawOptions
+  const options = rawOptions === false || rawOptions === true ? {} : rawOptions
 
-  const plugin = await interopDefault(
-    // @ts-expect-error -- no types
-    import('eslint-plugin-tailwindcss'),
-  )
+   
+  const plugin = await interopDefault(import('eslint-plugin-tailwindcss'))
 
   return [
     {
       files: [GLOB_TAILWIND],
       name: 'will-stone/tailwind',
+       
       plugins: { tailwindcss: plugin },
       rules: {
         'tailwindcss/classnames-order': 'warn',
@@ -32,7 +31,7 @@ export async function tailwind({
       },
       settings: {
         tailwindcss: {
-          config: options.config,
+          config: options?.config,
           /**
            * Default to no custom CSS files, due to performance issue with the
            * plugin can be somewhat mitigated by setting this config to `[]` so
@@ -40,7 +39,7 @@ export async function tailwind({
            * @see https://github.com/francoismassart/eslint-plugin-tailwindcss/issues/276
            * @see https://github.com/francoismassart/eslint-plugin-tailwindcss/issues/174
            */
-          cssFiles: options.cssFiles || [],
+          cssFiles: options?.cssFiles || [],
         },
       },
     },

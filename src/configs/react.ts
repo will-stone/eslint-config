@@ -8,6 +8,7 @@ import { GLOB_SRC } from '../globs.js'
 import { interopDefault } from '../utils/interop-default.js'
 
 export async function react(_configContext: ConfigContext): Promise<TSESLint.FlatConfig.Config[]> {
+  // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment
   const [pluginJsxA11y, pluginReact, pluginReactHooks] = await Promise.all([
     // @ts-expect-error -- no types
     interopDefault(import('eslint-plugin-jsx-a11y')),
@@ -28,6 +29,7 @@ export async function react(_configContext: ConfigContext): Promise<TSESLint.Fla
       },
       name: 'will-stone/react',
       plugins: {
+        // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment
         'jsx-a11y': pluginJsxA11y,
         react: pluginReact,
         'react-hooks': pluginReactHooks,
