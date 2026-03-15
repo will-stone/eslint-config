@@ -10,14 +10,12 @@ export async function tailwind({
 }: ConfigContext): Promise<TSESLint.FlatConfig.Config[]> {
   const options = rawOptions === false || rawOptions === true ? {} : rawOptions
 
-   
   const plugin = await interopDefault(import('eslint-plugin-tailwindcss'))
 
   return [
     {
       files: [GLOB_TAILWIND],
       name: 'will-stone/tailwind',
-       
       plugins: { tailwindcss: plugin },
       rules: {
         'tailwindcss/classnames-order': 'warn',
