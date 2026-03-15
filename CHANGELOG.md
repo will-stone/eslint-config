@@ -1,5 +1,12 @@
 # Changelog
 
+## [26.0.0](https://github.com/will-stone/eslint-config/compare/v25.2.1...v26.0.0) (2026-03-15)
+
+### Major changes
+
+- Add type aware linting
+  ([e676d19](https://github.com/will-stone/eslint-config/commit/e676d190d6f4ef83bea82fd2f7fd1b5f26cedd62))
+
 ## [25.2.1](https://github.com/will-stone/eslint-config/compare/v25.2.0...v25.2.1) (2026-02-24)
 
 ### Patches
