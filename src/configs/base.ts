@@ -223,8 +223,20 @@ export function base(): TSESLint.FlatConfig.Config[] {
         // Can cause issues when Prettier is enabled
         'prefer-arrow-callback': 'off',
         'prefer-const': 'warn',
-        // Make compatible with Unicorn's no-unreadable-array-destructuring
-        'prefer-destructuring': ['warn', { array: false, object: true }],
+        "prefer-destructuring": [
+          "error",
+          {
+            AssignmentExpression: {
+              array: false,
+              object: false,
+            },
+            VariableDeclarator: {
+              // Make compatible with Unicorn's no-unreadable-array-destructuring.
+              array: false,
+              object: true,
+            },
+          },
+        ],
         'prefer-exponentiation-operator': 'warn',
         'prefer-named-capture-group': 'off',
         'prefer-numeric-literals': 'warn',
