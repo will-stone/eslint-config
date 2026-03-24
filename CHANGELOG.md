@@ -1,5 +1,15 @@
 # Changelog
 
+## [26.0.1](https://github.com/will-stone/eslint-config/compare/v26.0.0...v26.0.1) (2026-03-24)
+
+### Patches
+
+- Fix prefer-destructuring not allowing assignment to variables causing awkward workarounds
+  ([5d247d9](https://github.com/will-stone/eslint-config/commit/5d247d90864a035dd2e9977c4e36640b11d5d453))
+
+  Updated prefer-destructuring rule to specify settings for AssignmentExpression and
+  VariableDeclarator.
+
 ## [26.0.0](https://github.com/will-stone/eslint-config/compare/v25.2.1...v26.0.0) (2026-03-15)
 
 ### Major changes
