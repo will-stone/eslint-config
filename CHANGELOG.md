@@ -1,5 +1,12 @@
 # Changelog
 
+## [26.0.2](https://github.com/will-stone/eslint-config/compare/v26.0.1...v26.0.2) (2026-03-25)
+
+### Patches
+
+- Fix incorrect eslint-plugin-react-hooks peerDep version
+  ([bb2ea55](https://github.com/will-stone/eslint-config/commit/bb2ea55fc1fa5e6d7d050633e81c036a0bc1de97))
+
 ## [26.0.1](https://github.com/will-stone/eslint-config/compare/v26.0.0...v26.0.1) (2026-03-24)
 
 ### Patches
