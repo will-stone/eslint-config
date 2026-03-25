@@ -200,7 +200,8 @@ export function typescript(): TSESLint.FlatConfig.Config[] {
         '@typescript-eslint/restrict-plus-operands': 'error',
         '@typescript-eslint/restrict-template-expressions': 'error',
         '@typescript-eslint/return-await': 'warn',
-        '@typescript-eslint/strict-boolean-expressions': 'error',
+        // Way too noisy, not particularly helpful most of the time.
+        '@typescript-eslint/strict-boolean-expressions': 'off',
         '@typescript-eslint/strict-void-return': 'error',
         '@typescript-eslint/switch-exhaustiveness-check': 'error',
         '@typescript-eslint/unbound-method': 'error',
