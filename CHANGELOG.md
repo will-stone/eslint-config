@@ -1,5 +1,12 @@
 # Changelog
 
+## [26.1.0](https://github.com/will-stone/eslint-config/compare/v26.0.3...v26.1.0) (2026-03-25)
+
+### Minor changes
+
+- Turn off @typescript-eslint/strict-boolean-expressions
+  ([8258a87](https://github.com/will-stone/eslint-config/commit/8258a875137bc736424105540138bba8da4c1a74))
+
 ## [26.0.3](https://github.com/will-stone/eslint-config/compare/v26.0.2...v26.0.3) (2026-03-25)
 
 ### Patches
