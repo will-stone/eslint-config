@@ -167,7 +167,20 @@ export function typescript(): TSESLint.FlatConfig.Config[] {
         '@typescript-eslint/no-useless-default-assignment': 'warn',
         '@typescript-eslint/non-nullable-type-assertion-style': 'warn',
         '@typescript-eslint/only-throw-error': 'error',
-        '@typescript-eslint/prefer-destructuring': ['warn', { array: false, object: true }],
+        '@typescript-eslint/prefer-destructuring': [
+          'warn',
+          {
+            AssignmentExpression: {
+              array: false,
+              object: false,
+            },
+            VariableDeclarator: {
+              // Make compatible with Unicorn's no-unreadable-array-destructuring.
+              array: false,
+              object: true,
+            },
+          },
+        ],
         '@typescript-eslint/prefer-find': 'error',
         '@typescript-eslint/prefer-includes': 'warn',
         '@typescript-eslint/prefer-nullish-coalescing': 'off',
