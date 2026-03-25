@@ -1,5 +1,12 @@
 # Changelog
 
+## [26.0.3](https://github.com/will-stone/eslint-config/compare/v26.0.2...v26.0.3) (2026-03-25)
+
+### Patches
+
+- Fix missing prefer-destructuring mirror rule for TS
+  ([6fd2c41](https://github.com/will-stone/eslint-config/commit/6fd2c411f3fa285fc412a5ff074d0e6d7dc4e044))
+
 ## [26.0.2](https://github.com/will-stone/eslint-config/compare/v26.0.1...v26.0.2) (2026-03-25)
 
 ### Patches
