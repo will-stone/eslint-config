@@ -1,5 +1,12 @@
 # Changelog
 
+## [26.2.0](https://github.com/will-stone/eslint-config/compare/v26.1.0...v26.2.0) (2026-04-03)
+
+### Minor changes
+
+- Turn off confusing @typescript-eslint/no-unsafe-argument
+  ([565178b](https://github.com/will-stone/eslint-config/commit/565178baa51f40b24e0d5a32e004c8fbc710dbb9))
+
 ## [26.1.0](https://github.com/will-stone/eslint-config/compare/v26.0.3...v26.1.0) (2026-03-25)
 
 ### Minor changes
