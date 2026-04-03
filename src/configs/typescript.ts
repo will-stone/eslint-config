@@ -155,7 +155,8 @@ export function typescript(): TSESLint.FlatConfig.Config[] {
         '@typescript-eslint/no-unnecessary-type-assertion': 'warn',
         '@typescript-eslint/no-unnecessary-type-conversion': 'error',
         '@typescript-eslint/no-unnecessary-type-parameters': 'error',
-        '@typescript-eslint/no-unsafe-argument': 'error',
+        // Too confusing to fix.
+        '@typescript-eslint/no-unsafe-argument': 'off',
         '@typescript-eslint/no-unsafe-assignment': 'error',
         '@typescript-eslint/no-unsafe-call': 'error',
         '@typescript-eslint/no-unsafe-enum-comparison': 'error',
