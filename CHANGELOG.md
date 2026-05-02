@@ -1,5 +1,12 @@
 # Changelog
 
+## [26.2.1](https://github.com/will-stone/eslint-config/compare/v26.2.0...v26.2.1) (2026-05-02)
+
+### Patches
+
+- Update release deps
+  ([f8b1aba](https://github.com/will-stone/eslint-config/commit/f8b1aba7f1d8457f32a63e8c8097a59bee2e6fbd))
+
 ## [26.2.0](https://github.com/will-stone/eslint-config/compare/v26.1.0...v26.2.0) (2026-04-03)
 
 ### Minor changes
