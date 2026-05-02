@@ -52,9 +52,9 @@
     "typescript-eslint": "^8.55.0"
   },
   "devDependencies": {
-    "@commits-with-character/conventional-changelog-preset": "^5.1.1",
+    "@commits-with-character/conventional-changelog-preset": "^6.0.0",
     "@eslint/config-inspector": "^1.4.2",
-    "@release-it/conventional-changelog": "^10.0.5",
+    "@release-it/conventional-changelog": "^11.0.0",
     "@types/eslint-plugin-tailwindcss": "^3.17.0",
     "@types/node": "^24.10.13",
     "@typescript-eslint/utils": "^8.55.0",
@@ -72,7 +72,7 @@
     "lint-staged": "^16.2.7",
     "memfs": "^4.56.10",
     "prettier": "^3.8.1",
-    "release-it": "^19.2.4",
+    "release-it": "^20.0.1",
     "typescript": "^5.9.3",
     "vite": "^7.3.1",
     "vite-plugin-dts": "^4.5.4",
