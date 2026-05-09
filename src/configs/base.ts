@@ -102,7 +102,7 @@ export function base(): TSESLint.FlatConfig.Config[] {
         'no-dupe-else-if': 'error',
         'no-dupe-keys': 'error',
         'no-duplicate-case': 'error',
-        'no-duplicate-imports': 'error',
+        'no-duplicate-imports': ['error', { allowSeparateTypeImports: true }],
         'no-else-return': 'warn',
         'no-empty': 'error',
         'no-empty-character-class': 'error',
@@ -223,8 +223,8 @@ export function base(): TSESLint.FlatConfig.Config[] {
         // Can cause issues when Prettier is enabled
         'prefer-arrow-callback': 'off',
         'prefer-const': 'warn',
-        "prefer-destructuring": [
-          "error",
+        'prefer-destructuring': [
+          'error',
           {
             AssignmentExpression: {
               array: false,
