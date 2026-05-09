@@ -1,5 +1,12 @@
 # Changelog
 
+## [27.0.2](https://github.com/will-stone/eslint-config/compare/v27.0.1...v27.0.2) (2026-05-09)
+
+### Patches
+
+- Turn off @typescript-eslint/no-unsafe-call
+  ([3588a2d](https://github.com/will-stone/eslint-config/commit/3588a2d3d5335fee5729db6a8532492c51c27384))
+
 ## [27.0.1](https://github.com/will-stone/eslint-config/compare/v27.0.0...v27.0.1) (2026-05-09)
 
 ### Patches
