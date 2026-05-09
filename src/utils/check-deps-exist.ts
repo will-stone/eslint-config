@@ -2,14 +2,18 @@ import type { PackageJson } from 'type-fest'
 
 import { globbySync } from 'globby'
 import { readFileSync } from 'node:fs'
+import path from 'node:path'
 
 /**
  * Given an array of dependency names, this will scan all package.json files in
  * the project, and return whether each exists in either a dependencies or
  * devDependencies field.
  */
-export function checkDepsExist<T extends string>(depNames: readonly T[]): Record<T, boolean> {
-  const allPackageJsonPaths = globbySync(['**/package.json', '!**/node_modules/**'])
+export function checkDepsExist<T extends string>(
+  depNames: readonly T[],
+  cwd: string,
+): Record<T, boolean> {
+  const allPackageJsonPaths = globbySync(['**/package.json', '!**/node_modules/**'], { cwd })
 
   const hasPackageMap: Record<string, boolean> = {}
 
@@ -21,7 +25,7 @@ export function checkDepsExist<T extends string>(depNames: readonly T[]): Record
   }
 
   for (const packageJsonPath of allPackageJsonPaths) {
-    const buffer = readFileSync(packageJsonPath)
+    const buffer = readFileSync(path.join(cwd, packageJsonPath))
     const data = new TextDecoder().decode(buffer)
     const package_ = JSON.parse(data) as PackageJson
 

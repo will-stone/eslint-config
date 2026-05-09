@@ -15,8 +15,9 @@ vi.mock(import('globby'), async (importOriginal) => {
   const original = await importOriginal<typeof Globby>()
   return {
     ...original,
-    globbySync: (paths: string[]) =>
+    globbySync: (paths: string[], { cwd }: { cwd: string }) =>
       original.globbySync(paths, {
+        cwd,
         // @ts-expect-error -- memfs and globby don't agree on type, but it works.
         fs,
       }),
@@ -42,7 +43,7 @@ beforeEach(() => {
 test('should find deps in package.json files', () => {
   const readFileSpy = vi.spyOn(fs, 'readFileSync')
 
-  expect(checkDepsExist(['react', 'moo', 'lorem', 'joe'])).toStrictEqual({
+  expect(checkDepsExist(['react', 'moo', 'lorem', 'joe'], '')).toStrictEqual({
     joe: true,
     lorem: true,
     moo: true,
@@ -51,15 +52,24 @@ test('should find deps in package.json files', () => {
   expect(readFileSpy).toHaveBeenCalledTimes(2)
 })
 
+test('should not find deps when in different cwd', () => {
+  expect(checkDepsExist(['react', 'moo', 'lorem', 'joe'], import.meta.dirname)).toStrictEqual({
+    joe: false,
+    lorem: false,
+    moo: false,
+    react: false,
+  })
+})
+
 test('should not find deps not in package.json files', () => {
-  expect(checkDepsExist(['absolute-rubbish', 'what'])).toStrictEqual({
+  expect(checkDepsExist(['absolute-rubbish', 'what'], '')).toStrictEqual({
     'absolute-rubbish': false,
     what: false,
   })
 })
 
 test('should not find deps only in peerDependencies', () => {
-  expect(checkDepsExist(['not', 'pkg'])).toStrictEqual({
+  expect(checkDepsExist(['not', 'pkg'], '')).toStrictEqual({
     not: false,
     pkg: false,
   })
@@ -67,6 +77,6 @@ test('should not find deps only in peerDependencies', () => {
 
 test('should exit early if all deps found', () => {
   const readFileSpy = vi.spyOn(fs, 'readFileSync')
-  expect(checkDepsExist(['bar'])).toStrictEqual({ bar: true })
+  expect(checkDepsExist(['bar'], '')).toStrictEqual({ bar: true })
   expect(readFileSpy).toHaveBeenCalledOnce()
 })

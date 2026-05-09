@@ -1,3 +1,3 @@
 import config from './src/index.js'
 
-export default config()
+export default config({ cwd: import.meta.dirname })

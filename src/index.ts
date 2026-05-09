@@ -9,18 +9,14 @@ import { autoConfigs, defaultConfigs } from './configs/index.js'
 import { checkDepsExist } from './utils/check-deps-exist.js'
 import { log } from './utils/log.js'
 
-const defaultOptions = {}
-
 /**
  * The shared configuration factory.
  */
-async function configImpl(
-  options: Options = defaultOptions,
-): Promise<TSESLint.FlatConfig.Config[]> {
+async function configImpl(options: Options): Promise<TSESLint.FlatConfig.Config[]> {
   const configs: TSESLint.FlatConfig.Config[][] = []
 
   const autoConfigDeps = Object.values(autoConfigs).map(({ dep }) => dep)
-  const existingAutoConfigDeps = checkDepsExist(autoConfigDeps)
+  const existingAutoConfigDeps = checkDepsExist(autoConfigDeps, options.cwd)
 
   const enabledAutoConfigs = autoConfigs.filter(({ dep, optionName }) => {
     return (
@@ -62,7 +58,7 @@ async function configImpl(
  * @returns An array of ESLint Flat Configs.
  */
 const config = async (
-  options?: Options,
+  options: Options,
   ...extraConfigs: (TSESLint.FlatConfig.Config | Linter.Config)[]
 ): Promise<(TSESLint.FlatConfig.Config | Linter.Config)[]> =>
   tseslint.config(await configImpl(options), ...extraConfigs)

@@ -28,7 +28,7 @@ plugin.
 // eslint.config.js
 import config from '@will-stone/eslint-config'
 
-export default config()
+export default config({ cwd: import.meta.dirname })
 ```
 
 ### Add script for package.json

@@ -36,7 +36,7 @@ test('should load default configs', async () => {
     }),
   })
 
-  await expect(config()).resolves.toStrictEqual([
+  await expect(config({ cwd: '' })).resolves.toStrictEqual([
     expect.objectContaining({ name: 'will-stone/ignores' }),
     expect.objectContaining({ name: 'will-stone/git-ignore' }),
     expect.objectContaining({ name: 'will-stone/base' }),
@@ -73,7 +73,7 @@ test.each([
     'package.json': JSON.stringify({ dependencies: { [dep]: '^9.0.0' } }),
   })
 
-  await expect(config()).resolves.toStrictEqual(
+  await expect(config({ cwd: '' })).resolves.toStrictEqual(
     expect.arrayContaining(
       configNames.map((configName) =>
         // eslint-disable-next-line @typescript-eslint/no-unsafe-return
@@ -101,6 +101,7 @@ test('should not load any auto-configs if forced off', async () => {
 
   await expect(
     config({
+      cwd: '',
       react: false,
       tailwind: false,
       typescript: false,
@@ -130,6 +131,7 @@ test('should load auto-configs if forced on', async () => {
 
   await expect(
     config({
+      cwd: '',
       react: true,
       tailwind: true,
       typescript: true,
@@ -166,7 +168,7 @@ test('should load multiple auto-configs', async () => {
     }),
   })
 
-  await expect(config()).resolves.toStrictEqual(
+  await expect(config({ cwd: '' })).resolves.toStrictEqual(
     expect.arrayContaining([
       expect.objectContaining({ name: 'will-stone/react' }),
       expect.objectContaining({ name: 'will-stone/vitest' }),

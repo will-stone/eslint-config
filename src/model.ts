@@ -2,6 +2,11 @@
  * This is a set of optional features that can be turned on.
  */
 export type Options = {
+  /**
+   * Set this to `import.meta.dirname` as some IDEs look for deps in the wrong directory.
+   */
+  cwd: string
+
   astro?: boolean
   react?: boolean
   tailwind?:
