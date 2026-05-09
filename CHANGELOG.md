@@ -1,5 +1,12 @@
 # Changelog
 
+## [27.0.1](https://github.com/will-stone/eslint-config/compare/v27.0.0...v27.0.1) (2026-05-09)
+
+### Patches
+
+- Fix no-duplicate-imports not taking into consideration types
+  ([6a3d856](https://github.com/will-stone/eslint-config/commit/6a3d856966277a6d845237bcb44d9ecc621b7178))
+
 ## [27.0.0](https://github.com/will-stone/eslint-config/compare/v26.2.1...v27.0.0) (2026-05-09)
 
 ### Major changes
