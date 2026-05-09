@@ -158,7 +158,8 @@ export function typescript(): TSESLint.FlatConfig.Config[] {
         // Too confusing to fix.
         '@typescript-eslint/no-unsafe-argument': 'off',
         '@typescript-eslint/no-unsafe-assignment': 'error',
-        '@typescript-eslint/no-unsafe-call': 'error',
+        // Doesn't seem to help and makes code more verbose.
+        '@typescript-eslint/no-unsafe-call': 'off',
         '@typescript-eslint/no-unsafe-enum-comparison': 'error',
         '@typescript-eslint/no-unsafe-member-access': 'error',
         '@typescript-eslint/no-unsafe-return': 'error',
