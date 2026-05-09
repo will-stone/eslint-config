@@ -1,5 +1,14 @@
 # Changelog
 
+## [27.0.0](https://github.com/will-stone/eslint-config/compare/v26.2.1...v27.0.0) (2026-05-09)
+
+### Major changes
+
+- Fix not working with Zed editor. A cwd option is now required, pass in
+  ([dbd85d4](https://github.com/will-stone/eslint-config/commit/dbd85d468844676c1c4469fd574b707703e1a95a))
+
+  import.meta.dirname.
+
 ## [26.2.1](https://github.com/will-stone/eslint-config/compare/v26.2.0...v26.2.1) (2026-05-02)
 
 ### Patches
